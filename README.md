@@ -17,19 +17,17 @@ docs/
 
 .githooks/              # Repository safety hooks
 first_setup.sh          # Initial repository setup
+```
 
-
-### Getting Started
-
-```markdown
 # Getting Started
 
 Clone the repository and run the setup script:
 
 ```bash
-git clone https://github.com/Gior-gio/Chipathon-2026-OnChipSAR.git
+git clone git@github.com:Gior-gio/Chipathon-2026-OnChipSAR.git
 cd Chipathon-2026-OnChipSAR
 ./first_setup.sh
+```
 
 # Links
 
