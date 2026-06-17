@@ -11,7 +11,8 @@ designs/
     ├── samplehold/
     ├── comparator/
     ├── digital/
-    └── dac/
+    ├── dac/
+    └── top/
 
 docs/
 ├── README.md           # Team Git workflow
