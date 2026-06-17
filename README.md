@@ -1,13 +1,35 @@
 # Overview
 This work presents a SAR ADC that combines several techniques to reduce area and implementation complexity while maintaining good linearity. A fully passive single-ended-to-differential conversion (SDC) stage is integrated into the capacitive DAC, eliminating the need for an active front-end. To mitigate common-mode voltage variations during the successive approximation process, a modified monotonic switching scheme is employed, requiring only two reference voltages while improving common-mode stability. In addition, the DAC is implemented using a hybrid RC architecture, significantly reducing the total capacitance and silicon area compared to conventional binary-weighted implementations.
 
-# Team members
-| Name | Discord | Github | Affiliation (experience) | Role |
-|---|---|---|---|---|
-| Jorge Angarita-Pérez | jangper | @Gior-gio | Onchip - Universidad Industrial de Santander (post-graduate) | Team lead |
-| Jeison Acevedo | Jeison Acevedo | @JHacevedo| Onchip - Universidad Industrial de Santander (post-graduate) | Circuit Design |
+# Repository Structure
 
-*And some occasional contributors
+```text
+designs/
+└── sar_adc/
+    ├── samplehold/
+    ├── comparator/
+    ├── digital/
+    └── dac/
+
+docs/
+├── README.md           # Team Git workflow
+└── ...
+
+.githooks/              # Repository safety hooks
+first_setup.sh          # Initial repository setup
+
+
+### Getting Started
+
+```markdown
+# Getting Started
+
+Clone the repository and run the setup script:
+
+```bash
+git clone https://github.com/Gior-gio/Chipathon-2026-OnChipSAR.git
+cd Chipathon-2026-OnChipSAR
+./first_setup.sh
 
 # Links
 
