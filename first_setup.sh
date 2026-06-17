@@ -33,7 +33,7 @@ git rev-parse --is-inside-work-tree >/dev/null 2>&1 \
 cd "$(git rev-parse --show-toplevel)" || die "Could not find the repository root."
 
 say ""
-say "=== Chipathon 2026 - Delta-Sigma modulator: first-time setup ==="
+say "=== Chipathon 2026 - SAR ADC: first-time setup ==="
 
 # ------------------------------------------------------------ 1. identity
 # git refuses to commit without a name and email.
@@ -82,7 +82,7 @@ mapfile -t branches < <(git for-each-ref --format='%(refname:strip=3)' refs/remo
                         | grep -v -x -E 'main|dev|HEAD' | sort)
 
 [ "${#branches[@]}" -gt 0 ] \
-    || die "No subgroup branches found on GitHub yet. Ask the integration lead."
+    || die "No subgroup branches found on GitHub yet. Ask the team lead."
 
 say ""
 say "Which block are you working on?"
@@ -105,7 +105,7 @@ branch="${branches[$((n-1))]}"
 # ------------------------------------------------------------ 4. switch
 git switch "$branch" >/dev/null 2>&1 \
     || die "Could not switch to '$branch'.
-       If you have unsaved changes, ask the integration lead before retrying."
+       If you have unsaved changes, ask the team lead before retrying."
 
 # ------------------------------------------------------------ 5. remember
 # .myblock stores your branch for the other team scripts.

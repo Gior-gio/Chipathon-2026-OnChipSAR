@@ -31,7 +31,7 @@ designs/
 └── sar_adc/
     ├── samplehold/     ← sar-samplehold
     ├── comparator/     ← sar-comparator
-    ├── digital_logic/  ← sar-digital
+    ├── digital/        ← sar-digital
     └── dac/            ← sar-dac
 ```
 
@@ -198,7 +198,7 @@ to `dev` as follows.
 4. Write a short description of what changed.
 5. Tell the **Team lead** that it's ready.
 
-The team lead reviews it and merges it into `dev`.
+The team leader reviews it and merges it into `dev`.
 
 ### Step B — Sync back (do NOT skip this!)
 
@@ -208,7 +208,7 @@ date:
 
 ```bash
 git switch <your-branch>
-git pull origin dev      # This merges the latest changes from `dev` into your subgroup branch.
+git pull origin dev      # Merge the latest changes from dev into your subgroup branch
 git push                 # save the synced result
 ```
 
@@ -216,7 +216,7 @@ git push                 # save the synced result
 > branch slowly drifts away from everyone else's and future merges get painful.
 > Sync back after **every** integration round.
 
-> ⚠ **TBD:** **who the team lead is** (the only person who merges into
+> ⚠ **TBD:** **who the team leader is** (the only person who merges into
 > `dev` and `main`). Reminder: PRs are opened **only when the team leader
 > requests them**.
 
@@ -298,11 +298,8 @@ A **Pull Request** is a request to merge your branch's work into another branch
 
 ## 9. Who to ask
 
-> ⚠ **TBD:** fill in names / contact channel.
->
-> - **Team lead:** ________
-> - **Per-subgroup contact:** ________
-> - **Team chat / where to ask git questions:** ________
+> - **Team lead:** Jorge Angarita-Pérez
+> - **Per-subgroup contact:** Jeison Acevedo and Ramón Sarmiento 
 
 ---
 
