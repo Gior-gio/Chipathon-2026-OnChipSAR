@@ -32,6 +32,7 @@ cd Chipathon-2026-OnChipSAR
 # Links
 
 _Repository_: https://github.com/Gior-gio/Chipathon-2026-OnChipSAR
+
 _Proposal_: https://drive.google.com/file/d/1aagTFaf6xT5bQSnxiDM6Otcf1aaIS6N0/view?usp=sharing
 
 # References
