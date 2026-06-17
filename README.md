@@ -32,6 +32,8 @@ cd Chipathon-2026-OnChipSAR
 ./first_setup.sh
 ```
 
+_Note:_ Remember to always open *xschem* inside the root directory
+
 # Links
 
 _Repository_: https://github.com/Gior-gio/Chipathon-2026-OnChipSAR
