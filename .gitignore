@@ -3,9 +3,6 @@
 # SAR ADC generated sim data
 designs/sar_adc/*/runs/
 
-# SAR ADC generated netlists
-designs/sar_adc/*/netlist/
-
 # SAR ADC generated docs
 designs/sar_adc/*/docs/
 
