@@ -213,8 +213,9 @@ value="
 "}
 C {code.sym} -587.5 -217.5 0 0 {name=CODE only_toplevel=false 
 value="
+.temp -40
 
-.param VDD = 3.3
+.param VDD = 3.3*0.9
 .param VSS = 0
 .param VRP = 2.1
 .param VRN = 1.2
