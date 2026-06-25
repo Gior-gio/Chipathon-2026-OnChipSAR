@@ -21,11 +21,11 @@ N 320 -200 320 -160 {lab=#net1}
 N 320 -380 400 -380 {lab=VRY[0]}
 N 320 -280 400 -280 {lab=VRY[1]}
 N 120 -500 120 -460 {lab=VCM}
-N 120 -400 120 -360 {lab=VRY[0]}
-N 120 -300 120 -260 {lab=VRY[1]}
+N 120 -400 120 -360 {lab=VRX[0]}
+N 120 -300 120 -260 {lab=VRX[1]}
 N 120 -200 120 -160 {lab=#net2}
-N 40 -380 120 -380 {lab=VRY[0]}
-N 40 -280 120 -280 {lab=VRY[1]}
+N 40 -380 120 -380 {lab=VRX[0]}
+N 40 -280 120 -280 {lab=VRX[1]}
 N 120 -500 320 -500 {lab=VCM}
 N 140 -430 300 -430 {lab=VSS}
 N 140 -330 300 -330 {lab=VSS}
@@ -90,8 +90,8 @@ m=1}
 C {lab_wire.sym} 240 -330 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 240 -130 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {ipin.sym} 120 -40 0 0 {name=p11 lab=VRP}
-C {lab_wire.sym} 100 -380 0 0 {name=p12 sig_type=std_logic lab=VRY[0]}
-C {lab_wire.sym} 100 -280 0 0 {name=p13 sig_type=std_logic lab=VRY[1]}
+C {lab_wire.sym} 100 -380 0 0 {name=p12 sig_type=std_logic lab=VRX[0]}
+C {lab_wire.sym} 100 -280 0 0 {name=p13 sig_type=std_logic lab=VRX[1]}
 C {lab_wire.sym} 240 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {iopin.sym} 340 -500 2 1 {name=p19 lab=VCM}
 C {iopin.sym} 480 -200 2 1 {name=p2 lab=VRY[1:0]}
