@@ -41,7 +41,7 @@ _Note:_ Remember to always open *xschem* inside the root directory
 
 _Repository_: https://github.com/Gior-gio/Chipathon-2026-OnChipSAR
 
-_Proposal_: https://drive.google.com/file/d/1cnjJn1mY6vDTXW3q3R2ybs9YaZu2KX3c/view?usp=sharing
+_Proposal_: https://drive.google.com/file/d/1vW6LQJf3oHZ-iXFw3v4OQ3EZNDzVT3Dk/view?usp=sharing
 
 # References
 
