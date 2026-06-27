@@ -231,10 +231,13 @@ value="
 let tstop = 50n
 let tstep = tstop/10k
 
+* Reference voltages:
+let VRPN = 0.9
+
 * Setting time
 let vlim_set = 1m
 let Tclk = 1/(60Meg)
-let ton = 2*Tclk 
+let ton = 2*Tclk
 
 * Run transient analysis
 tran $&tstep $&tstop
@@ -268,13 +271,40 @@ let ts0_ratio = ts0/Tclk
 let ts1_ratio = ts1/Tclk
 let tsCM_ratio = tsCM/Tclk
 
+* Power and resistance estimation
+let IVRP = -1*i(VREFP)
+let IVRN = -1*i(VREFN)
+meas tran I_VRP_avg AVG IVRP from=tstep to=tstop
+meas tran I_VRN_avg AVG IVRN from=tstep to=tstop
+let P_VRP_avg = I_VRP_avg*2.1
+let P_VRN_avg = I_VRN_avg*1.2
+let P_T_avg = P_VRP_avg + P_VRN_avg
+let RDAC = (VRPN^2)/P_T_avg
+let Ru = RDAC/8
+
 * Print outputs
+echo ============================================================
+echo POWER_AND_RESISTANCE
+echo ============================================================
+
+echo P_T_avg = $&P_T_avg W
+echo RDAC    = $&RDAC Ohm
+echo Ru      = $&Ru Ohm
+
+echo
 echo ============================================================
 echo SETTLING_TIME_RESULTS
 echo ============================================================
 
-print ts0 ts1 tsCM
-print ts0_ratio ts1_ratio tsCM_ratio
+echo ts0       = $&ts0 s
+echo ts1       = $&ts1 s
+echo tsCM      = $&tsCM s
+
+echo
+
+echo ts0/Tclk  = $&ts0_ratio cycles
+echo ts1/Tclk  = $&ts1_ratio cycles
+echo tsCM/Tclk = $&tsCM_ratio cycles
 
 * Plots
 *plot v(VX) v(VY)
