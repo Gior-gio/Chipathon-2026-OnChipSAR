@@ -20,7 +20,7 @@ N 300 -150 300 -100 {lab=VSS}
 N 200 -100 300 -100 {lab=VSS}
 N 200 -120 200 -80 {lab=VSS}
 N 200 -220 340 -220 {lab=B}
-C {symbols/nfet_03v3.sym} 180 -150 0 0 {name=MN
+C {symbols/nfet_03v3.sym} 180 -150 0 0 {name=INV_N
 L=0.28u
 W=0.5u
 nf=1
@@ -34,7 +34,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 180 -290 0 0 {name=MP
+C {symbols/pfet_03v3.sym} 180 -290 0 0 {name=XINV_P
 L=0.28u
 W=0.5u
 nf=1
