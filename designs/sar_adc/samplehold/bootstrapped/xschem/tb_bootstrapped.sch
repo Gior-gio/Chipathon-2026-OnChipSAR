@@ -36,13 +36,16 @@ C {lab_wire.sym} 820 -360 0 0 {name=p3 sig_type=std_logic lab=VSS
 }
 C {lab_wire.sym} 260 -360 0 0 {name=p5 sig_type=std_logic lab=Vin
 }
-C {devices/code_shown.sym} 915 -275 0 0 {name=MODELS1 only_toplevel=true
+C {devices/code_shown.sym} 875 -415 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice ss
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice cap_mim
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
+
 "}
-C {code.sym} 805 -600 0 0 {name=s1 only_toplevel=false value="
+C {code.sym} 805 -580 0 0 {name=s1 only_toplevel=false value="
 
 * Sampling clock
 .param Fs = 5Meg
@@ -51,7 +54,7 @@ C {code.sym} 805 -600 0 0 {name=s1 only_toplevel=false value="
 * Input parameters
 .param Ts = 1/Fs
 .param Ns = 1024
-.param Nc = 509
+.param Nc = 103
 .param fin = Nc/Ns*Fs
 
 * Test-bench parameters
@@ -72,7 +75,14 @@ let tstep = 1/(Fs*240)
 let tstop = (Ns + Nspare)/Fs
 
 * Transient simulation
-tran $&tstep $&tstop
+tran $&tstep $&tstop 
+*power
+let IDD=-1*i(v1)
+
+meas tran I_avg AVG IDD from=1n to=tstop
+meas tran v_avg AVG v(vdd) from=1n to=tstop
+let P_avg = abs(I_avg*v_avg)
+print P_avg
 
 linearize v(vout) v(vin) v(clk)
 wrdata tb_bootstrapped.csv v(vin) v(vout) v(clk)
