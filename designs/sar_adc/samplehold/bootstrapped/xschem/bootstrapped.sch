@@ -8,7 +8,7 @@ E {}
 N 520 -490 520 -420 {lab=cc}
 N 1000 -700 1040 -700 {lab=#net1}
 N 1100 -700 1180 -700 {lab=VSS}
-N 1070 -780 1070 -740 {lab=CLK}
+N 1070 -780 1070 -740 {lab=CLKN}
 N 970 -780 970 -740 {lab=VDD}
 N 860 -700 940 -700 {lab=VX}
 N 1060 -130 1100 -130 {lab=VIN}
@@ -37,11 +37,11 @@ N 310 -700 800 -700 {lab=Vc}
 N 310 -180 370 -180 {lab=VSS}
 N 370 -180 370 -110 {lab=VSS}
 N 310 -110 370 -110 {lab=VSS}
-N 210 -180 270 -180 {lab=CLK}
-N 440 -390 480 -390 {lab=CLKN}
-N 440 -520 480 -520 {lab=CLKN}
-N 440 -520 440 -390 {lab=CLKN}
-N 410 -450 440 -450 {lab=CLKN}
+N 210 -180 270 -180 {lab=CLKN}
+N 440 -390 480 -390 {lab=CLK}
+N 440 -520 480 -520 {lab=CLK}
+N 440 -520 440 -390 {lab=CLK}
+N 410 -450 440 -450 {lab=CLK}
 N 470 -240 520 -240 {lab=Vcc}
 N 310 -240 470 -240 {lab=Vcc}
 N 520 -600 520 -550 {lab=VDD}
@@ -90,12 +90,11 @@ C {lab_wire.sym} 980 -210 2 0 {name=p14 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 770 -320 2 1 {name=p15 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 310 -80 2 1 {name=p16 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 580 -390 2 0 {name=p17 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 210 -180 0 0 {name=p18 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} 520 -600 0 0 {name=p20 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 60 -430 2 0 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} -40 -550 0 0 {name=p22 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} 60 -650 0 0 {name=p23 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 410 -450 0 1 {name=p26 sig_type=std_logic lab=CLKN
+C {lab_wire.sym} 1070 -770 0 0 {name=p26 sig_type=std_logic lab=CLKN
 }
 C {symbols/nfet_03v3.sym} 1070 -720 3 1 {name=MN
 L=0.28u
@@ -168,7 +167,6 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {lab_wire.sym} 920 -730 0 0 {name=p1 sig_type=std_logic lab=VX}
-C {sar_adc/samplehold/gate_inv_L0d28/xschem/gate_inv_L0d28.sym} 60 -550 0 0 {name=x1}
 C {lab_wire.sym} 670 -450 0 0 {name=p24 sig_type=std_logic lab=cc}
 C {symbols/pfet_03v3.sym} 330 -800 0 1 {name=MP
 L=0.28u
@@ -188,14 +186,14 @@ C {lab_wire.sym} 510 -700 0 0 {name=p25 sig_type=std_logic lab=Vc}
 C {lab_wire.sym} 480 -240 0 0 {name=p27 sig_type=std_logic lab=Vcc}
 C {capa.sym} 310 -470 0 0 {name=C1
 m=1
-value=500f
+value=100f
 
 footprint=1206
 device="ceramic capacitor"}
 C {lab_wire.sym} 1130 -100 2 0 {name=p13 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 180 -550 0 1 {name=p9 sig_type=std_logic lab=CLKN
 }
-C {lab_wire.sym} 1070 -770 0 0 {name=p19 sig_type=std_logic lab=CLK}
+C {lab_wire.sym} 440 -450 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {symbols/nfet_03v3.sym} 1130 -150 1 0 {name=M1
 L=0.28u
 W=10u
@@ -251,4 +249,7 @@ nrd="'0.18u / W'" nrs="'0.18u / W'"
 sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
+}
+C {designs/sar_adc/samplehold/gate_inv_sh/xschem/gate_inv_sh.sym} 60 -550 0 0 {name=x1}
+C {lab_wire.sym} 260 -180 0 0 {name=p28 sig_type=std_logic lab=CLKN
 }
