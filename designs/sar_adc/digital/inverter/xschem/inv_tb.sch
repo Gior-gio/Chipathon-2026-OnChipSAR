@@ -89,8 +89,8 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 420 -840 0 0 {name=x1}
 C {gnd.sym} -180 -710 0 0 {name=l1 lab=0}
 C {lab_pin.sym} 500 -860 2 0 {name=p2 sig_type=std_logic lab=out}
 C {noconn.sym} 550 -860 2 0 {name=l5}
 C {gnd.sym} 280 -740 0 0 {name=l2 lab=0}
+C {sar_adc/digital/inverter/xschem/inverter.sym} 420 -840 0 0 {name=x1}

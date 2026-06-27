@@ -37,15 +37,15 @@ N 1220 200 1220 240 {lab=VDD}
 N 1180 200 1180 240 {lab=VSS}
 N 1140 170 1140 210 {lab=CLK}
 N 1140 310 1140 350 {lab=CLKN}
-N 1420 -40 1520 -40 {lab=QN}
-N 1470 -40 1470 270 {lab=QN}
+N 1420 -40 1520 -40 {lab=Q}
+N 1470 -40 1470 270 {lab=Q}
 N 840 -20 840 270 {lab=#net2}
 N 840 270 980 270 {lab=#net2}
 N 1300 40 1300 80 {lab=VSS}
 N 1300 -160 1300 -120 {lab=VDD}
 N 1620 -160 1620 -120 {lab=VDD}
 N 1620 40 1620 80 {lab=VSS}
-N 1720 -40 1760 -40 {lab=Q}
+N 1720 -40 1760 -40 {lab=VDD}
 N -140 -0 -80 0 {lab=D}
 N 500 -100 500 -90 {lab=VDD}
 N 500 50 500 60 {lab=VSS}
@@ -66,8 +66,8 @@ N -460 370 -460 400 {lab=VDD}
 N -380 470 -330 470 {lab=CLK2N}
 N -580 470 -540 470 {lab=CLK2}
 N 1620 -120 1620 -110 {lab=VDD}
-N 1700 -40 1720 -40 {lab=Q}
-N 1520 -40 1540 -40 {lab=QN}
+N 1700 -40 1720 -40 {lab=VDD}
+N 1520 -40 1540 -40 {lab=Q}
 N 1620 30 1620 40 {lab=VSS}
 N 380 -20 420 -20 {lab=nand1}
 N 580 270 610 270 {lab=#net1}
@@ -75,13 +75,13 @@ N 610 -20 610 270 {lab=#net1}
 N 410 270 580 270 {lab=#net1}
 N 120 270 250 270 {lab=tg1}
 N 980 270 1060 270 {lab=#net2}
-N 1220 270 1470 270 {lab=QN}
+N 1220 270 1470 270 {lab=Q}
+N 1480 -180 1480 -40 {lab=Q}
 C {iopin.sym} 40 -320 0 0 {name=p1 lab=VDD}
 C {iopin.sym} 40 -280 0 0 {name=p3 lab=VSS}
 C {iopin.sym} 220 -320 0 0 {name=p5 lab=CLK
 }
 C {iopin.sym} 400 -320 0 0 {name=p9 lab=D}
-C {iopin.sym} 400 -280 0 0 {name=p11 lab=Q}
 C {iopin.sym} 230 -290 0 0 {name=p13 lab=RN}
 C {lab_pin.sym} 260 -140 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 640 -90 1 0 {name=p16 sig_type=std_logic lab=VDD}
@@ -103,7 +103,6 @@ C {lab_pin.sym} 1300 80 2 1 {name=p31 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1620 80 2 1 {name=p32 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 120 -40 0 0 {name=p33 sig_type=std_logic lab=RN}
 C {lab_pin.sym} 1160 -60 0 0 {name=p34 sig_type=std_logic lab=RN}
-C {lab_pin.sym} 1720 -40 0 1 {name=p35 sig_type=std_logic lab=Q}
 C {lab_pin.sym} -140 0 0 0 {name=p36 sig_type=std_logic lab=D
 }
 C {lab_pin.sym} 0 -100 3 1 {name=p37 sig_type=std_logic lab=CLK
@@ -152,6 +151,9 @@ C {lab_pin.sym} -460 570 0 1 {name=p48 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -580 210 2 1 {name=p49 sig_type=std_logic lab=CLK
 }
 C {sar_adc/digital/inverter/xschem/inverter.sym} 1640 -20 0 0 {name=x12}
-C {lab_pin.sym} 1480 -40 3 1 {name=p6 sig_type=std_logic lab=QN}
 C {lab_pin.sym} 400 -20 3 1 {name=p50 sig_type=std_logic lab=nand1}
 C {lab_pin.sym} 100 0 1 1 {name=p51 sig_type=std_logic lab=tg1}
+C {iopin.sym} 400 -280 0 0 {name=p6 lab=Q}
+C {iopin.sym} 400 -250 0 0 {name=p35 lab=QN}
+C {lab_pin.sym} 1480 -180 0 0 {name=p11 sig_type=std_logic lab=Q}
+C {lab_pin.sym} 1760 -40 2 0 {name=p52 sig_type=std_logic lab=QN}
