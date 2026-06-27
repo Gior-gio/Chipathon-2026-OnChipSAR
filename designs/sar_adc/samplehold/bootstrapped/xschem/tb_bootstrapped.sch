@@ -5,11 +5,11 @@ V {}
 S {}
 F {}
 E {}
-N 490 -480 490 -450 {lab=VSS}
+N 540 -510 540 -480 {lab=VSS}
 N 620 -560 690 -560 {lab=Vout}
-N 490 -670 490 -640 {lab=VDD}
-N 310 -560 380 -560 {lab=Vin}
-N 310 -520 380 -520 {lab=CLK}
+N 540 -640 540 -610 {lab=VDD}
+N 390 -560 460 -560 {lab=Vin}
+N 390 -540 460 -540 {lab=CLK}
 N 720 -240 720 -210 {lab=GND}
 N 720 -360 720 -300 {lab=VDD}
 N 820 -240 820 -210 {lab=GND}
@@ -83,20 +83,20 @@ plot v(vin) v(vout) xl 0 4u
 .endc
 
 "}
-C {lab_wire.sym} 490 -670 0 0 {name=p2 sig_type=std_logic lab=VDD
+C {lab_wire.sym} 540 -640 0 0 {name=p2 sig_type=std_logic lab=VDD
 }
-C {lab_wire.sym} 490 -450 2 0 {name=p4 sig_type=std_logic lab=VSS
+C {lab_wire.sym} 540 -480 2 0 {name=p4 sig_type=std_logic lab=VSS
 
 }
 C {lab_wire.sym} 680 -560 0 1 {name=p6 sig_type=std_logic lab=Vout}
-C {lab_wire.sym} 310 -560 0 0 {name=p7 sig_type=std_logic lab=Vin
+C {lab_wire.sym} 390 -560 0 0 {name=p7 sig_type=std_logic lab=Vin
 }
 C {devices/vsource.sym} 470 -270 0 0 {name=V4 value="PULSE(0 \{VDD\} 0 1n 1n \{ton\} \{Ts\})"
 }
 C {devices/gnd.sym} 470 -210 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 470 -360 0 0 {name=p8 sig_type=std_logic lab=CLK
 }
-C {lab_wire.sym} 310 -520 0 0 {name=p9 sig_type=std_logic lab=CLK
+C {lab_wire.sym} 390 -540 2 1 {name=p9 sig_type=std_logic lab=CLK
 }
 C {devices/gnd.sym} 660 -470 0 0 {name=l6 lab=GND
 value="
@@ -120,4 +120,4 @@ value=\{Cload\}
 
 footprint=1206
 device="ceramic capacitor"}
-C {designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sym} 330 -370 0 0 {name=x2}
+C {designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sym} 540 -560 0 0 {name=x2}
