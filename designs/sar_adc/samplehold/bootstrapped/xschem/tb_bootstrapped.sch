@@ -71,7 +71,7 @@ let Fs = 5Meg
 let Ns = 1024
 let Nspare = 5
 
-let tstep = 1/(Fs*240)
+let tstep = 1/(Fs*250)
 let tstop = (Ns + Nspare)/Fs
 
 * Transient simulation
@@ -79,8 +79,8 @@ tran $&tstep $&tstop
 *power
 let IDD=-1*i(v1)
 
-meas tran I_avg AVG IDD from=1n to=tstop
-meas tran v_avg AVG v(vdd) from=1n to=tstop
+meas tran I_avg AVG IDD from=tstep to=tstop
+meas tran v_avg AVG v(vdd) from=tstep to=tstop
 let P_avg = abs(I_avg*v_avg)
 print P_avg
 
@@ -130,4 +130,4 @@ value=\{Cload\}
 
 footprint=1206
 device="ceramic capacitor"}
-C {designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sym} 490 -550 0 0 {name=x2}
+C {designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sym} 490 -550 0 0 {name=xSH}

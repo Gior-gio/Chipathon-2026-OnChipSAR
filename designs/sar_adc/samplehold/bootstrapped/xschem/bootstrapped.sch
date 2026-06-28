@@ -177,9 +177,9 @@ C {lab_wire.sym} 240 -470 0 1 {name=p9 sig_type=std_logic lab=CLKN
 C {lab_wire.sym} 440 -450 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {symbols/nfet_03v3.sym} 1130 -150 1 0 {name=BS_SW_N1
 L=0.28u
-W=2.5u
+W=0.5u
 nf=1
-m=1
+m=3
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
