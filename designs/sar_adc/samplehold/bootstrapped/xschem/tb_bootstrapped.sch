@@ -19,14 +19,14 @@ N 260 -360 260 -300 {lab=Vin}
 N 470 -240 470 -210 {lab=GND}
 N 470 -360 470 -300 {lab=CLK}
 N 610 -490 610 -460 {lab=GND}
-C {devices/vsource.sym} 720 -270 0 0 {name=V1 value=\{VDD\}
+C {devices/vsource.sym} 720 -270 0 0 {name=VSP value=\{VDD\}
 }
 C {devices/gnd.sym} 720 -210 0 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 820 -270 0 0 {name=V2 value=0
+C {devices/vsource.sym} 820 -270 0 0 {name=VSN value=0
 
 }
 C {devices/gnd.sym} 820 -210 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 260 -270 0 0 {name=V3 value= "SIN(\{VDD/2\} \{VDD/2\} \{fin\} 0 )"
+C {devices/vsource.sym} 260 -270 0 0 {name=VSIN value= "SIN(\{VDD/2\} \{VDD/2\} \{fin\} 0 )"
 }
 C {devices/gnd.sym} 260 -210 0 0 {name=l3 lab=GND}
 C {lab_wire.sym} 720 -360 0 0 {name=p1 sig_type=std_logic lab=VDD
@@ -75,17 +75,15 @@ let tstep = 1/(Fs*250)
 let tstop = (Ns + Nspare)/Fs
 
 * Transient simulation
-tran $&tstep $&tstop 
-*power
-let IDD=-1*i(v1)
+tran $&tstep $&tstop
 
-meas tran I_avg AVG IDD from=tstep to=tstop
-meas tran v_avg AVG v(vdd) from=tstep to=tstop
-let P_avg = abs(I_avg*v_avg)
+* Power calculation
+let P_DD=-v(vdd)*i(vsp)
+meas tran P_avg AVG P_DD from=0 to=tstop
 print P_avg
 
-linearize v(vout) v(vin) v(clk)
-wrdata tb_bootstrapped.csv v(vin) v(vout) v(clk)
+linearize v(vout) v(vin) v(clk) P_DD
+wrdata tb_bootstrapped.csv v(vin) v(vout) v(clk) P_DD
 
 plot v(vin) v(vout)
 plot v(vin) v(vout) xl 0 4u
@@ -101,7 +99,7 @@ C {lab_wire.sym} 490 -470 2 0 {name=p4 sig_type=std_logic lab=VSS
 C {lab_wire.sym} 630 -550 0 1 {name=p6 sig_type=std_logic lab=Vout}
 C {lab_wire.sym} 340 -550 0 0 {name=p7 sig_type=std_logic lab=Vin
 }
-C {devices/vsource.sym} 470 -270 0 0 {name=V4 value="PULSE(0 \{VDD\} 0 1n 1n \{ton\} \{Ts\})"
+C {devices/vsource.sym} 470 -270 0 0 {name=VCLK value="PULSE(0 \{VDD\} 0 1n 1n \{ton\} \{Ts\})"
 }
 C {devices/gnd.sym} 470 -210 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} 470 -360 0 0 {name=p8 sig_type=std_logic lab=CLK
