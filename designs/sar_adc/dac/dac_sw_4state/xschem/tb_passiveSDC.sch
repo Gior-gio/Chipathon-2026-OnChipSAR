@@ -139,7 +139,7 @@ let Fs = 5Meg
 let Ns = 64
 let Nspare = 5
 
-let tstep = 1/(Fs*600)
+let tstep = 1/(Fs*250)
 let tstop = (Ns + Nspare)/Fs
 
 * Transient simulation
@@ -169,7 +169,7 @@ plot V(VIN) V(CN)
 
 .endc
 "}
-C {devices/vsource.sym} -40 -550 0 0 {name=VSIN value= "SIN(\{VCM\} \{VRPN/2\} \{fin\} 0 )"
+C {devices/vsource.sym} -40 -550 0 0 {name=VSIN value= "SIN(\{VCM\} \{0.95*VRPN/2\} \{fin\} 0 )"
 }
 C {devices/gnd.sym} -40 -490 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} -40 -590 3 1 {name=p5 sig_type=std_logic lab=VIN
