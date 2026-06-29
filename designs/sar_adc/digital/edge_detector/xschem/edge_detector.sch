@@ -51,13 +51,20 @@ N 340 -240 415 -240 {lab=#net3}
 N 415 -240 420 -240 {lab=#net3}
 N 580 -240 660 -240 {lab=#net4}
 N 820 -240 900 -240 {lab=#net5}
+N 380 -240 380 -200 {lab=#net3}
+N 380 -140 380 -80 {lab=VSS}
 C {iopin.sym} 100 -360 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 100 -80 0 1 {name=p16 lab=VSS}
 C {ipin.sym} 100 -240 0 0 {name=p17 lab=IN}
 C {opin.sym} 1700 -220 0 0 {name=p18 lab=OUT}
-C {sar_adc/digital/NAND/xschem/NAND.sym} 1520 -220 0 0 {name=x1}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 1240 -220 0 0 {name=x2}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 1000 -220 0 0 {name=x3}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 760 -220 0 0 {name=x4}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 520 -220 0 0 {name=x5}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 280 -220 0 0 {name=x6}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1520 -220 0 0 {name=x1}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1240 -220 0 0 {name=x2}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1000 -220 0 0 {name=x3}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 760 -220 0 0 {name=x4}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 520 -220 0 0 {name=x5}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 280 -220 0 0 {name=x6}
+C {capa.sym} 380 -170 0 0 {name=C1
+m=1
+value=50f
+footprint=1206
+device="ceramic capacitor"}

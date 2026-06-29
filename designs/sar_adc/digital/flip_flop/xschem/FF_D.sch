@@ -45,7 +45,7 @@ N 1300 40 1300 80 {lab=VSS}
 N 1300 -160 1300 -120 {lab=VDD}
 N 1620 -160 1620 -120 {lab=VDD}
 N 1620 40 1620 80 {lab=VSS}
-N 1720 -40 1760 -40 {lab=VDD}
+N 1720 -40 1760 -40 {lab=QN}
 N -140 -0 -80 0 {lab=D}
 N 500 -100 500 -90 {lab=VDD}
 N 500 50 500 60 {lab=VSS}
@@ -66,7 +66,7 @@ N -460 370 -460 400 {lab=VDD}
 N -380 470 -330 470 {lab=CLK2N}
 N -580 470 -540 470 {lab=CLK2}
 N 1620 -120 1620 -110 {lab=VDD}
-N 1700 -40 1720 -40 {lab=VDD}
+N 1700 -40 1720 -40 {lab=QN}
 N 1520 -40 1540 -40 {lab=Q}
 N 1620 30 1620 40 {lab=VSS}
 N 380 -20 420 -20 {lab=nand1}
@@ -121,21 +121,21 @@ C {lab_pin.sym} 1140 350 1 1 {name=p43 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 720 60 3 0 {name=p44 sig_type=std_logic lab=CLK2N
 }
-C {sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=x1}
-C {sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=x2}
-C {sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 1 {name=x3}
-C {sar_adc/digital/TG/xschem/TG.sym} 330 290 0 1 {name=x4}
-C {sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=x5}
-C {sar_adc/digital/NAND/xschem/NAND.sym} 1300 -40 0 0 {name=x6}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 520 0 0 0 {name=x8}
-C {sar_adc/digital/inverter/xschem/inverter.sym} -440 -30 0 0 {name=x9}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 1000 0 0 0 {name=x7}
-C {sar_adc/digital/inverter/xschem/inverter.sym} -440 230 0 0 {name=x10}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=x1}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=x2}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 1 {name=x3}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 330 290 0 1 {name=x4}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=x5}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1300 -40 0 0 {name=x6}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 520 0 0 0 {name=x8}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -440 -30 0 0 {name=x9}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1000 0 0 0 {name=x7}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -440 230 0 0 {name=x10}
 C {lab_pin.sym} -580 -50 2 1 {name=p2 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} -340 -50 0 1 {name=p4 sig_type=std_logic lab=CLK2
 }
-C {sar_adc/digital/inverter/xschem/inverter.sym} -440 490 0 0 {name=x11}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -440 490 0 0 {name=x11}
 C {lab_pin.sym} -330 210 0 1 {name=p7 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} -580 470 2 1 {name=p8 sig_type=std_logic lab=CLK2
@@ -150,7 +150,7 @@ C {lab_pin.sym} -460 310 0 1 {name=p47 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -460 570 0 1 {name=p48 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -580 210 2 1 {name=p49 sig_type=std_logic lab=CLK
 }
-C {sar_adc/digital/inverter/xschem/inverter.sym} 1640 -20 0 0 {name=x12}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1640 -20 0 0 {name=x12}
 C {lab_pin.sym} 400 -20 3 1 {name=p50 sig_type=std_logic lab=nand1}
 C {lab_pin.sym} 100 0 1 1 {name=p51 sig_type=std_logic lab=tg1}
 C {iopin.sym} 400 -280 0 0 {name=p6 lab=Q}
