@@ -85,7 +85,6 @@ tran $&tstep $&tstop
 ** Plots
 *plot xREG.SAMPN xREG.SET
 
-plot "sw0[8]" "sw0[7]" "sw0[6]" "sw0[5]" "sw0[4]" "sw0[3]"
-plot "sw1[8]" "sw1[7]" "sw1[6]" "sw1[5]" "sw1[4]" "sw1[3]"
+plot \\"sw0[8]\\" \\"sw0[7]\\" \\"sw0[6]\\" \\"sw1[8]\\"+4 \\"sw1[7]\\"+4 \\"sw1[6]\\"+4
 .endc
 "}
