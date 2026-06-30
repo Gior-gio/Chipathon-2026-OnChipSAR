@@ -24,7 +24,6 @@ N 190 -170 190 -120 {lab=ViN}
 N 190 -170 210 -170 {lab=ViN}
 N 350 -240 420 -240 {lab=Op}
 N 350 -180 420 -180 {lab=On}
-C {comparador.sym} 370 -210 0 0 {name=x1}
 C {vsource.sym} 60 -280 0 0 {name=V1 value="3.3" savecurrent=false}
 C {gnd.sym} 290 -120 0 0 {name=l1 lab=GND}
 C {gnd.sym} 190 -40 0 0 {name=l2 lab=GND}
@@ -44,3 +43,4 @@ C {code_shown.sym} 500 -290 0 0 {name=s1 only_toplevel=false value="
 .measure tran VVIP_cross FIND v(VIP) WHEN v(On)=1.65 FALL=1
 .end
 "}
+C {designs/sar_adc/comparator/comparador/xschem/comparador.sym} 370 -210 0 0 {name=x1}
