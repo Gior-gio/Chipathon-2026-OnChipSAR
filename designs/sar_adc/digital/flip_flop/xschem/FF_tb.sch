@@ -70,7 +70,7 @@ plot QN
 write FF_tb.raw
 .endc
 "}
-C {sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}
 C {lab_pin.sym} -710 390 0 1 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -710 70 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {vsource.sym} -1540 200 0 0 {name=V4 value="PULSE (0 3.3 0 1n 1n 1000n 2000n)" savecurrent=false}
