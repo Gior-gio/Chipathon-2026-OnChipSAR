@@ -89,23 +89,27 @@ let Nspare = 5
 let tstep = 1/(Fs*12*100)
 let tstop = (Ns + Nspare)/Fs
 
+* Save main signals
+save V(VIN) V(VX) V(VY) \\"B[9]\\" \\"B[8]\\" \\"B[7]\\" \\"B[6]\\" \\"B[5]\\" \\"B[4]\\" \\"B[3]\\" \\"B[2]\\" \\"B[1]\\" \\"B[0]\\"
+
 * Transient simulation
 tran $&tstep $&tstop
 
-save all
+* Output waveforms
+linearize
+let vxy = V(VX)-V(VY)
+let dout = (\\"B[9]\\"*1/2 + \\"B[8]\\"*1/4 + \\"B[7]\\"*1/8 + \\"B[6]\\"*1/16 + \\"B[5]\\"*1/32 + \\"B[4]\\"*1/64 + \\"B[3]\\"*1/128 + \\"B[2]\\"*1/256 + \\"B[1]\\"*1/512 + \\"B[0]\\"*1/1024)
 
 * export waveforms
-linearize
-wrdata tb_sar_adc_10b.csv v(VIN) v(VX) v(VY) v("B[9]")
+wrdata tb_sar_adc_10b.csv v(VIN) v(VX) v(VY) dout
 
-let vxy = V(VX)-V(VY)
-
-* Plots
+ * Plots
 *plot V(VX) V(VY)
-plot vxy
 *plot V(VIN) V(VRP) V(VRN)
 *plot V(CLK) V(SAMP)
 *plot V(xADC.COMP)
+plot vxy
+plot dout
 
 .endc
 "}
