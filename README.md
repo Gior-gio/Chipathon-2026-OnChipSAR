@@ -43,6 +43,10 @@ _Repository_: https://github.com/Gior-gio/Chipathon-2026-OnChipSAR
 
 _Proposal_: https://drive.google.com/file/d/1vW6LQJf3oHZ-iXFw3v4OQ3EZNDzVT3Dk/view?usp=sharing
 
+_Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
+
+_Schematic Review **SLIDES**_: https://drive.google.com/file/d/14t893NU9KBiNonRp7lFU2uHhL7IopoWv/view?usp=sharing
+
 # References
 
 [1] A. Peña-Pérez et al., "A Low-Power Single-Ended SAR ADC With Energy-Efficient Differential Switching for Ultrafast X-Ray Imagers," in IEEE Open Journal of Circuits and Systems, vol. 7, pp. 255-268, 2026, doi: 10.1109/OJCAS.2025.3628857.
