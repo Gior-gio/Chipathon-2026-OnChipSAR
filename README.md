@@ -45,7 +45,7 @@ _Proposal_: https://drive.google.com/file/d/1vW6LQJf3oHZ-iXFw3v4OQ3EZNDzVT3Dk/vi
 
 _Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
 
-_Schematic Review **SLIDES**_: https://drive.google.com/file/d/14t893NU9KBiNonRp7lFU2uHhL7IopoWv/view?usp=sharing
+_Schematic Review **SLIDES**_: https://drive.google.com/file/d/1372NUOJXoKILFVo08-AIrBGeSPYBvQ_W/view?usp=sharing
 
 # References
 
