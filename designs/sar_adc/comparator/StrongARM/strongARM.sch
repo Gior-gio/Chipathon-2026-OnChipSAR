@@ -126,18 +126,18 @@ N 730 -2930 730 -2840 {lab=VSS}
 N 850 -2360 930 -2360 {lab=CLK}
 N 670 -2360 850 -2360 {lab=CLK}
 N 1910 -2710 2140 -2710 {lab=ON}
-N 1910 -1210 1950 -1210 {lab=ON}
-N 1910 -1400 1950 -1400 {lab=ON}
-N 1910 -1590 1950 -1590 {lab=ON}
-N 1910 -1790 1950 -1790 {lab=ON}
-N 1910 -1990 1950 -1990 {lab=ON}
-N 1910 -2180 1950 -2180 {lab=ON}
-N 1910 -2380 1950 -2380 {lab=ON}
+N 1910 -1210 1950 -1210 {lab=#net4}
+N 1910 -1400 1950 -1400 {lab=#net4}
+N 1910 -1590 1950 -1590 {lab=#net4}
+N 1910 -1790 1950 -1790 {lab=#net4}
+N 1910 -1990 1950 -1990 {lab=#net4}
+N 1910 -2180 1950 -2180 {lab=#net4}
+N 1910 -2380 1950 -2380 {lab=#net4}
 N 1890 -2710 1910 -2710 {lab=ON}
-N 1910 -640 1950 -640 {lab=ON}
-N 1910 -830 1950 -830 {lab=ON}
-N 1910 -1020 1950 -1020 {lab=ON}
-N 2130 -2380 2170 -2380 {lab=#net4}
+N 1910 -640 1950 -640 {lab=#net4}
+N 1910 -830 1950 -830 {lab=#net4}
+N 1910 -1020 1950 -1020 {lab=#net4}
+N 2130 -2380 2170 -2380 {lab=OPP}
 N 2130 -2180 2170 -2180 {lab=#net5}
 N 2130 -1990 2170 -1990 {lab=#net6}
 N 2130 -1790 2170 -1790 {lab=#net7}
@@ -173,8 +173,19 @@ N 1540 -2730 1570 -2730 {lab=A-}
 N 1540 -2730 1540 -2720 {lab=A-}
 N 1110 -2650 1110 -2630 {lab=GND}
 N 1540 -2660 1540 -2650 {lab=GND}
-N 1910 -2400 1910 -640 {lab=ON}
-N 1910 -2710 1910 -2400 {lab=ON}
+N 1710 -2310 1710 -2290 {lab=VSS}
+N 1720 -2470 1720 -2450 {lab=VDD}
+N 1590 -2380 1640 -2380 {lab=OP}
+N 1910 -2380 1910 -640 {lab=#net4}
+N 1820 -2380 1910 -2380 {lab=#net4}
+N 2810 -2300 2810 -2280 {lab=VSS}
+N 2820 -2460 2820 -2440 {lab=VDD}
+N 2690 -2370 2740 -2370 {lab=ON}
+N 2920 -2370 2960 -2370 {lab=#net14}
+N 3080 -2300 3080 -2280 {lab=VSS}
+N 3090 -2460 3090 -2440 {lab=VDD}
+N 2960 -2370 3010 -2370 {lab=#net14}
+N 3190 -2370 3230 -2370 {lab=ONN}
 C {symbols/nfet_03v3.sym} 2270 -2600 0 1 {name=M1
 L=0.28u
 W=0.22u
@@ -419,7 +430,6 @@ C {inv.sym} 2160 -1690 0 0 {name=x4}
 C {inv.sym} 2160 -1490 0 0 {name=x5}
 C {inv.sym} 2160 -1300 0 0 {name=x6}
 C {inv.sym} 2160 -1110 0 0 {name=x7}
-C {noconn.sym} 2170 -2380 0 1 {name=l1}
 C {noconn.sym} 2170 -2180 0 1 {name=l2}
 C {noconn.sym} 2170 -1990 0 1 {name=l5}
 C {noconn.sym} 2170 -1790 0 1 {name=l8}
@@ -464,3 +474,16 @@ footprint=1206
 device="ceramic capacitor"}
 C {gnd.sym} 1540 -2650 0 0 {name=l15 lab=GND}
 C {gnd.sym} 1110 -2630 0 0 {name=l16 lab=GND}
+C {inv.sym} 1850 -2280 0 0 {name=x11}
+C {lab_wire.sym} 1720 -2470 0 1 {name=p44 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 1710 -2290 3 0 {name=p45 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 1590 -2380 0 0 {name=p46 sig_type=std_logic lab=OP}
+C {inv.sym} 2950 -2270 0 0 {name=x12}
+C {lab_wire.sym} 2820 -2460 0 1 {name=p47 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2810 -2280 3 0 {name=p48 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 2690 -2370 0 0 {name=p49 sig_type=std_logic lab=ON}
+C {inv.sym} 3220 -2270 0 0 {name=x13}
+C {lab_wire.sym} 3090 -2460 0 1 {name=p50 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 3080 -2280 3 0 {name=p51 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 2170 -2380 0 1 {name=p52 sig_type=std_logic lab=OPP}
+C {lab_wire.sym} 3230 -2370 0 1 {name=p53 sig_type=std_logic lab=ONN}
