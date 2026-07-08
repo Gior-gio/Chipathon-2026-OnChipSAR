@@ -141,7 +141,7 @@ N 1980 -370 1980 -320 {lab=CN[8]}
 N 160 -470 220 -470 {lab=VCM}
 N 2140 -510 2140 -490 {lab=VX}
 N 2140 -450 2140 -430 {lab=VY}
-N 2320 -470 2380 -470 {lab=CLKB}
+N 2320 -470 2380 -470 {lab=CLK}
 N 2460 -600 2460 -540 {lab=VDD}
 N 2460 -400 2460 -340 {lab=VSS}
 N 2140 -510 2380 -510 {lab=VX}
@@ -156,10 +156,10 @@ N 2270 -220 2310 -220 {lab=VDD}
 N 2200 -140 2200 -80 {lab=SAMP}
 N 2220 -140 2220 -80 {lab=VRN}
 N 2220 -430 2220 -300 {lab=VY}
-N 2910 -520 2970 -520 {lab=SAMP}
-N 2910 -540 2970 -540 {lab=CLK}
-N 3070 -680 3070 -620 {lab=VDD}
-N 3070 -420 3070 -360 {lab=VSS}
+N 2640 -520 2700 -520 {lab=SAMP}
+N 2640 -540 2700 -540 {lab=CLK}
+N 2800 -680 2800 -620 {lab=VDD}
+N 2800 -420 2800 -360 {lab=VSS}
 N 320 -900 320 -760 {lab=SW1[0],SW0[0]}
 N 320 -180 320 -40 {lab=SW1[0],SW0[0]}
 N 520 -900 520 -760 {lab=SW1[1],SW0[1]}
@@ -180,25 +180,11 @@ N 1920 -900 1920 -760 {lab=SW1[8],SW0[8]}
 N 1920 -180 1920 -40 {lab=SW1[8],SW0[8]}
 N 2220 -380 2240 -380 {lab=VY}
 N 2220 -560 2240 -560 {lab=VX}
-N 2720 -610 2720 -570 {lab=VDD}
-N 2720 -430 2720 -400 {lab=VSS}
-N 2520 -440 2640 -440 {lab=ON}
-N 3170 -580 3270 -580 {lab=SW0[8:0]}
-N 3170 -460 3270 -460 {lab=SW1[8:0]}
-N 3170 -520 3270 -520 {lab=B[9:0]}
-N 2800 -500 2970 -500 {lab=COMP}
-N 3090 -260 3090 -220 {lab=VDD}
-N 3090 -80 3090 -50 {lab=VSS}
-N 3390 -150 3450 -150 {lab=CLKB}
-N 3310 -260 3310 -220 {lab=VDD}
-N 3310 -80 3310 -50 {lab=VSS}
-N 3170 -150 3230 -150 {lab=CLKN}
-N 2950 -150 3010 -150 {lab=CLK}
-N 2720 -260 2720 -220 {lab=VDD}
-N 2720 -80 2720 -50 {lab=VSS}
-N 2580 -150 2640 -150 {lab=ON}
-N 2800 -150 2860 -150 {lab=COMPN}
-N 2520 -500 2640 -500 {lab=OP}
+N 2900 -580 3000 -580 {lab=SW0[8:0]}
+N 2900 -460 3000 -460 {lab=SW1[8:0]}
+N 2900 -520 3000 -520 {lab=B[9:0]}
+N 2520 -440 2680 -440 {lab=COMPN}
+N 2520 -500 2700 -500 {lab=COMP}
 C {designs/sar_adc/dac/cdac/xschem/cdac.sym} 1180 -470 0 0 {name=xCDAC}
 C {designs/sar_adc/dac/rdac/xschem/rdac.sym} 80 -470 0 0 {name=xRDAC}
 C {lab_wire.sym} 200 -370 0 0 {name=p2 sig_type=std_logic lab=VSS}
@@ -349,10 +335,9 @@ C {lab_wire.sym} 2020 -370 1 1 {name=p132 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2000 -370 1 1 {name=p133 sig_type=std_logic lab=VSS}
 C {noconn.sym} 220 -470 0 1 {name=l5
 lab=VX}
-C {designs/sar_adc/comparator/comparador/xschem/comparador.sym} 2540 -470 0 0 {name=xCOMP}
 C {lab_wire.sym} 2460 -560 1 0 {name=p136 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2460 -380 1 1 {name=p137 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2960 -500 0 0 {name=p138 sig_type=std_logic lab=COMP}
+C {lab_wire.sym} 2680 -500 0 0 {name=p138 sig_type=std_logic lab=COMP}
 C {designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sym} 2220 -720 1 0 {name=xSHP}
 C {lab_wire.sym} 2310 -720 0 0 {name=p139 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2130 -720 0 1 {name=p140 sig_type=std_logic lab=VSS}
@@ -362,21 +347,20 @@ C {lab_wire.sym} 2280 -220 2 0 {name=p143 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 2160 -220 2 1 {name=p144 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 2200 -130 1 1 {name=p145 sig_type=std_logic lab=SAMP}
 C {lab_wire.sym} 2220 -130 1 1 {name=p146 sig_type=std_logic lab=VRN}
-C {designs/sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} 3090 -520 0 0 {name=xREG}
-C {lab_wire.sym} 2990 -150 0 0 {name=p147 sig_type=std_logic lab=CLK}
-C {lab_wire.sym} 3070 -640 1 0 {name=p149 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 3070 -400 1 1 {name=p150 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 3250 -580 0 0 {name=p151 sig_type=std_logic lab=SW0[8:0]}
-C {lab_wire.sym} 3250 -460 0 0 {name=p152 sig_type=std_logic lab=SW1[8:0]}
+C {designs/sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} 2820 -520 0 0 {name=xREG}
+C {lab_wire.sym} 2800 -640 1 0 {name=p149 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 2800 -400 1 1 {name=p150 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 2980 -580 0 0 {name=p151 sig_type=std_logic lab=SW0[8:0]}
+C {lab_wire.sym} 2980 -460 0 0 {name=p152 sig_type=std_logic lab=SW1[8:0]}
 C {lab_wire.sym} 320 -770 1 0 {name=p154 sig_type=std_logic lab=SW1[0],SW0[0]}
 C {lab_wire.sym} 320 -170 1 1 {name=p155 sig_type=std_logic lab=SW1[0],SW0[0]}
 C {iopin.sym} 90 -800 0 1 {name=p156 lab=VSS}
 C {iopin.sym} 90 -820 0 1 {name=p157 lab=VDD}
 C {ipin.sym} 80 -630 3 1 {name=p158 lab=VRP}
 C {ipin.sym} 80 -310 3 0 {name=p159 lab=VRN}
-C {ipin.sym} 2910 -540 0 0 {name=p1 lab=CLK}
-C {ipin.sym} 2910 -520 0 0 {name=p22 lab=SAMP}
-C {opin.sym} 3270 -520 0 0 {name=p135 lab=B[9:0]}
+C {ipin.sym} 2640 -540 0 0 {name=p1 lab=CLK}
+C {ipin.sym} 2640 -520 0 0 {name=p22 lab=SAMP}
+C {opin.sym} 3000 -520 0 0 {name=p135 lab=B[9:0]}
 C {ipin.sym} 2220 -860 1 0 {name=p148 lab=VIN}
 C {lab_wire.sym} 520 -770 1 0 {name=p142 sig_type=std_logic lab=SW1[1],SW0[1]}
 C {lab_wire.sym} 520 -170 1 1 {name=p153 sig_type=std_logic lab=SW1[1],SW0[1]}
@@ -395,25 +379,9 @@ C {lab_wire.sym} 1520 -170 1 1 {name=p169 sig_type=std_logic lab=SW1[6],SW0[6]}
 C {lab_wire.sym} 1720 -770 1 0 {name=p170 sig_type=std_logic lab=SW1[7],SW0[7]}
 C {lab_wire.sym} 1720 -170 1 1 {name=p171 sig_type=std_logic lab=SW1[7],SW0[7]}
 C {lab_wire.sym} 1920 -770 1 0 {name=p172 sig_type=std_logic lab=SW1[8],SW0[8]}
-C {lab_wire.sym} 2610 -500 0 0 {name=p174 sig_type=std_logic lab=OP}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 2740 -480 0 0 {name=x2}
-C {lab_pin.sym} 2720 -590 0 1 {name=p175 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 2720 -410 0 1 {name=p176 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2610 -440 0 0 {name=p177 sig_type=std_logic lab=ON}
 C {lab_wire.sym} 1980 -570 1 0 {name=p173 sig_type=std_logic lab=CP[8]}
 C {lab_wire.sym} 1980 -370 1 1 {name=p71 sig_type=std_logic lab=CN[8]}
 C {lab_wire.sym} 1920 -170 1 1 {name=p134 sig_type=std_logic lab=SW1[8],SW0[8]}
-C {lab_wire.sym} 2370 -470 0 0 {name=p178 sig_type=std_logic lab=CLKB}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 3110 -130 0 0 {name=x4}
-C {lab_pin.sym} 3090 -240 0 1 {name=p179 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 3090 -60 0 1 {name=p180 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 3330 -130 0 0 {name=xINVB1[2:0]}
-C {lab_pin.sym} 3310 -240 0 1 {name=p182 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 3310 -60 0 1 {name=p183 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 3220 -150 0 0 {name=p184 sig_type=std_logic lab=CLKN}
-C {lab_wire.sym} 3440 -150 0 0 {name=p181 sig_type=std_logic lab=CLKB}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 2740 -130 0 0 {name=x1}
-C {lab_pin.sym} 2720 -240 0 1 {name=p185 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 2720 -60 0 1 {name=p186 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 2620 -150 0 0 {name=p187 sig_type=std_logic lab=ON}
-C {lab_wire.sym} 2860 -150 0 0 {name=p188 sig_type=std_logic lab=COMPN}
+C {lab_wire.sym} 2370 -470 0 0 {name=p178 sig_type=std_logic lab=CLK}
+C {lab_wire.sym} 2680 -440 0 0 {name=p188 sig_type=std_logic lab=COMPN}
+C {designs/sar_adc/comparator/StrongARM/strongARM.sym} 2540 -470 0 0 {name=x3}
