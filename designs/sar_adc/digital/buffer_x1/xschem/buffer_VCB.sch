@@ -24,5 +24,5 @@ C {iopin.sym} 220 0 0 0 {name=p1 lab=OUT}
 C {iopin.sym} 0 -160 0 0 {name=p3 lab=VDD}
 C {iopin.sym} 0 160 0 0 {name=p2 lab=VSS}
 C {iopin.sym} 0 80 0 0 {name=p5 lab=Y}
-C {sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -110 0 0 0 {name=x1}
-C {sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 110 0 0 0 {name=xINVB[2:0]}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -110 0 0 0 {name=x2}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 110 0 0 0 {name=xINVB1[2:0]}

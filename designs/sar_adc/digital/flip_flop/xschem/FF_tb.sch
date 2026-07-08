@@ -79,4 +79,4 @@ C {lab_pin.sym} -730 390 0 0 {name=p4 sig_type=std_logic lab=RN
 }
 C {lab_pin.sym} -830 270 0 0 {name=p6 sig_type=std_logic lab=CLK
 }
-C {sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}

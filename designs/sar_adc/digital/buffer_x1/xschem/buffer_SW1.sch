@@ -23,6 +23,5 @@ C {iopin.sym} 180 -140 0 0 {name=p3 lab=VDD}
 C {iopin.sym} -60 0 0 1 {name=p4 lab=IN
 }
 C {iopin.sym} 180 70 0 0 {name=p5 lab=Y}
-C {sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 100 20 0 0 {name=xINV1[8:0]}
-C {sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 300 20 0 0 {name=xINV0A[8:0]
-}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 100 20 0 0 {name=xINV1A[8:0]}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 300 20 0 0 {name=xINV1B[8:0]}

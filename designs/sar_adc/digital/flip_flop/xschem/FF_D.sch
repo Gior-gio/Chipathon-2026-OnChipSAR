@@ -114,12 +114,12 @@ C {lab_pin.sym} 330 170 0 1 {name=p4 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 720 -120 0 1 {name=p8 sig_type=std_logic lab=CLK
 }
-C {sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=x1}
-C {sar_adc/digital/NAND/xschem/NAND.sym} 1300 -40 0 0 {name=x2}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 520 0 0 0 {name=x3}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 1000 0 0 0 {name=x4}
-C {sar_adc/digital/inverter/xschem/inverter.sym} -430 20 0 0 {name=x5}
-C {sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=x6}
-C {sar_adc/digital/TG/xschem/TG.sym} 330 290 0 0 {name=x7}
-C {sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=x8}
-C {sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 0 {name=x9}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=x1}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1300 -40 0 0 {name=x2}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=x3}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 330 290 0 0 {name=x4}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=x5}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 0 {name=x6}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 520 0 0 0 {name=x7}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 1000 0 0 0 {name=x8}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} -430 20 0 0 {name=x9}

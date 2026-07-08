@@ -85,4 +85,4 @@ C {lab_pin.sym} 40 -400 0 1 {name=p9 sig_type=std_logic lab=SW08,SW07,SW0[6:0]
 }
 C {lab_pin.sym} 40 -280 0 1 {name=p7 sig_type=std_logic lab=SW18,SW17,SW1[6:0]
 }
-C {sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} -80 -340 0 0 {name=xREG1}
+C {designs/sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} -80 -340 0 0 {name=x1}

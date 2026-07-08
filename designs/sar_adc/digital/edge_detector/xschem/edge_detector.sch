@@ -29,5 +29,5 @@ C {iopin.sym} 440 -520 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 440 -200 0 1 {name=p16 lab=VSS}
 C {ipin.sym} 440 -400 0 0 {name=p17 lab=IN}
 C {opin.sym} 1240 -380 0 0 {name=p18 lab=OUT}
-C {sar_adc/digital/nand_edge/xschem/NAND.sym} 1060 -380 0 0 {name=x1}
-C {sar_adc/digital/delay_cell/xschem/delay_cell_x1.sym} 740 -400 0 0 {name=x2}
+C {designs/sar_adc/digital/delay_cell/xschem/delay_cell_x1.sym} 740 -400 0 0 {name=x1}
+C {designs/sar_adc/digital/nand_edge/xschem/NAND.sym} 1060 -380 0 0 {name=x2}
