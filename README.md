@@ -47,6 +47,16 @@ _Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
 
 _Schematic Review **SLIDES**_: https://drive.google.com/file/d/1-Q9feKeOXLGis_tFy5v3wk1oLtbvaeF3/view?usp=sharing
 
+# Progress summary
+
+| Block | Schematic (Typical) | PVT/MC Validation | Layout | PEX Validation |
+|--------|----------------------|-------------------|--------|----------------|
+| Sample & Hold | 100% | 100% | 0% | 0% |
+| Comparator | 100% | 100% | 0% | 0% |
+| Digital Logic | 100% | NA | 0% | 0% |
+| Hybrid DAC | 100% | 100% | 0% | 0% |
+| SAR ADC | 100% | 50% | 0% | 0% |
+
 # References
 
 [1] A. Peña-Pérez et al., "A Low-Power Single-Ended SAR ADC With Energy-Efficient Differential Switching for Ultrafast X-Ray Imagers," in IEEE Open Journal of Circuits and Systems, vol. 7, pp. 255-268, 2026, doi: 10.1109/OJCAS.2025.3628857.
