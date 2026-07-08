@@ -51,7 +51,7 @@ C {lab_pin.sym} -240 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
 }
 C {lab_pin.sym} 40 -340 0 1 {name=p8 sig_type=std_logic lab=B9,B8,B[7:0]
 }
-C {devices/code_shown.sym} 290 -520 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 350 -630 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -61,11 +61,19 @@ echo '==============TRAN measurements========='
 ** Simulations
 tran 0.1n 600n
 
+let p_inst = -v(VDD)*i(V2)
+let i_vdd = -i(V2)
+
+meas tran Pavg AVG p_inst
+
+meas tran Iavg AVG i_vdd
+
 ** Plots
 plot xREG.SAMPN xREG.SET
 plot B9 B8
 plot SW08 SW07
 plot SW18 SW17
+print Pavg
 .endc
 "}
 C {devices/code_shown.sym} 620 -120 0 0 {name=MODELS only_toplevel=true
