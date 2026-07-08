@@ -39,27 +39,21 @@ N 660 -140 700 -140 {lab=CK[9:0]}
 N 0 -400 60 -400 {lab=SAMP}
 N 140 -510 140 -470 {lab=VDD}
 N 140 -330 140 -300 {lab=VSS}
-N -280 -260 -280 -220 {lab=VDD}
-N -280 -80 -280 -50 {lab=VSS}
 N -420 -150 -360 -150 {lab=Vcomp}
-N 20 -150 80 -150 {lab=VCB}
-N -60 -260 -60 -220 {lab=VDD}
-N -60 -80 -60 -50 {lab=VSS}
-N -200 -150 -140 -150 {lab=VCN}
-N 1350 -780 1350 -740 {lab=VDD}
-N 1350 -600 1350 -570 {lab=VSS}
-N 1570 -780 1570 -740 {lab=VDD}
-N 1570 -600 1570 -570 {lab=VSS}
-N 1430 -670 1490 -670 {lab=BNN[9:1]}
-N 1650 -670 1690 -670 {lab=SW0[8:0]}
-N 1220 -670 1270 -670 {lab=BN[9:1]}
-N 1350 -470 1350 -430 {lab=VDD}
-N 1350 -290 1350 -260 {lab=VSS}
-N 1570 -470 1570 -430 {lab=VDD}
-N 1570 -290 1570 -260 {lab=VSS}
-N 1430 -360 1490 -360 {lab=CKN[9:1]}
-N 1650 -360 1690 -360 {lab=SW1[8:0]}
-N 1220 -360 1270 -360 {lab=CK[9:1]}
+N -190 -150 -130 -150 {lab=VCB}
+N -290 -270 -290 -230 {lab=VDD}
+N -290 -70 -290 -40 {lab=VSS}
+N 1450 -790 1450 -750 {lab=VDD}
+N 1450 -590 1450 -560 {lab=VSS}
+N 1550 -670 1590 -670 {lab=SW0[8:0]}
+N 1330 -670 1380 -670 {lab=BN[9:1]}
+N 1450 -280 1450 -250 {lab=VSS}
+N 1550 -360 1590 -360 {lab=SW1[8:0]}
+N 1330 -360 1380 -360 {lab=CK[9:1]}
+N 1490 -790 1490 -730 {lab=BNN[9:1]}
+N 1450 -480 1450 -440 {lab=VDD}
+N 1490 -480 1490 -420 {lab=CKN[9:1]}
+N -250 -270 -250 -210 {lab=VCN}
 C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 340 -610 0 0 {name=xFFR[10]}
 C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 800 -610 0 0 {name=xFFR[9:0]}
 C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 610 -20 0 0 {name=xFFSET[9:0]}
@@ -92,30 +86,21 @@ C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 160 -380 0 0 {name=x1}
 C {lab_pin.sym} 140 -490 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -310 0 1 {name=p27 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 770 -40 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -260 -130 0 0 {name=x2}
-C {lab_pin.sym} -280 -240 0 1 {name=p29 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -280 -60 0 1 {name=p30 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 80 -150 2 0 {name=p31 sig_type=std_logic lab=VCB}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -40 -130 0 0 {name=xINVB[2:0]}
-C {lab_pin.sym} -60 -240 0 1 {name=p32 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -60 -60 0 1 {name=p33 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} -170 -150 1 0 {name=p34 sig_type=std_logic lab=VCN}
-C {iopin.sym} 1690 -670 2 1 {name=p35 lab=SW0[8:0]}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1370 -650 0 0 {name=xINV0A[8:0]}
-C {lab_pin.sym} 1350 -760 0 1 {name=p36 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1350 -580 0 1 {name=p37 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1590 -650 0 0 {name=xINV0B[8:0]}
-C {lab_pin.sym} 1570 -760 0 1 {name=p38 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1570 -580 0 1 {name=p39 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1460 -670 1 0 {name=p40 sig_type=std_logic lab=BNN[9:1]}
+C {lab_pin.sym} -130 -150 2 0 {name=p31 sig_type=std_logic lab=VCB}
+C {lab_pin.sym} -290 -270 0 0 {name=p32 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -290 -40 0 1 {name=p33 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -250 -270 2 0 {name=p34 sig_type=std_logic lab=VCN}
+C {iopin.sym} 1590 -670 2 1 {name=p35 lab=SW0[8:0]}
+C {lab_pin.sym} 1450 -790 0 0 {name=p36 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1450 -560 0 1 {name=p39 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1490 -790 2 0 {name=p40 sig_type=std_logic lab=BNN[9:1]}
 C {lab_pin.sym} 880 -240 2 0 {name=p41 sig_type=std_logic lab=BN[9:0]}
-C {lab_pin.sym} 1220 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
-C {iopin.sym} 1690 -360 2 1 {name=p42 lab=SW1[8:0]}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1370 -340 0 0 {name=xINV1A[8:0]}
-C {lab_pin.sym} 1350 -450 0 1 {name=p43 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1350 -270 0 1 {name=p44 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1590 -340 0 0 {name=xINV1B[8:0]}
-C {lab_pin.sym} 1570 -450 0 1 {name=p45 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1570 -270 0 1 {name=p46 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1460 -360 1 0 {name=p47 sig_type=std_logic lab=CKN[9:1]}
-C {lab_pin.sym} 1220 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
+C {lab_pin.sym} 1330 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
+C {iopin.sym} 1590 -360 2 1 {name=p42 lab=SW1[8:0]}
+C {lab_pin.sym} 1450 -250 0 1 {name=p44 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1490 -480 2 0 {name=p47 sig_type=std_logic lab=CKN[9:1]}
+C {lab_pin.sym} 1330 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
+C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW0.sym} 1460 -670 0 0 {name=x4}
+C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW1.sym} 1450 -360 0 0 {name=x5}
+C {lab_pin.sym} 1450 -480 0 0 {name=p37 sig_type=std_logic lab=VDD}
+C {designs/sar_adc/digital/buffer_x1/xschem/buffer_VCB.sym} -290 -150 0 0 {name=x2}
