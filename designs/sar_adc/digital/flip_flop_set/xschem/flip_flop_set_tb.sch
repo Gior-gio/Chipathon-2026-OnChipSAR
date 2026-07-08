@@ -92,4 +92,4 @@ C {vsource.sym} -130 -520 0 0 {name=V6 value="PULSE (0 3.3 0 1n 1n 1000n 2000n)"
 C {gnd.sym} -130 -450 0 0 {name=l8 lab=0}
 C {lab_pin.sym} -130 -590 0 0 {name=p8 sig_type=std_logic lab=SN
 }
-C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 750 -330 0 0 {name=x2}
+C {sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 750 -330 0 0 {name=x1}

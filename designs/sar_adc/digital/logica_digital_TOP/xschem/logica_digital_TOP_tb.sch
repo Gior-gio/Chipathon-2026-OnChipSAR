@@ -23,7 +23,6 @@ N -240 -320 -200 -320 {lab=Vcomp}
 N 0 -400 40 -400 {lab=SW08,SW07,SW0[6:0]}
 N 0 -340 40 -340 {lab=B9,B8,B[7:0]}
 N 0 -280 40 -280 {lab=SW18,SW17,SW1[6:0]}
-C {designs/sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} -80 -340 0 0 {name=xREG}
 C {vsource.sym} -260 -50 0 0 {name=V1 value="PULSE (0 3.3 60n 1n 1n 44n 90n)" savecurrent=false}
 C {gnd.sym} -260 20 0 0 {name=l1 lab=0}
 C {vsource.sym} 460 -50 0 0 {name=V2 value=3.3 savecurrent=false}
@@ -86,3 +85,4 @@ C {lab_pin.sym} 40 -400 0 1 {name=p9 sig_type=std_logic lab=SW08,SW07,SW0[6:0]
 }
 C {lab_pin.sym} 40 -280 0 1 {name=p7 sig_type=std_logic lab=SW18,SW17,SW1[6:0]
 }
+C {sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} -80 -340 0 0 {name=xREG1}
