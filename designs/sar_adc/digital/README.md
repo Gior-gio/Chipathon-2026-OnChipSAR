@@ -62,7 +62,7 @@ digital/
 
 ### `logica_digital_TOP/`
 
-Contains the top-level implementation of the SAR ADC digital controller, integrating all the required digital building blocks.
+Contains the top-level implementation of the SAR ADC digital logic, integrating all the required digital building blocks.
 
 ### `flip_flop/`
 
