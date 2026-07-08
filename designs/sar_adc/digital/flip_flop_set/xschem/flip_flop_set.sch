@@ -98,29 +98,19 @@ C {lab_pin.sym} 670 -650 0 1 {name=p37 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 670 -470 2 0 {name=p41 sig_type=std_logic lab=CLK
 }
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 670 -530 0 0 {name=x1}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1390 -550 0 0 {name=x2}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1810 -260 0 0 {name=x3}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1000 -260 0 0 {name=x4}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 930 -570 0 0 {name=x5}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1970 -590 0 0 {name=x6}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 200 -570 0 0 {name=x10}
 C {lab_pin.sym} 310 -590 0 1 {name=p7 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 180 -690 2 0 {name=p14 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 180 -490 0 1 {name=p47 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 60 -590 2 1 {name=p49 sig_type=std_logic lab=CLK
 }
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 2310 -570 0 0 {name=xINV[2:0]}
 C {lab_pin.sym} 770 -550 1 1 {name=p51 sig_type=std_logic lab=tg1}
 C {iopin.sym} 1070 -830 0 0 {name=p6 lab=Q}
 C {iopin.sym} 1070 -800 0 0 {name=p35 lab=QN}
 C {lab_pin.sym} 2150 -730 0 0 {name=p11 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 2430 -590 2 0 {name=p52 sig_type=std_logic lab=QN}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1170 -590 0 0 {name=x8}
 C {lab_pin.sym} 1170 -720 0 0 {name=p20 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1170 -450 2 1 {name=p28 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1670 -590 0 0 {name=x7}
 C {lab_pin.sym} 1670 -480 2 1 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1670 -710 0 0 {name=p30 sig_type=std_logic lab=VDD}
 C {iopin.sym} 900 -810 0 0 {name=p50 lab=SN}
@@ -138,3 +128,13 @@ C {lab_pin.sym} 1000 -380 2 0 {name=p4 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 1390 -670 2 0 {name=p10 sig_type=std_logic lab=CLK
 }
+C {sar_adc/digital/NAND/xschem/NAND.sym} 930 -570 0 0 {name=x1}
+C {sar_adc/digital/NAND/xschem/NAND.sym} 1170 -590 0 0 {name=x2}
+C {sar_adc/digital/NAND/xschem/NAND.sym} 1670 -590 0 0 {name=x3}
+C {sar_adc/digital/NAND/xschem/NAND.sym} 1970 -590 0 0 {name=x4}
+C {sar_adc/digital/edge_inv_x1/xschem/inverter.sym} 200 -570 0 0 {name=x5}
+C {sar_adc/digital/edge_inv_x1/xschem/inverter.sym} 2310 -570 0 0 {name=x6}
+C {sar_adc/digital/TG/xschem/TG.sym} 670 -530 0 0 {name=x7}
+C {sar_adc/digital/TG/xschem/TG.sym} 1000 -260 0 0 {name=x8}
+C {sar_adc/digital/TG/xschem/TG.sym} 1390 -550 0 0 {name=x9}
+C {sar_adc/digital/TG/xschem/TG.sym} 1810 -260 0 0 {name=x10}

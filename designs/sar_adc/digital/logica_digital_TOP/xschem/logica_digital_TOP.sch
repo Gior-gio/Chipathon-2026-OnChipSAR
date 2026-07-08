@@ -54,10 +54,6 @@ N 1490 -790 1490 -730 {lab=BNN[9:1]}
 N 1450 -480 1450 -440 {lab=VDD}
 N 1490 -480 1490 -420 {lab=CKN[9:1]}
 N -250 -270 -250 -210 {lab=VCN}
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 340 -610 0 0 {name=xFFR[10]}
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 800 -610 0 0 {name=xFFR[9:0]}
-C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 610 -20 0 0 {name=xFFSET[9:0]}
-C {designs/sar_adc/digital/edge_detector/xschem/edge_detector.sym} 360 -30 0 0 {name=x3}
 C {iopin.sym} 80 -670 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 80 -650 0 1 {name=p16 lab=VSS}
 C {iopin.sym} 80 -610 0 1 {name=p1 lab=SAMP}
@@ -82,7 +78,6 @@ C {iopin.sym} 880 -120 2 1 {name=p26 lab=B[9:0]}
 C {lab_pin.sym} 920 -670 0 1 {name=p14 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 660 -140 2 1 {name=p17 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 540 -270 2 1 {name=p18 sig_type=std_logic lab=SET}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 160 -380 0 0 {name=x1}
 C {lab_pin.sym} 140 -490 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -310 0 1 {name=p27 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 770 -40 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
@@ -100,7 +95,12 @@ C {iopin.sym} 1590 -360 2 1 {name=p42 lab=SW1[8:0]}
 C {lab_pin.sym} 1450 -250 0 1 {name=p44 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1490 -480 2 0 {name=p47 sig_type=std_logic lab=CKN[9:1]}
 C {lab_pin.sym} 1330 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW0.sym} 1460 -670 0 0 {name=x4}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW1.sym} 1450 -360 0 0 {name=x5}
 C {lab_pin.sym} 1450 -480 0 0 {name=p37 sig_type=std_logic lab=VDD}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_VCB.sym} -290 -150 0 0 {name=x2}
+C {sar_adc/digital/buffer_x1/xschem/buffer_SW1.sym} 1450 -360 0 0 {name=x1}
+C {sar_adc/digital/buffer_x1/xschem/buffer_SW0.sym} 1460 -670 0 0 {name=x2}
+C {sar_adc/digital/buffer_x1/xschem/buffer_VCB.sym} -290 -150 0 0 {name=x3}
+C {sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 610 -20 0 0 {name=xFFSET[9:0]}
+C {sar_adc/digital/flip_flop/xschem/FF_D.sym} 340 -610 0 0 {name=xFFR[10]}
+C {sar_adc/digital/flip_flop/xschem/FF_D.sym} 800 -610 0 0 {name=xFFR[8:0]}
+C {sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 160 -380 0 0 {name=x7}
+C {sar_adc/digital/edge_detector/xschem/edge_detector.sym} 360 -30 0 0 {name=x8}

@@ -38,8 +38,6 @@ N 10 -170 10 -130 {lab=VDD}
 N 10 -170 40 -170 {lab=VDD}
 C {iopin.sym} -180 -180 3 0 {name=p1 lab=VDD}
 C {lab_pin.sym} 650 0 0 1 {name=p21 sig_type=std_logic lab=out}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 340 20 0 0 {name=xINVA}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 540 20 0 0 {name=xINVB[2:0]}
 C {lab_pin.sym} 320 -110 0 1 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 520 -100 0 1 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 320 130 0 1 {name=p8 sig_type=std_logic lab=VSS}
@@ -111,3 +109,5 @@ C {lab_pin.sym} -140 140 0 0 {name=p13 sig_type=std_logic lab=B}
 C {lab_pin.sym} -240 -130 0 0 {name=p14 sig_type=std_logic lab=A}
 C {lab_pin.sym} 100 -130 2 0 {name=p15 sig_type=std_logic lab=B}
 C {lab_pin.sym} -40 50 2 0 {name=p2 sig_type=std_logic lab=VSS}
+C {sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 340 20 0 0 {name=x1}
+C {sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 540 20 0 0 {name=x2}
