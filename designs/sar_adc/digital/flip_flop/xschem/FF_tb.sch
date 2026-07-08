@@ -12,8 +12,8 @@ N -1200 230 -1200 270 {lab=0}
 N -1200 130 -1200 170 {lab=VDD}
 N -1260 230 -1260 270 {lab=0}
 N -1260 130 -1260 170 {lab=VSS}
-N -1540 20 -1540 60 {lab=0}
-N -1540 -80 -1540 -40 {lab=CLK}
+N -1440 230 -1440 270 {lab=0}
+N -1440 130 -1440 170 {lab=CLK}
 N -640 170 -590 170 {lab=Q}
 N -710 350 -710 390 {lab=VSS}
 N -710 70 -710 110 {lab=VDD}
@@ -22,6 +22,7 @@ N -850 170 -800 170 {lab=D}
 N -730 350 -730 390 {lab=RN}
 N -1540 230 -1540 270 {lab=0}
 N -1540 130 -1540 170 {lab=RN}
+N -640 290 -540 290 {lab=QN}
 C {lab_pin.sym} -600 170 0 1 {name=p35 sig_type=std_logic lab=Q}
 C {lab_pin.sym} -850 170 0 0 {name=p36 sig_type=std_logic lab=D
 }
@@ -31,13 +32,13 @@ C {vsource.sym} -1200 200 0 0 {name=V2 value=3.3 savecurrent=false}
 C {gnd.sym} -1200 270 0 0 {name=l2 lab=0}
 C {vsource.sym} -1260 200 0 0 {name=V3 value=0 savecurrent=false}
 C {gnd.sym} -1260 270 0 0 {name=l3 lab=0}
-C {vsource.sym} -1540 -10 0 0 {name=V5 value="PULSE (0 3.3 0 1n 1n 50n 100n)" savecurrent=false}
-C {gnd.sym} -1540 60 0 0 {name=l5 lab=0}
+C {vsource.sym} -1440 200 0 0 {name=V5 value="PULSE (0 3.3 0 1n 1n 50n 100n)" savecurrent=false}
+C {gnd.sym} -1440 270 0 0 {name=l5 lab=0}
 C {lab_pin.sym} -1200 130 0 0 {name=p45 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -1260 130 2 1 {name=p46 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -1140 130 0 0 {name=p47 sig_type=std_logic lab=D
 }
-C {lab_pin.sym} -1540 -80 0 0 {name=p49 sig_type=std_logic lab=CLK
+C {lab_pin.sym} -1440 130 0 0 {name=p49 sig_type=std_logic lab=CLK
 }
 C {devices/code_shown.sym} -1390 410 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -80,4 +81,6 @@ C {lab_pin.sym} -730 390 0 0 {name=p4 sig_type=std_logic lab=RN
 C {noconn.sym} -550 170 2 0 {name=l7}
 C {lab_pin.sym} -830 270 0 0 {name=p6 sig_type=std_logic lab=CLK
 }
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}
+C {noconn.sym} -540 290 2 0 {name=l6}
+C {lab_pin.sym} -590 290 0 1 {name=p5 sig_type=std_logic lab=QN}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x2}
