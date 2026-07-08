@@ -77,9 +77,6 @@ value="
 .param Ts = 1/Fs
 .param Tclk = 1/(Fs*12)
 
-.param sw_stat_global = 0
-.param sw_stat_mismatch = 0
-
 .control
 
 * Local variables for .control
@@ -161,4 +158,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 
+* Monte Carlo settings
+.param sw_stat_global = 0
+.param sw_stat_mismatch = 0
+.option SEED = 98765
 "}
