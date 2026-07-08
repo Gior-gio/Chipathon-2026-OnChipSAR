@@ -22,7 +22,6 @@ N -850 170 -800 170 {lab=D}
 N -730 350 -730 390 {lab=RN}
 N -1540 230 -1540 270 {lab=0}
 N -1540 130 -1540 170 {lab=RN}
-N -640 290 -540 290 {lab=QN}
 C {lab_pin.sym} -600 170 0 1 {name=p35 sig_type=std_logic lab=Q}
 C {lab_pin.sym} -850 170 0 0 {name=p36 sig_type=std_logic lab=D
 }
@@ -46,7 +45,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} -510 50 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -510 30 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -81,6 +80,4 @@ C {lab_pin.sym} -730 390 0 0 {name=p4 sig_type=std_logic lab=RN
 C {noconn.sym} -550 170 2 0 {name=l7}
 C {lab_pin.sym} -830 270 0 0 {name=p6 sig_type=std_logic lab=CLK
 }
-C {noconn.sym} -540 290 2 0 {name=l6}
-C {lab_pin.sym} -590 290 0 1 {name=p5 sig_type=std_logic lab=QN}
 C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x2}
