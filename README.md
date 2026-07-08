@@ -45,8 +45,7 @@ _Proposal_: https://drive.google.com/file/d/1vW6LQJf3oHZ-iXFw3v4OQ3EZNDzVT3Dk/vi
 
 _Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
 
-_Schematic Review **SLIDES**_: https://drive.google.com/file/d/1-Q9feKeOXLGis_tFy5v3wk1oLtbvaeF3/view?usp=sharing
-
+_Schematic Review **SLIDES**_: https://drive.google.com/file/d/1ia9soZeWhDro_W-J8qWbhhiAUtmrSQDr/view?usp=sharing
 # Progress summary
 
 | Block | Schematic (Typical) | PVT/MC Validation | Layout | PEX Validation |
