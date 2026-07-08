@@ -8,8 +8,8 @@ E {}
 N 750 -550 810 -550 {lab=tg1}
 N 590 -610 590 -580 {lab=VDD}
 N 630 -610 630 -580 {lab=VSS}
-N 670 -650 670 -610 {lab=CLK}
-N 670 -510 670 -470 {lab=CLKN}
+N 670 -650 670 -610 {lab=CLKN}
+N 670 -510 670 -470 {lab=CLK}
 N 790 -590 830 -590 {lab=RN}
 N 810 -550 830 -550 {lab=tg1}
 N 930 -690 930 -650 {lab=VDD}
@@ -29,7 +29,7 @@ N 1470 -570 1550 -570 {lab=#net1}
 N 1830 -610 1870 -610 {lab=RN}
 N 1890 -350 1890 -310 {lab=VDD}
 N 1850 -350 1850 -310 {lab=VSS}
-N 1810 -380 1810 -340 {lab=CLK}
+N 1810 -380 1810 -340 {lab=CLKN}
 N 1810 -240 1810 -200 {lab=CLKN}
 N 2090 -590 2190 -590 {lab=Q}
 N 2140 -590 2140 -280 {lab=Q}
@@ -102,19 +102,19 @@ C {lab_pin.sym} 790 -590 0 0 {name=p33 sig_type=std_logic lab=RN}
 C {lab_pin.sym} 1830 -610 0 0 {name=p34 sig_type=std_logic lab=RN}
 C {lab_pin.sym} 530 -550 0 0 {name=p36 sig_type=std_logic lab=D
 }
-C {lab_pin.sym} 670 -650 3 1 {name=p37 sig_type=std_logic lab=CLK
+C {lab_pin.sym} 670 -650 3 1 {name=p37 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 1390 -670 3 1 {name=p38 sig_type=std_logic lab=CLK2
 }
 C {lab_pin.sym} 1000 -380 1 0 {name=p39 sig_type=std_logic lab=CLK2
 }
-C {lab_pin.sym} 1810 -380 1 0 {name=p40 sig_type=std_logic lab=CLK
+C {lab_pin.sym} 1810 -380 1 0 {name=p40 sig_type=std_logic lab=CLKN
 }
-C {lab_pin.sym} 670 -470 3 0 {name=p41 sig_type=std_logic lab=CLKN
+C {lab_pin.sym} 670 -470 3 0 {name=p41 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 1000 -200 1 1 {name=p42 sig_type=std_logic lab=CLK2N
 }
-C {lab_pin.sym} 1810 -200 1 1 {name=p43 sig_type=std_logic lab=CLKN
+C {lab_pin.sym} 1810 -200 1 1 {name=p43 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 1390 -490 3 0 {name=p44 sig_type=std_logic lab=CLK2N
 }

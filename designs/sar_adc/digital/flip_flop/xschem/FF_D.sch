@@ -17,21 +17,21 @@ N 260 60 260 100 {lab=VSS}
 N 120 -0 120 180 {lab=tg1}
 N 120 230 120 270 {lab=tg1}
 N 120 180 120 230 {lab=tg1}
-N 500 60 500 100 {lab=VSS}
-N 500 -140 500 -100 {lab=VDD}
-N 580 -20 640 -20 {lab=#net1}
-N 720 20 720 60 {lab=CLK2N}
-N 720 -120 720 -80 {lab=CLK2}
+N 510 130 510 170 {lab=VSS}
+N 650 70 650 110 {lab=VDD}
+N 580 -20 640 -20 {lab=nand1}
+N 720 20 720 60 {lab=CLK2}
+N 720 -120 720 -80 {lab=CLK2N}
 N 680 -90 680 -50 {lab=VSS}
 N 640 -90 640 -50 {lab=VDD}
-N 330 170 330 210 {lab=CLK2}
+N 330 170 330 210 {lab=CLK2N}
 N 370 200 370 240 {lab=VSS}
 N 410 200 410 240 {lab=VDD}
-N 330 310 330 350 {lab=CLK2N}
-N 800 -20 880 -20 {lab=#net2}
+N 330 310 330 350 {lab=CLK2}
+N 800 -20 880 -20 {lab=#net1}
 N 980 60 980 100 {lab=VSS}
 N 980 -140 980 -100 {lab=VDD}
-N 1080 -20 1200 -20 {lab=#net3}
+N 1080 -20 1200 -20 {lab=#net2}
 N 1160 -60 1200 -60 {lab=RN}
 N 1220 200 1220 240 {lab=VDD}
 N 1180 200 1180 240 {lab=VSS}
@@ -39,19 +39,16 @@ N 1140 170 1140 210 {lab=CLK}
 N 1140 310 1140 350 {lab=CLKN}
 N 1420 -40 1520 -40 {lab=Q}
 N 1470 -40 1470 270 {lab=Q}
-N 840 -20 840 270 {lab=#net2}
-N 840 270 980 270 {lab=#net2}
+N 840 -20 840 270 {lab=#net1}
+N 840 270 980 270 {lab=#net1}
 N 1300 40 1300 80 {lab=VSS}
 N 1300 -160 1300 -120 {lab=VDD}
-N 1620 -160 1620 -120 {lab=VDD}
-N 1620 40 1620 80 {lab=VSS}
-N 1720 -40 1760 -40 {lab=QN}
 N -140 -0 -80 0 {lab=D}
-N 500 -100 500 -90 {lab=VDD}
-N 500 50 500 60 {lab=VSS}
-N 880 -20 900 -20 {lab=#net2}
+N 650 110 650 120 {lab=VDD}
+N 510 120 510 130 {lab=VSS}
+N 880 -20 900 -20 {lab=#net1}
 N 980 50 980 60 {lab=VSS}
-N 1060 -20 1080 -20 {lab=#net3}
+N 1060 -20 1080 -20 {lab=#net2}
 N 980 -100 980 -90 {lab=VDD}
 N -460 -160 -460 -120 {lab=VDD}
 N -460 20 -460 60 {lab=VSS}
@@ -65,18 +62,15 @@ N -460 540 -460 570 {lab=VSS}
 N -460 370 -460 400 {lab=VDD}
 N -380 470 -330 470 {lab=CLK2N}
 N -580 470 -540 470 {lab=CLK2}
-N 1620 -120 1620 -110 {lab=VDD}
-N 1700 -40 1720 -40 {lab=QN}
 N 1520 -40 1540 -40 {lab=Q}
-N 1620 30 1620 40 {lab=VSS}
 N 380 -20 420 -20 {lab=nand1}
-N 580 270 610 270 {lab=#net1}
-N 610 -20 610 270 {lab=#net1}
-N 410 270 580 270 {lab=#net1}
+N 410 270 580 270 {lab=#net3}
 N 120 270 250 270 {lab=tg1}
-N 980 270 1060 270 {lab=#net2}
+N 980 270 1060 270 {lab=#net1}
 N 1220 270 1470 270 {lab=Q}
-N 1480 -180 1480 -40 {lab=Q}
+N 580 -20 580 40 {lab=nand1}
+N 420 -20 580 -20 {lab=nand1}
+N 580 200 580 270 {lab=#net3}
 C {iopin.sym} 40 -320 0 0 {name=p1 lab=VDD}
 C {iopin.sym} 40 -280 0 0 {name=p3 lab=VSS}
 C {iopin.sym} 220 -320 0 0 {name=p5 lab=CLK
@@ -88,38 +82,38 @@ C {lab_pin.sym} 640 -90 1 0 {name=p16 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -80 -60 1 0 {name=p17 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 410 200 3 1 {name=p18 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1220 200 3 1 {name=p19 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 500 -140 3 1 {name=p20 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 650 70 3 1 {name=p20 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 980 -140 0 0 {name=p21 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1300 -160 0 0 {name=p22 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1620 -160 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -40 -60 3 1 {name=p24 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 680 -90 3 1 {name=p25 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 370 200 1 0 {name=p26 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1180 200 1 0 {name=p27 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 500 100 1 1 {name=p28 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 510 170 1 1 {name=p28 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 260 100 2 1 {name=p29 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 100 2 1 {name=p30 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1300 80 2 1 {name=p31 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1620 80 2 1 {name=p32 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 120 -40 0 0 {name=p33 sig_type=std_logic lab=RN}
 C {lab_pin.sym} 1160 -60 0 0 {name=p34 sig_type=std_logic lab=RN}
 C {lab_pin.sym} -140 0 0 0 {name=p36 sig_type=std_logic lab=D
 }
 C {lab_pin.sym} 0 -100 3 1 {name=p37 sig_type=std_logic lab=CLK
+
 }
-C {lab_pin.sym} 720 -120 3 1 {name=p38 sig_type=std_logic lab=CLK2
+C {lab_pin.sym} 720 -120 3 1 {name=p38 sig_type=std_logic lab=CLK2N
 }
-C {lab_pin.sym} 330 170 1 0 {name=p39 sig_type=std_logic lab=CLK2
+C {lab_pin.sym} 330 170 1 0 {name=p39 sig_type=std_logic lab=CLK2N
 }
 C {lab_pin.sym} 1140 170 1 0 {name=p40 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 0 80 3 0 {name=p41 sig_type=std_logic lab=CLKN
+
 }
-C {lab_pin.sym} 330 350 1 1 {name=p42 sig_type=std_logic lab=CLK2N
+C {lab_pin.sym} 330 350 1 1 {name=p42 sig_type=std_logic lab=CLK2
 }
 C {lab_pin.sym} 1140 350 1 1 {name=p43 sig_type=std_logic lab=CLKN
 }
-C {lab_pin.sym} 720 60 3 0 {name=p44 sig_type=std_logic lab=CLK2N
+C {lab_pin.sym} 720 60 3 0 {name=p44 sig_type=std_logic lab=CLK2
 }
 C {designs/sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=x1}
 C {designs/sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=x2}
@@ -127,7 +121,7 @@ C {designs/sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 1 {name=x3}
 C {designs/sar_adc/digital/TG/xschem/TG.sym} 330 290 0 1 {name=x4}
 C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=x5}
 C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1300 -40 0 0 {name=x6}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 520 0 0 0 {name=x8}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 560 140 1 0 {name=x8}
 C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -440 -30 0 0 {name=x9}
 C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1000 0 0 0 {name=x7}
 C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -440 230 0 0 {name=x10}
@@ -150,10 +144,7 @@ C {lab_pin.sym} -460 310 0 1 {name=p47 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -460 570 0 1 {name=p48 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -580 210 2 1 {name=p49 sig_type=std_logic lab=CLK
 }
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1640 -20 0 0 {name=x12}
 C {lab_pin.sym} 400 -20 3 1 {name=p50 sig_type=std_logic lab=nand1}
 C {lab_pin.sym} 100 0 1 1 {name=p51 sig_type=std_logic lab=tg1}
 C {iopin.sym} 400 -280 0 0 {name=p6 lab=Q}
-C {iopin.sym} 400 -250 0 0 {name=p35 lab=QN}
-C {lab_pin.sym} 1480 -180 0 0 {name=p11 sig_type=std_logic lab=Q}
-C {lab_pin.sym} 1760 -40 2 0 {name=p52 sig_type=std_logic lab=QN}
+C {lab_pin.sym} 1540 -40 0 1 {name=p11 sig_type=std_logic lab=Q}
