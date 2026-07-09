@@ -33,8 +33,8 @@ N 1810 -380 1810 -340 {lab=CLKN}
 N 1810 -240 1810 -200 {lab=CLK}
 N 2090 -590 2190 -590 {lab=Q}
 N 2140 -590 2140 -280 {lab=Q}
-N 1510 -570 1510 -280 {lab=#net1}
-N 1510 -280 1650 -280 {lab=#net1}
+N 1510 -570 1510 -280 {lab=X}
+N 1510 -280 1650 -280 {lab=X}
 N 1970 -510 1970 -470 {lab=VSS}
 N 1970 -710 1970 -670 {lab=VDD}
 N 2290 -710 2290 -670 {lab=VDD}
@@ -49,11 +49,11 @@ N 2290 -670 2290 -660 {lab=VDD}
 N 2370 -590 2390 -590 {lab=QN}
 N 2190 -590 2210 -590 {lab=Q}
 N 2290 -520 2290 -510 {lab=VSS}
-N 1250 -280 1280 -280 {lab=#net2}
-N 1280 -570 1280 -280 {lab=#net2}
-N 1080 -280 1250 -280 {lab=#net2}
+N 1250 -280 1280 -280 {lab=B}
+N 1280 -570 1280 -280 {lab=B}
+N 1080 -280 1250 -280 {lab=B}
 N 790 -280 920 -280 {lab=tg1}
-N 1650 -280 1730 -280 {lab=#net1}
+N 1650 -280 1730 -280 {lab=X}
 N 1890 -280 2140 -280 {lab=Q}
 N 2150 -730 2150 -590 {lab=Q}
 N 1050 -570 1070 -570 {lab=#net3}
@@ -63,13 +63,13 @@ N 1040 -610 1070 -610 {lab=RN}
 N 1040 -700 1040 -610 {lab=RN}
 N 1170 -720 1170 -670 {lab=VDD}
 N 1170 -510 1170 -450 {lab=VSS}
-N 1550 -570 1570 -570 {lab=#net1}
-N 1790 -570 1870 -570 {lab=#net4}
-N 1790 -590 1790 -570 {lab=#net4}
+N 1550 -570 1570 -570 {lab=X}
+N 1790 -570 1870 -570 {lab=Y}
+N 1790 -590 1790 -570 {lab=Y}
 N 1670 -510 1670 -480 {lab=VSS}
 N 1670 -710 1670 -670 {lab=VDD}
-N 1520 -610 1570 -610 {lab=SN}
-N 1520 -720 1520 -610 {lab=SN}
+N 1520 -610 1570 -610 {lab=RN}
+N 1520 -720 1520 -610 {lab=RN}
 C {iopin.sym} 710 -870 0 0 {name=p1 lab=VDD}
 C {iopin.sym} 710 -830 0 0 {name=p3 lab=VSS}
 C {iopin.sym} 890 -870 0 0 {name=p5 lab=CLK
@@ -107,7 +107,7 @@ C {lab_pin.sym} 60 -590 2 1 {name=p49 sig_type=std_logic lab=CLK
 C {lab_pin.sym} 770 -550 1 1 {name=p51 sig_type=std_logic lab=tg1}
 C {iopin.sym} 1070 -830 0 0 {name=p6 lab=Q}
 C {iopin.sym} 1070 -800 0 0 {name=p35 lab=QN}
-C {lab_pin.sym} 2150 -730 0 0 {name=p11 sig_type=std_logic lab=Q}
+C {lab_pin.sym} 2150 -730 0 1 {name=p11 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 2430 -590 2 0 {name=p52 sig_type=std_logic lab=QN}
 C {lab_pin.sym} 1170 -720 0 0 {name=p20 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1170 -450 2 1 {name=p28 sig_type=std_logic lab=VSS}

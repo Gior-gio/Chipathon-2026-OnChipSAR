@@ -16,10 +16,7 @@ N 800 -490 800 -450 {lab=VSS}
 N 220 -400 750 -400 {lab=SAMPN}
 N 780 -490 780 -400 {lab=SAMPN}
 N 320 -490 320 -400 {lab=SAMPN}
-N 250 -250 300 -250 {lab=SAMPN}
-N 250 -400 250 -250 {lab=SAMPN}
 N 770 -330 770 -300 {lab=SET}
-N 540 -330 770 -330 {lab=SET}
 N 540 -330 540 -250 {lab=SET}
 N 420 -250 540 -250 {lab=SET}
 N 790 -350 790 -300 {lab=VDD}
@@ -57,7 +54,7 @@ N -250 -270 -250 -210 {lab=VCN}
 C {iopin.sym} 80 -670 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 80 -650 0 1 {name=p16 lab=VSS}
 C {iopin.sym} 80 -610 0 1 {name=p1 lab=SAMP}
-C {iopin.sym} 80 -630 0 1 {name=p2 lab=CLK}
+C {iopin.sym} 80 -580 0 1 {name=p2 lab=CLK}
 C {lab_pin.sym} 200 -670 3 1 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 200 -570 2 1 {name=p3 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 360 -380 0 1 {name=p4 sig_type=std_logic lab=VDD}
@@ -66,7 +63,7 @@ C {lab_pin.sym} 340 -770 3 1 {name=p6 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 800 -770 3 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 800 -450 1 1 {name=p9 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 340 -460 0 1 {name=p10 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 790 -20 0 1 {name=p11 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 790 -40 0 1 {name=p11 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 790 -350 0 1 {name=p12 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 470 -670 0 1 {name=p13 sig_type=std_logic lab=CK[10]}
 C {lab_pin.sym} 0 -400 2 1 {name=p20 sig_type=std_logic lab=SAMP}

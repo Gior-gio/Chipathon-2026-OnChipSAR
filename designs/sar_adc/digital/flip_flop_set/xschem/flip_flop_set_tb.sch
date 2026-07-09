@@ -20,8 +20,8 @@ N 930 -650 930 -610 {lab=VDD}
 N 810 -450 840 -450 {lab=CLK}
 N 790 -550 840 -550 {lab=D}
 N 910 -370 910 -330 {lab=RN}
-N 100 -490 100 -450 {lab=0}
-N 100 -590 100 -550 {lab=RN}
+N -130 -700 -130 -660 {lab=0}
+N -130 -800 -130 -760 {lab=RN}
 N 1000 -430 1100 -430 {lab=QN}
 N 910 -650 910 -610 {lab=SN}
 N -130 -490 -130 -450 {lab=0}
@@ -76,9 +76,9 @@ write FF_tb.raw
 "}
 C {lab_pin.sym} 930 -330 0 1 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 930 -650 2 0 {name=p2 sig_type=std_logic lab=VDD}
-C {vsource.sym} 100 -520 0 0 {name=V4 value="PULSE (3.3 3.3 0 1n 1n 1000n 2000n)" savecurrent=false}
-C {gnd.sym} 100 -450 0 0 {name=l4 lab=0}
-C {lab_pin.sym} 100 -590 0 0 {name=p3 sig_type=std_logic lab=RN
+C {vsource.sym} -130 -730 0 0 {name=V4 value="PULSE (3.3 3.3 0 1n 1n 1000n 2000n)" savecurrent=false}
+C {gnd.sym} -130 -660 0 0 {name=l4 lab=0}
+C {lab_pin.sym} -130 -800 0 0 {name=p3 sig_type=std_logic lab=RN
 }
 C {lab_pin.sym} 910 -330 0 0 {name=p4 sig_type=std_logic lab=RN
 }

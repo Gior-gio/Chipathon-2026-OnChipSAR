@@ -32,7 +32,8 @@ designs/
     ├── samplehold/     ← sar-samplehold
     ├── comparator/     ← sar-comparator
     ├── digital/        ← sar-digital
-    └── dac/            ← sar-dac
+    ├── dac/            ← sar-dac
+    └── top/
 ```
 
 Your **branch** and your **folder** go together: e.g. the Sample & Hold subgroup works

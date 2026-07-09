@@ -58,7 +58,7 @@ N 580 270 610 270 {lab=#net1}
 N 610 -20 610 270 {lab=#net1}
 N 410 270 580 270 {lab=#net1}
 N 120 270 250 270 {lab=tg1}
-N 980 270 1060 270 {lab=#net2}
+N 980 270 1060 270 {lab=#net3}
 N 1220 270 1470 270 {lab=Q}
 N 1470 -180 1470 -40 {lab=Q}
 N 1420 -40 1470 -40 {lab=Q}
@@ -85,7 +85,7 @@ C {lab_pin.sym} 260 100 2 1 {name=p29 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 980 100 2 1 {name=p30 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1300 80 2 1 {name=p31 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 120 -40 0 0 {name=p33 sig_type=std_logic lab=RN}
-C {lab_pin.sym} 1160 -60 0 0 {name=p34 sig_type=std_logic lab=RN}
+C {lab_pin.sym} 880 -60 0 0 {name=p34 sig_type=std_logic lab=RN}
 C {lab_pin.sym} -140 0 0 0 {name=p36 sig_type=std_logic lab=D
 }
 C {lab_pin.sym} 1140 350 0 1 {name=p40 sig_type=std_logic lab=CLK

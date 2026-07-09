@@ -35,30 +35,38 @@ C {lab_pin.sym} 460 -120 0 0 {name=p45 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 560 -120 2 1 {name=p46 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -260 -120 0 0 {name=p47 sig_type=std_logic lab=CLK
 }
-C {lab_pin.sym} 220 -120 0 0 {name=p49 sig_type=std_logic lab=Vcomp
+C {lab_pin.sym} 900 -160 0 0 {name=p49 sig_type=std_logic lab=Vcomp
 }
-C {vsource.sym} -20 -50 0 0 {name=V4 value="PULSE (0 3.3 0 1n 1n 50n 9999u)" savecurrent=false}
-C {gnd.sym} -20 20 0 0 {name=l4 lab=0}
-C {lab_pin.sym} -20 -120 0 0 {name=p3 sig_type=std_logic lab=SAMP
+C {gnd.sym} 580 -20 0 0 {name=l4 lab=0}
+C {lab_pin.sym} 580 -160 0 0 {name=p3 sig_type=std_logic lab=SAMP
 }
-C {lab_pin.sym} -100 -220 0 1 {name=p1 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} -100 -460 2 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -240 -360 0 0 {name=p4 sig_type=std_logic lab=CLK
+C {lab_pin.sym} 260 -220 0 1 {name=p1 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 260 -460 2 0 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 120 -360 0 0 {name=p4 sig_type=std_logic lab=CLK
 }
-C {lab_pin.sym} -240 -340 0 0 {name=p5 sig_type=std_logic lab=SAMP}
-C {lab_pin.sym} -240 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
+C {lab_pin.sym} 120 -340 0 0 {name=p5 sig_type=std_logic lab=SAMP}
+C {lab_pin.sym} 120 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
 }
-C {lab_pin.sym} 40 -340 0 1 {name=p8 sig_type=std_logic lab=B9,B8,B[7:0]
+C {lab_pin.sym} 400 -340 0 1 {name=p8 sig_type=std_logic lab=B[9:0]
 }
 C {devices/code_shown.sym} 350 -630 0 0 {name=NGSPICE only_toplevel=true
 value="
+* Input parameters
+.param VDD = 3.3
+.param Fs = 5Meg
+.param Ts = 1/Fs
+.param Tclk = 1/(Fs*12)
+
 .control
 save all
 
-echo '==============TRAN measurements========='
+* Variables
+let Fs = 5Meg
+let tstep = 1/(Fs*12*100)
+let tstop = 2/Fs
 
-** Simulations
-tran 0.1n 600n
+* Transient simulation
+tran $&tstep $&tstop
 
 let p_inst = -v(VDD)*i(V2)
 let i_vdd = -i(V2)
