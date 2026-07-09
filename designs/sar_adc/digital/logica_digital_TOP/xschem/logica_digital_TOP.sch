@@ -51,6 +51,9 @@ N 1490 -790 1490 -730 {lab=BNN[9:1]}
 N 1450 -480 1450 -440 {lab=VDD}
 N 1490 -480 1490 -420 {lab=CKN[9:1]}
 N -250 -270 -250 -210 {lab=VCN}
+N 540 -330 770 -330 {lab=SET}
+N 260 -400 260 -250 {lab=SAMPN}
+N 260 -250 300 -250 {lab=SAMPN}
 C {iopin.sym} 80 -670 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 80 -650 0 1 {name=p16 lab=VSS}
 C {iopin.sym} 80 -610 0 1 {name=p1 lab=SAMP}

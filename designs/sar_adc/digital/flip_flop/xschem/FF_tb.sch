@@ -45,7 +45,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} -510 30 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -510 40 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all

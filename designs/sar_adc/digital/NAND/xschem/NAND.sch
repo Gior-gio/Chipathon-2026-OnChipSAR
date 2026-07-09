@@ -109,5 +109,5 @@ C {lab_pin.sym} -140 140 0 0 {name=p13 sig_type=std_logic lab=B}
 C {lab_pin.sym} -240 -130 0 0 {name=p14 sig_type=std_logic lab=A}
 C {lab_pin.sym} 100 -130 2 0 {name=p15 sig_type=std_logic lab=B}
 C {lab_pin.sym} -40 50 2 0 {name=p2 sig_type=std_logic lab=VSS}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 340 20 0 0 {name=x1}
-C {sar_adc/digital/inverter/xschem/inverter.sym} 540 20 0 0 {name=x2}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 340 20 0 0 {name=x1}
+C {designs/sar_adc/digital/buffer_inv_x1/xschem/inverter.sym} 540 20 0 0 {name=x2}

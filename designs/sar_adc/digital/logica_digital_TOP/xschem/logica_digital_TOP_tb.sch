@@ -21,7 +21,7 @@ N -240 -360 -200 -360 {lab=CLK}
 N -240 -340 -200 -340 {lab=SAMP}
 N -240 -320 -200 -320 {lab=Vcomp}
 N 0 -400 40 -400 {lab=SW08,SW07,SW0[6:0]}
-N 0 -340 40 -340 {lab=B9,B8,B[7:0]}
+N 0 -340 40 -340 {lab=B[9:0]}
 N 0 -280 40 -280 {lab=SW18,SW17,SW1[6:0]}
 C {vsource.sym} -260 -50 0 0 {name=V1 value="PULSE (0 3.3 60n 1n 1n 44n 90n)" savecurrent=false}
 C {gnd.sym} -260 20 0 0 {name=l1 lab=0}
@@ -35,21 +35,20 @@ C {lab_pin.sym} 460 -120 0 0 {name=p45 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 560 -120 2 1 {name=p46 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -260 -120 0 0 {name=p47 sig_type=std_logic lab=CLK
 }
-C {lab_pin.sym} 900 -160 0 0 {name=p49 sig_type=std_logic lab=Vcomp
+C {lab_pin.sym} 220 -120 0 0 {name=p49 sig_type=std_logic lab=Vcomp
 }
-C {gnd.sym} 580 -20 0 0 {name=l4 lab=0}
-C {lab_pin.sym} 580 -160 0 0 {name=p3 sig_type=std_logic lab=SAMP
+C {lab_pin.sym} -20 -120 0 0 {name=p3 sig_type=std_logic lab=SAMP
 }
-C {lab_pin.sym} 260 -220 0 1 {name=p1 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 260 -460 2 0 {name=p2 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 120 -360 0 0 {name=p4 sig_type=std_logic lab=CLK
+C {lab_pin.sym} -100 -220 0 1 {name=p1 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -100 -460 2 0 {name=p2 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -240 -360 0 0 {name=p4 sig_type=std_logic lab=CLK
 }
-C {lab_pin.sym} 120 -340 0 0 {name=p5 sig_type=std_logic lab=SAMP}
-C {lab_pin.sym} 120 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
+C {lab_pin.sym} -240 -340 0 0 {name=p5 sig_type=std_logic lab=SAMP}
+C {lab_pin.sym} -240 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
 }
-C {lab_pin.sym} 400 -340 0 1 {name=p8 sig_type=std_logic lab=B[9:0]
+C {lab_pin.sym} 40 -340 0 1 {name=p8 sig_type=std_logic lab=B[9:0]
 }
-C {devices/code_shown.sym} 350 -630 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} 340 -780 0 0 {name=NGSPICE only_toplevel=true
 value="
 * Input parameters
 .param VDD = 3.3
@@ -94,3 +93,5 @@ C {lab_pin.sym} 40 -400 0 1 {name=p9 sig_type=std_logic lab=SW08,SW07,SW0[6:0]
 C {lab_pin.sym} 40 -280 0 1 {name=p7 sig_type=std_logic lab=SW18,SW17,SW1[6:0]
 }
 C {designs/sar_adc/digital/logica_digital_TOP/xschem/logica_digital_TOP.sym} -80 -340 0 0 {name=x1}
+C {gnd.sym} -20 20 0 0 {name=l6 lab=0}
+C {vsource.sym} -20 -50 0 0 {name=V4 value="PULSE (0 3.3 0 1n 1n 50n 9999u)" savecurrent=false}
