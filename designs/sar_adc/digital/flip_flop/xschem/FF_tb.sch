@@ -22,7 +22,7 @@ N -850 170 -800 170 {lab=D}
 N -730 350 -730 390 {lab=RN}
 N -1540 230 -1540 270 {lab=0}
 N -1540 130 -1540 170 {lab=RN}
-C {lab_pin.sym} -550 170 0 1 {name=p35 sig_type=std_logic lab=Q}
+C {lab_pin.sym} -600 170 0 1 {name=p35 sig_type=std_logic lab=Q}
 C {lab_pin.sym} -850 170 0 0 {name=p36 sig_type=std_logic lab=D
 }
 C {vsource.sym} -1140 200 0 0 {name=V1 value="PULSE (0 3.3 25n 1n 1n 200n 400n)" savecurrent=false}
@@ -45,7 +45,7 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {devices/code_shown.sym} -510 40 0 0 {name=NGSPICE only_toplevel=true
+C {devices/code_shown.sym} -510 50 0 0 {name=NGSPICE only_toplevel=true
 value="
 .control
 save all
@@ -69,6 +69,7 @@ plot QN
 write FF_tb.raw
 .endc
 "}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}
 C {lab_pin.sym} -710 390 0 1 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -710 70 2 0 {name=p2 sig_type=std_logic lab=VDD}
 C {vsource.sym} -1540 200 0 0 {name=V4 value="PULSE (0 3.3 0 1n 1n 1000n 2000n)" savecurrent=false}
@@ -77,6 +78,6 @@ C {lab_pin.sym} -1540 130 0 0 {name=p3 sig_type=std_logic lab=RN
 }
 C {lab_pin.sym} -730 390 0 0 {name=p4 sig_type=std_logic lab=RN
 }
+C {noconn.sym} -550 170 2 0 {name=l7}
 C {lab_pin.sym} -830 270 0 0 {name=p6 sig_type=std_logic lab=CLK
 }
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} -710 230 0 0 {name=x1}

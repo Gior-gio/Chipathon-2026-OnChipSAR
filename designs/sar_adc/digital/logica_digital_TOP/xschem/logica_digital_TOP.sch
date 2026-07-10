@@ -29,31 +29,32 @@ N 750 -400 780 -400 {lab=SAMPN}
 N 770 -60 770 -20 {lab=SAMPN}
 N 860 -240 880 -240 {lab=BN[9:0]}
 N 860 -120 880 -120 {lab=B[9:0]}
-N 235 -400 235 -20 {lab=SAMPN}
-N 235 -20 770 -20 {lab=SAMPN}
 N 870 -670 920 -670 {lab=CK[9:0]}
 N 660 -140 700 -140 {lab=CK[9:0]}
 N 0 -400 60 -400 {lab=SAMP}
 N 140 -510 140 -470 {lab=VDD}
 N 140 -330 140 -300 {lab=VSS}
-N -420 -150 -360 -150 {lab=Vcomp}
-N -190 -150 -130 -150 {lab=VCB}
-N -290 -270 -290 -230 {lab=VDD}
-N -290 -70 -290 -40 {lab=VSS}
-N 1450 -790 1450 -750 {lab=VDD}
-N 1450 -590 1450 -560 {lab=VSS}
-N 1550 -670 1590 -670 {lab=SW0[8:0]}
-N 1330 -670 1380 -670 {lab=BN[9:1]}
-N 1450 -280 1450 -250 {lab=VSS}
-N 1550 -360 1590 -360 {lab=SW1[8:0]}
-N 1330 -360 1380 -360 {lab=CK[9:1]}
-N 1490 -790 1490 -730 {lab=BNN[9:1]}
-N 1450 -480 1450 -440 {lab=VDD}
-N 1490 -480 1490 -420 {lab=CKN[9:1]}
-N -250 -270 -250 -210 {lab=VCN}
+N -270 -610 -270 -570 {lab=VDD}
+N -270 -430 -270 -400 {lab=VSS}
+N -390 -500 -330 -500 {lab=Vcomp}
+N -190 -500 -130 -500 {lab=VCB}
+N 1350 -780 1350 -740 {lab=VDD}
+N 1350 -600 1350 -570 {lab=VSS}
+N 1430 -670 1470 -670 {lab=SW0[8:0]}
+N 1240 -670 1290 -670 {lab=BN[9:1]}
+N 1350 -470 1350 -430 {lab=VDD}
+N 1350 -290 1350 -260 {lab=VSS}
+N 1430 -360 1470 -360 {lab=SW1[8:0]}
+N 1240 -360 1290 -360 {lab=CK[9:1]}
 N 540 -330 770 -330 {lab=SET}
 N 260 -400 260 -250 {lab=SAMPN}
 N 260 -250 300 -250 {lab=SAMPN}
+N 240 -400 240 -20 {lab=SAMPN}
+N 240 -20 770 -20 {lab=SAMPN}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 340 -610 0 0 {name=xFFR[10]}
+C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 800 -610 0 0 {name=xFFR[9:0]}
+C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 610 -20 0 0 {name=xFFSET[9:0]}
+C {designs/sar_adc/digital/edge_detector/xschem/edge_detector.sym} 360 -30 0 0 {name=x3}
 C {iopin.sym} 80 -670 0 1 {name=p15 lab=VDD}
 C {iopin.sym} 80 -650 0 1 {name=p16 lab=VSS}
 C {iopin.sym} 80 -610 0 1 {name=p1 lab=SAMP}
@@ -72,35 +73,28 @@ C {lab_pin.sym} 470 -670 0 1 {name=p13 sig_type=std_logic lab=CK[10]}
 C {lab_pin.sym} 0 -400 2 1 {name=p20 sig_type=std_logic lab=SAMP}
 C {lab_pin.sym} 650 -570 2 1 {name=p21 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 650 -670 2 1 {name=p22 sig_type=std_logic lab=CK[10:1]}
-C {iopin.sym} -420 -150 0 1 {name=p19 lab=Vcomp}
-C {lab_pin.sym} 660 -240 2 1 {name=p24 sig_type=std_logic lab=VCB}
+C {iopin.sym} -390 -500 0 1 {name=p19 lab=Vcomp}
+C {lab_pin.sym} 660 -240 0 0 {name=p24 sig_type=std_logic lab=VCB}
 C {iopin.sym} 880 -120 2 1 {name=p26 lab=B[9:0]}
 C {lab_pin.sym} 920 -670 0 1 {name=p14 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 660 -140 2 1 {name=p17 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 540 -270 2 1 {name=p18 sig_type=std_logic lab=SET}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 160 -380 0 0 {name=xinv_samp}
 C {lab_pin.sym} 140 -490 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -310 0 1 {name=p27 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 770 -40 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
-C {lab_pin.sym} -130 -150 2 0 {name=p31 sig_type=std_logic lab=VCB}
-C {lab_pin.sym} -290 -270 0 0 {name=p32 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -290 -40 0 1 {name=p33 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} -250 -270 2 0 {name=p34 sig_type=std_logic lab=VCN}
-C {iopin.sym} 1590 -670 2 1 {name=p35 lab=SW0[8:0]}
-C {lab_pin.sym} 1450 -790 0 0 {name=p36 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1450 -560 0 1 {name=p39 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1490 -790 2 0 {name=p40 sig_type=std_logic lab=BNN[9:1]}
+C {lab_pin.sym} 240 -50 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
+C {lab_pin.sym} -270 -590 0 1 {name=p29 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -270 -410 0 1 {name=p30 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -130 -500 2 0 {name=p31 sig_type=std_logic lab=VCB}
+C {iopin.sym} 1470 -670 2 1 {name=p35 lab=SW0[8:0]}
+C {lab_pin.sym} 1350 -760 0 1 {name=p36 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1350 -580 0 1 {name=p37 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 880 -240 2 0 {name=p41 sig_type=std_logic lab=BN[9:0]}
-C {lab_pin.sym} 1330 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
-C {iopin.sym} 1590 -360 2 1 {name=p42 lab=SW1[8:0]}
-C {lab_pin.sym} 1450 -250 0 1 {name=p44 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1490 -480 2 0 {name=p47 sig_type=std_logic lab=CKN[9:1]}
-C {lab_pin.sym} 1330 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
-C {lab_pin.sym} 1450 -480 0 0 {name=p37 sig_type=std_logic lab=VDD}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW1.sym} 1450 -360 0 0 {name=x4}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_SW0.sym} 1460 -670 0 0 {name=x5}
-C {designs/sar_adc/digital/buffer_x1/xschem/buffer_VCB.sym} -290 -150 0 0 {name=x6}
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 340 -610 0 0 {name=xFFR[10]}
-C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 610 -20 0 0 {name=xFFSET1[9:0]}
-C {designs/sar_adc/digital/edge_inv_x1/xschem/inverter.sym} 160 -380 0 0 {name=x1}
-C {designs/sar_adc/digital/flip_flop/xschem/FF_D.sym} 800 -610 0 0 {name=xFFR[8:0]}
-C {designs/sar_adc/digital/edge_detector/xschem/edge_detector.sym} 360 -30 0 0 {name=x2}
+C {lab_pin.sym} 1240 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
+C {iopin.sym} 1470 -360 2 1 {name=p42 lab=SW1[8:0]}
+C {lab_pin.sym} 1350 -450 0 1 {name=p43 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1350 -270 0 1 {name=p44 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1240 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -670 0 0 {name=xbuffer1[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -360 0 0 {name=xbuffer2[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} -270 -500 0 0 {name=xbuffer}

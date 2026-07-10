@@ -87,9 +87,9 @@ C {lab_pin.sym} 810 -450 0 0 {name=p6 sig_type=std_logic lab=CLK
 }
 C {noconn.sym} 1100 -430 2 0 {name=l6}
 C {lab_pin.sym} 1050 -430 0 1 {name=p5 sig_type=std_logic lab=QN}
+C {designs/sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 750 -330 0 0 {name=x1}
 C {lab_pin.sym} 910 -650 0 0 {name=p7 sig_type=std_logic lab=SN}
 C {vsource.sym} -130 -520 0 0 {name=V6 value="PULSE (0 3.3 0 1n 1n 1000n 2000n)" savecurrent=false}
 C {gnd.sym} -130 -450 0 0 {name=l8 lab=0}
 C {lab_pin.sym} -130 -590 0 0 {name=p8 sig_type=std_logic lab=SN
 }
-C {sar_adc/digital/flip_flop_set/xschem/flip_flop_set.sym} 750 -330 0 0 {name=x1}

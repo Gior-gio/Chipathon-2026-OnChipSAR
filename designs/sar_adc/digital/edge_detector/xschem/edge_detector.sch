@@ -5,29 +5,28 @@ V {}
 S {}
 F {}
 E {}
-N 480 -400 480 -280 {lab=IN}
-N 660 -250 670 -260 {lab=IN}
-N 670 -260 690 -260 {lab=IN}
-N 690 -260 700 -250 {lab=IN}
-N 1180 -380 1240 -380 {lab=OUT}
-N 440 -400 520 -400 {lab=IN}
-N 840 -400 960 -400 {lab=#net1}
-N 480 -250 660 -250 {lab=IN}
-N 480 -280 480 -260 {lab=IN}
-N 900 -360 960 -360 {lab=IN}
-N 700 -250 900 -250 {lab=IN}
-N 480 -260 480 -250 {lab=IN}
-N 440 -200 680 -200 {lab=VSS}
-N 680 -320 680 -200 {lab=VSS}
-N 680 -200 1060 -200 {lab=VSS}
-N 440 -520 1060 -520 {lab=VDD}
-N 680 -520 680 -480 {lab=VDD}
-N 900 -360 900 -250 {lab=IN}
-N 1060 -300 1060 -200 {lab=VSS}
-N 1060 -520 1060 -460 {lab=VDD}
-C {iopin.sym} 440 -520 0 1 {name=p15 lab=VDD}
-C {iopin.sym} 440 -200 0 1 {name=p16 lab=VSS}
-C {ipin.sym} 440 -400 0 0 {name=p17 lab=IN}
-C {opin.sym} 1240 -380 0 0 {name=p18 lab=OUT}
-C {designs/sar_adc/digital/delay_cell/xschem/delay_cell_x1.sym} 740 -400 0 0 {name=x1}
-C {designs/sar_adc/digital/nand_edge/xschem/NAND.sym} 1060 -380 0 0 {name=x2}
+N 1520 -360 1520 -300 {lab=VDD}
+N 1130 -120 1140 -130 {lab=IN}
+N 1140 -130 1160 -130 {lab=IN}
+N 1160 -130 1170 -120 {lab=IN}
+N 1240 -120 1400 -120 {lab=IN}
+N 1400 -200 1400 -120 {lab=IN}
+N 1520 -140 1520 -80 {lab=VSS}
+N 1640 -220 1700 -220 {lab=OUT}
+N 920 -240 1000 -240 {lab=IN}
+N 1150 -170 1150 -80 {lab=VSS}
+N 1150 -360 1150 -310 {lab=VDD}
+N 960 -120 1000 -120 {lab=IN}
+N 960 -240 960 -120 {lab=IN}
+N 1150 -80 1520 -80 {lab=VSS}
+N 1150 -360 1520 -360 {lab=VDD}
+N 1000 -120 1130 -120 {lab=IN}
+N 1170 -120 1240 -120 {lab=IN}
+N 1300 -240 1420 -240 {lab=#net1}
+N 1400 -200 1420 -200 {lab=IN}
+C {iopin.sym} 1320 -360 1 1 {name=p15 lab=VDD}
+C {iopin.sym} 1350 -80 3 1 {name=p16 lab=VSS}
+C {ipin.sym} 920 -240 0 0 {name=p17 lab=IN}
+C {opin.sym} 1700 -220 0 0 {name=p18 lab=OUT}
+C {designs/sar_adc/digital/edge_detector/xschem/delay_cell.sym} 1150 -220 0 0 {name=x2}
+C {designs/sar_adc/digital/edge_detector/xschem/nand_edge.sym} 1390 -120 0 0 {name=x1}
