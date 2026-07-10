@@ -18,9 +18,9 @@ N 240 -190 240 -160 {lab=VDD}
 C {opin.sym} 280 -90 0 0 {name=p2 lab=out}
 C {symbols/nfet_03v3.sym} 220 -20 0 0 {name=M1
 L=0.28u
-W=1u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -32,9 +32,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 220 -160 0 0 {name=M2
 L=0.28u
-W=3u
+W=0.5u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
