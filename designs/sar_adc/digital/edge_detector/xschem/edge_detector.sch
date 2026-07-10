@@ -29,4 +29,4 @@ C {iopin.sym} 1350 -80 3 1 {name=p16 lab=VSS}
 C {ipin.sym} 920 -240 0 0 {name=p17 lab=IN}
 C {opin.sym} 1700 -220 0 0 {name=p18 lab=OUT}
 C {designs/sar_adc/digital/edge_detector/xschem/delay_cell.sym} 1150 -220 0 0 {name=x2}
-C {designs/sar_adc/digital/edge_detector/xschem/nand_edge.sym} 1390 -120 0 0 {name=x1}
+C {designs/sar_adc/digital/edge_detector/xschem/nand_edge.sym} 1390 -120 0 0 {name=xgate_nand}

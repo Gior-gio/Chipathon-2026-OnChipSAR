@@ -79,12 +79,11 @@ C {iopin.sym} 880 -120 2 1 {name=p26 lab=B[9:0]}
 C {lab_pin.sym} 920 -670 0 1 {name=p14 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 660 -140 2 1 {name=p17 sig_type=std_logic lab=CK[9:0]}
 C {lab_pin.sym} 540 -270 2 1 {name=p18 sig_type=std_logic lab=SET}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 160 -380 0 0 {name=xinv_samp}
 C {lab_pin.sym} 140 -490 0 1 {name=p23 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 140 -310 0 1 {name=p27 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 140 -300 0 1 {name=p27 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 240 -50 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
-C {lab_pin.sym} -270 -590 0 1 {name=p29 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -270 -410 0 1 {name=p30 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -270 -610 0 1 {name=p29 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} -270 -400 0 1 {name=p30 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -130 -500 2 0 {name=p31 sig_type=std_logic lab=VCB}
 C {iopin.sym} 1470 -670 2 1 {name=p35 lab=SW0[8:0]}
 C {lab_pin.sym} 1350 -760 0 1 {name=p36 sig_type=std_logic lab=VDD}
@@ -93,8 +92,9 @@ C {lab_pin.sym} 880 -240 2 0 {name=p41 sig_type=std_logic lab=BN[9:0]}
 C {lab_pin.sym} 1240 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
 C {iopin.sym} 1470 -360 2 1 {name=p42 lab=SW1[8:0]}
 C {lab_pin.sym} 1350 -450 0 1 {name=p43 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1350 -270 0 1 {name=p44 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1350 -260 0 1 {name=p44 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1240 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
-C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -670 0 0 {name=xbuffer1[8:0]}
-C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -360 0 0 {name=xbuffer2[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -670 0 0 {name=xbuffersw0[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -360 0 0 {name=xbuffersw1[8:0]}
 C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} -270 -500 0 0 {name=xbuffer}
+C {designs/sar_adc/digital/inverter_SAMPN/xschem/inverter_sampn.sym} 110 -400 0 0 {name=xINV_SAMP}

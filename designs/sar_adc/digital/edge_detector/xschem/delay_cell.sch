@@ -33,8 +33,8 @@ C {iopin.sym} -680 -400 0 1 {name=p15 lab=VDD}
 C {iopin.sym} -680 -120 0 1 {name=p16 lab=VSS}
 C {ipin.sym} -680 -280 0 0 {name=p17 lab=IN}
 C {iopin.sym} 660 -280 2 1 {name=p1 lab=OUT}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -520 -280 0 0 {name=x1}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -280 -280 0 0 {name=x2}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -40 -280 0 0 {name=x3}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 200 -280 0 0 {name=x4}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 440 -280 0 0 {name=x5}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -520 -280 0 0 {name=xINV1}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -280 -280 0 0 {name=xINV2}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -40 -280 0 0 {name=xINV3}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 200 -280 0 0 {name=xINV4}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 440 -280 0 0 {name=xINV5}

@@ -102,13 +102,11 @@ C {lab_pin.sym} 670 -650 1 0 {name=p41 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 1810 -380 3 1 {name=p43 sig_type=std_logic lab=CLKN
 }
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 670 -530 0 0 {name=x1}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1390 -550 0 0 {name=x2}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1810 -260 0 1 {name=x3}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1000 -260 0 1 {name=x4}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 930 -570 0 0 {name=x5}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1970 -590 0 0 {name=x6}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 230 -320 0 0 {name=x10}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 670 -530 0 0 {name=xslave1}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 1810 -260 0 1 {name=xslave2}
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 1000 -260 0 1 {name=xmaster}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 930 -570 0 0 {name=xgate_nand1}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 230 -320 0 0 {name=xINV_CLK}
 C {lab_pin.sym} 340 -340 0 1 {name=p7 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 210 -440 2 0 {name=p14 sig_type=std_logic lab=VDD}
@@ -121,10 +119,8 @@ C {iopin.sym} 1070 -830 0 0 {name=p6 lab=Q}
 C {iopin.sym} 1070 -800 0 0 {name=p35 lab=QN}
 C {lab_pin.sym} 2150 -730 0 1 {name=p11 sig_type=std_logic lab=Q}
 C {lab_pin.sym} 2430 -590 2 0 {name=p52 sig_type=std_logic lab=QN}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1170 -590 0 0 {name=x8}
 C {lab_pin.sym} 1170 -720 0 0 {name=p20 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 1170 -450 2 1 {name=p28 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1670 -590 0 0 {name=x7}
 C {lab_pin.sym} 1670 -480 2 1 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1670 -710 0 0 {name=p30 sig_type=std_logic lab=VDD}
 C {iopin.sym} 900 -810 0 0 {name=p50 lab=SN}
@@ -142,3 +138,7 @@ C {lab_pin.sym} 1000 -200 0 1 {name=p8 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 1390 -490 0 1 {name=p10 sig_type=std_logic lab=CLKN
 }
+C {designs/sar_adc/digital/TG/xschem/TG.sym} 1390 -550 0 0 {name=xmaster1}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1170 -590 0 0 {name=xgate_nand2}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1670 -590 0 0 {name=xgate_nand3}
+C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1970 -590 0 0 {name=xgate_nand4}

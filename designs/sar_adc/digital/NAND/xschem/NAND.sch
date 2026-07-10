@@ -45,7 +45,7 @@ C {iopin.sym} -340 -260 0 0 {name=p5 lab=out}
 C {iopin.sym} -180 -180 3 0 {name=p16 lab=VDD}
 C {lab_pin.sym} 650 0 0 1 {name=p17 sig_type=std_logic lab=out}
 C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 340 20 0 0 {name=xINVA1}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 540 20 0 0 {name=xINVB1[2:0]}
+C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 540 20 0 0 {name=xINVB1}
 C {lab_pin.sym} 320 -110 0 1 {name=p18 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 520 -100 0 1 {name=p19 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 320 130 0 1 {name=p20 sig_type=std_logic lab=VSS}
