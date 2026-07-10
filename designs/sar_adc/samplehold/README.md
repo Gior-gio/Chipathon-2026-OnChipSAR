@@ -1,10 +1,4 @@
-
 # Sample & Hold (S/H) – GF180MCU
-
-
-
-
-## Overview
 
 This repository contains the design, layout, and verification files for a bootstrapped Sample & Hold (S/H) circuit implemented using the GlobalFoundries GF180MCU Process Design Kit (PDK).
 
@@ -12,16 +6,9 @@ The Sample & Hold serves as the front-end sampling stage of a Successive Approxi
 
 ---
 
-## Features
-
-
-- Layout design (in progress)
-
----
-
 ## Verification Status
 
-The design has successfully completed the following verification stages:
+The design has successfully completed the following verification stages.
 
 | Verification | Status |
 |--------------|:------:|
@@ -29,20 +16,22 @@ The design has successfully completed the following verification stages:
 | Functional Transient Simulation | ✅ |
 | Process, Voltage and Temperature (PVT) Analysis | ✅ |
 | Monte Carlo Mismatch Analysis | ✅ |
-| DRC |Planned|
-| LVS |Planned|
+| Layout |  In Progress |
+| DRC |  Planned |
+| LVS |  Planned |
 
 ---
 
-## Performance Summary
+## Simulation Results
 
 The Sample & Hold was evaluated under nominal operating conditions.
+
 | Parameter | Low-Frequency Test | Near-Nyquist Test |
 |-----------|-------------------:|------------------:|
 | Technology | GF180MCU | GF180MCU |
 | Supply Voltage | 3.3 V | 3.3 V |
 | Sampling Frequency | 5 MS/s | 5 MS/s |
-| Input Frequency | 502.9296 kHz | 2.4853 MHz |
+| Input Frequency | 502.93 kHz | 2.485 MHz |
 | Output Load | 0.25 pF | 0.25 pF |
 | SNDR | 81.73 dB | 73.06 dB |
 | SFDR | 88.39 dB | 73.60 dB |
@@ -52,60 +41,55 @@ The Sample & Hold was evaluated under nominal operating conditions.
 > The reported results demonstrate the dynamic performance of the Sample & Hold under both low-frequency and near-Nyquist input conditions.
 
 ---
-## Repository Structure
+
+## Directory Structure
 
 ```text
 samplehold/
 ├── bootstrapped/
-│   ├── cace/                   # Circuit characterization files
-│   ├── gds/                    
+│   ├── cace/
+│   ├── gds/
 │   └── xschem/
-│       ├── bootstrapped.sch    # Bootstrapped Sample & Hold schematic
-│       ├── bootstrapped.sym    # Xschem symbol
-│       ├── tb_bootstrapped.sch # Transient simulation testbench
-│       └── tb_bootstrapped.ipynb # FFT and data analysis
+│       ├── bootstrapped.sch
+│       ├── bootstrapped.sym
+│       ├── tb_bootstrapped.sch
+│       └── tb_bootstrapped.ipynb
 │
 ├── gate_inv_sh/
 │   └── xschem/
-│       ├── gate_inv_sh.sch     # Gate driver inverter schematic
-│       └── gate_inv_sh.sym     # Xschem symbol
+│       ├── gate_inv_sh.sch
+│       └── gate_inv_sh.sym
 │
-├── gate_inv_L0d28/             
+├── gate_inv_L0d28/
 │
 └── tb_resistencia/
     └── xschem/
-        └── tb_resistencia.sch  # Switch ON-resistance characterization
+        └── tb_resistencia.sch
 ```
-## Directory Description
 
+---
 
+## Directory Details
 
 ### `bootstrapped/`
 
-Contains the complete schematic implementation of the bootstrapped Sample & Hold switch, including the Xschem schematic and symbol, circuit characterization files, transient simulation testbench, and generated simulation outputs.
+Contains the complete schematic implementation of the bootstrapped Sample & Hold switch, including the Xschem schematic and symbol, characterization files, transient simulation testbench, and simulation outputs.
 
 ### `gate_inv_sh/`
 
-Contains the schematic and Xschem symbol of the inverter used to drive the gate of the bootstrapped switch.
+Contains the schematic and Xschem symbol of the inverter used to drive the bootstrapped switch.
 
+### `gate_inv_L0d28/`
 
+Reserved for the future layout implementation of the gate driver inverter.
 
 ### `tb_resistencia/`
 
 Contains the testbench used to characterize the switch ON resistance (Ron) under different operating conditions.
 
-## Required Tools
-
-- GF180MCU PDK
-- Xschem
-- NGSPICE
-- KLayout
-- Python 3
-- Jupyter Notebook
-
 ---
 
-## Running Simulations
+## How to Simulate
 
 Open the desired schematic using Xschem:
 
@@ -119,16 +103,27 @@ or
 xschem tb_resistencia.sch
 ```
 
+Open the Jupyter Notebook for post-processing and analysis
+
+```bash
+
+jupyter notebook tb_bootstrapped.ipynb
+
+```
+
 Generate the netlist and execute the simulation using NGSPICE.
 
----
-
-## Applications
-
-This Sample & Hold circuit is intended for integration into the front-end of a high-performance SAR ADC implemented in the GF180MCU technology.
+The generated simulation data can be post-processed using the provided Jupyter Notebook for FFT analysis and performance evaluation.
 
 ---
 
-## Authors
+## Required Tools
 
-OnCHIP Integrated Systems Research Group-Universidad Industrial de Santander (UIS)
+- GF180MCU PDK
+- Xschem
+- NGSPICE
+- KLayout
+- Python 3
+- Jupyter Notebook
+
+---
