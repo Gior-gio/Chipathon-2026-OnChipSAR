@@ -34,18 +34,18 @@ N 660 -140 700 -140 {lab=CK[9:0]}
 N 0 -400 60 -400 {lab=SAMP}
 N 140 -510 140 -470 {lab=VDD}
 N 140 -330 140 -300 {lab=VSS}
-N -270 -610 -270 -570 {lab=VDD}
-N -270 -430 -270 -400 {lab=VSS}
-N -390 -500 -330 -500 {lab=Vcomp}
-N -190 -500 -130 -500 {lab=VCB}
-N 1350 -780 1350 -740 {lab=VDD}
-N 1350 -600 1350 -570 {lab=VSS}
-N 1430 -670 1470 -670 {lab=SW0[8:0]}
-N 1240 -670 1290 -670 {lab=BN[9:1]}
-N 1350 -470 1350 -430 {lab=VDD}
-N 1350 -290 1350 -260 {lab=VSS}
-N 1430 -360 1470 -360 {lab=SW1[8:0]}
-N 1240 -360 1290 -360 {lab=CK[9:1]}
+N 1260 -260 1260 -220 {lab=VDD}
+N 1260 -80 1260 -50 {lab=VSS}
+N 1140 -150 1200 -150 {lab=Vcomp}
+N 1340 -150 1400 -150 {lab=VCB}
+N 1260 -780 1260 -740 {lab=VDD}
+N 1260 -600 1260 -570 {lab=VSS}
+N 1340 -670 1380 -670 {lab=SW0[8:0]}
+N 1150 -670 1200 -670 {lab=BN[9:1]}
+N 1260 -530 1260 -490 {lab=VDD}
+N 1260 -350 1260 -320 {lab=VSS}
+N 1340 -420 1380 -420 {lab=SW1[8:0]}
+N 1150 -420 1200 -420 {lab=CK[9:1]}
 N 540 -330 770 -330 {lab=SET}
 N 260 -400 260 -250 {lab=SAMPN}
 N 260 -250 300 -250 {lab=SAMPN}
@@ -73,7 +73,7 @@ C {lab_pin.sym} 470 -670 0 1 {name=p13 sig_type=std_logic lab=CK[10]}
 C {lab_pin.sym} 0 -400 2 1 {name=p20 sig_type=std_logic lab=SAMP}
 C {lab_pin.sym} 650 -570 2 1 {name=p21 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 650 -670 2 1 {name=p22 sig_type=std_logic lab=CK[10:1]}
-C {iopin.sym} -390 -500 0 1 {name=p19 lab=Vcomp}
+C {iopin.sym} 1140 -150 0 1 {name=p19 lab=Vcomp}
 C {lab_pin.sym} 660 -240 0 0 {name=p24 sig_type=std_logic lab=VCB}
 C {iopin.sym} 880 -120 2 1 {name=p26 lab=B[9:0]}
 C {lab_pin.sym} 920 -670 0 1 {name=p14 sig_type=std_logic lab=CK[9:0]}
@@ -82,19 +82,19 @@ C {lab_pin.sym} 540 -270 2 1 {name=p18 sig_type=std_logic lab=SET}
 C {lab_pin.sym} 140 -490 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 140 -300 0 1 {name=p27 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 240 -50 2 1 {name=p28 sig_type=std_logic lab=SAMPN}
-C {lab_pin.sym} -270 -610 0 1 {name=p29 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} -270 -400 0 1 {name=p30 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} -130 -500 2 0 {name=p31 sig_type=std_logic lab=VCB}
-C {iopin.sym} 1470 -670 2 1 {name=p35 lab=SW0[8:0]}
-C {lab_pin.sym} 1350 -760 0 1 {name=p36 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1350 -580 0 1 {name=p37 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1260 -260 0 1 {name=p29 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1260 -50 0 1 {name=p30 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1400 -150 2 0 {name=p31 sig_type=std_logic lab=VCB}
+C {iopin.sym} 1380 -670 2 1 {name=p35 lab=SW0[8:0]}
+C {lab_pin.sym} 1260 -760 0 1 {name=p36 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1260 -580 0 1 {name=p37 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 880 -240 2 0 {name=p41 sig_type=std_logic lab=BN[9:0]}
-C {lab_pin.sym} 1240 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
-C {iopin.sym} 1470 -360 2 1 {name=p42 lab=SW1[8:0]}
-C {lab_pin.sym} 1350 -450 0 1 {name=p43 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 1350 -260 0 1 {name=p44 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1240 -360 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
-C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -670 0 0 {name=xbuffersw0[8:0]}
-C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1350 -360 0 0 {name=xbuffersw1[8:0]}
-C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} -270 -500 0 0 {name=xbuffer}
-C {designs/sar_adc/digital/inverter_SAMPN/xschem/inverter_sampn.sym} 110 -400 0 0 {name=xINV_SAMP}
+C {lab_pin.sym} 1150 -670 2 1 {name=p25 sig_type=std_logic lab=BN[9:1]}
+C {iopin.sym} 1380 -420 2 1 {name=p42 lab=SW1[8:0]}
+C {lab_pin.sym} 1260 -510 0 1 {name=p43 sig_type=std_logic lab=VDD}
+C {lab_pin.sym} 1260 -320 0 1 {name=p44 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1150 -420 2 1 {name=p48 sig_type=std_logic lab=CK[9:1]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1260 -670 0 0 {name=xbuffersw0[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1260 -420 0 0 {name=xbuffersw1[8:0]}
+C {designs/sar_adc/digital/gate_buf_x1/xschem/gate_buf_x1.sym} 1260 -150 0 0 {name=xbuffer}
+C {designs/sar_adc/digital/gate_inv_x2/xschem/gate_inv_x2.sym} 110 -400 0 0 {name=xINV_SAMP}

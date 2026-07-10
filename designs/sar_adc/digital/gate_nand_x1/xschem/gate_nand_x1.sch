@@ -7,20 +7,14 @@ F {}
 E {}
 N -160 50 -150 50 {lab=A}
 N -180 -180 -180 -160 {lab=VDD}
-N 160 0 240 0 {lab=#net1}
-N 400 0 440 0 {lab=#net2}
-N 600 0 650 0 {lab=out}
-N 320 -110 320 -70 {lab=VDD}
-N 520 -100 520 -70 {lab=VDD}
-N 320 70 320 130 {lab=VSS}
-N 520 70 520 110 {lab=VSS}
-N -180 -100 -180 0 {lab=#net1}
-N -180 0 40 0 {lab=#net1}
-N 40 -100 40 0 {lab=#net1}
-N -70 0 -70 20 {lab=#net1}
+N 160 0 240 0 {lab=out}
+N -180 -100 -180 0 {lab=out}
+N -180 0 40 0 {lab=out}
+N 40 -100 40 0 {lab=out}
+N -70 0 -70 20 {lab=out}
 N -150 50 -110 50 {lab=A}
 N -160 50 -150 50 {lab=A}
-N -70 80 -70 110 {lab=#net3}
+N -70 80 -70 110 {lab=#net1}
 N -140 140 -110 140 {lab=B}
 N -70 170 -70 200 {lab=VSS}
 N -70 140 -50 140 {lab=VSS}
@@ -32,7 +26,7 @@ N 40 -180 40 -160 {lab=VDD}
 N -180 -180 -180 -160 {lab=VDD}
 N -240 -130 -220 -130 {lab=A}
 N 80 -130 100 -130 {lab=B}
-N 40 0 160 0 {lab=#net1}
+N 40 0 160 0 {lab=out}
 N -180 -130 -130 -130 {lab=VDD}
 N -130 -170 -130 -130 {lab=VDD}
 N -180 -170 -130 -170 {lab=VDD}
@@ -43,13 +37,7 @@ C {iopin.sym} -340 -230 0 0 {name=p3 lab=A
 C {iopin.sym} -340 -190 0 0 {name=p4 lab=B}
 C {iopin.sym} -340 -260 0 0 {name=p5 lab=out}
 C {iopin.sym} -180 -180 3 0 {name=p16 lab=VDD}
-C {lab_pin.sym} 650 0 0 1 {name=p17 sig_type=std_logic lab=out}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 340 20 0 0 {name=xINVA1}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 540 20 0 0 {name=xINVB1}
-C {lab_pin.sym} 320 -110 0 1 {name=p18 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 520 -100 0 1 {name=p19 sig_type=std_logic lab=VDD}
-C {lab_pin.sym} 320 130 0 1 {name=p20 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 520 110 0 1 {name=p22 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 240 0 0 1 {name=p17 sig_type=std_logic lab=out}
 C {symbols/pfet_03v3.sym} -200 -130 0 0 {name=M5
 L=0.28u
 W=0.5u

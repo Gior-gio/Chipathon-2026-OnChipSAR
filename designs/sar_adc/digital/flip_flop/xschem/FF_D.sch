@@ -90,15 +90,10 @@ C {lab_pin.sym} 0 80 1 1 {name=p37 sig_type=std_logic lab=CLK
 }
 C {lab_pin.sym} 0 -100 1 0 {name=p41 sig_type=std_logic lab=CLKN
 }
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 0 20 0 0 {name=xslave1}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 720 0 0 0 {name=xmaster2}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 1140 290 0 1 {name=xslave2}
-C {designs/sar_adc/digital/TG/xschem/TG.sym} 330 290 0 1 {name=xmaster1}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 260 -20 0 0 {name=xgate_nand1}
-C {designs/sar_adc/digital/NAND/xschem/NAND.sym} 1020 -40 0 0 {name=xgate_nand2}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 520 0 0 0 {name=xgate_inverter1}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} 1360 -20 0 0 {name=xgate_inv2}
-C {designs/sar_adc/digital/inverter/xschem/inverter.sym} -480 20 0 0 {name=xINV_CLK}
+C {designs/sar_adc/digital/gate_tg_x1/xschem/gate_tg_x1.sym} 0 20 0 0 {name=xslave1}
+C {designs/sar_adc/digital/gate_tg_x1/xschem/gate_tg_x1.sym} 720 0 0 0 {name=xmaster2}
+C {designs/sar_adc/digital/gate_tg_x1/xschem/gate_tg_x1.sym} 1140 290 0 1 {name=xslave2}
+C {designs/sar_adc/digital/gate_tg_x1/xschem/gate_tg_x1.sym} 330 290 0 1 {name=xmaster1}
 C {lab_pin.sym} -370 0 0 1 {name=p7 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} -500 -100 2 0 {name=p14 sig_type=std_logic lab=VDD}
@@ -121,3 +116,8 @@ C {lab_pin.sym} 1140 170 2 1 {name=p12 sig_type=std_logic lab=CLKN
 }
 C {lab_pin.sym} 1140 350 2 1 {name=p38 sig_type=std_logic lab=CLK
 }
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} -480 20 0 0 {name=xINV_CLK}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 520 0 0 0 {name=xgate_inv1}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 1360 -20 0 0 {name=xgate_inv2}
+C {designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sym} 260 -20 0 0 {name=xgate_nand1}
+C {designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sym} 1020 -40 0 0 {name=xgate_nand2}
