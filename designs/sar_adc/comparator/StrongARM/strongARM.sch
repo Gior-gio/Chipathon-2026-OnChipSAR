@@ -85,14 +85,9 @@ N 1080 -180 1100 -180 {lab=VDD}
 N 1080 -240 1080 -180 {lab=VDD}
 N 1220 -180 1240 -180 {lab=VDD}
 N 1220 -240 1220 -180 {lab=VDD}
-N 880 150 940 150 {lab=VSS}
-N 940 140 940 150 {lab=VSS}
-N 940 50 940 80 {lab=AP}
 N 1040 -110 1040 -80 {lab=#net4}
-N 610 140 610 150 {lab=VSS}
-N 610 50 610 80 {lab=AN}
 N 1060 -80 1100 -80 {lab=#net4}
-N 1180 -80 1210 -80 {lab=#net6}
+N 1180 -80 1210 -80 {lab=OP}
 N 1140 -60 1140 -40 {lab=VSS}
 N 1140 -40 1160 -40 {lab=VSS}
 N 1140 -120 1140 -100 {lab=VDD}
@@ -105,16 +100,23 @@ N 500 -80 540 -80 {lab=#net3}
 N 390 -80 420 -80 {lab=ON}
 N 40 -140 40 -120 {lab=CLKK}
 N 40 -120 60 -120 {lab=CLKK}
-N -70 -150 -70 -140 {lab=VDD}
-N -70 -170 -70 -150 {lab=VDD}
-N -70 -100 -70 -70 {lab=VSS}
-N -130 -120 -110 -120 {lab=CLK}
+N -260 -150 -260 -140 {lab=VDD}
+N -260 -170 -260 -150 {lab=VDD}
+N -260 -100 -260 -70 {lab=VSS}
+N -320 -120 -300 -120 {lab=CLK}
 N -30 -120 40 -120 {lab=CLKK}
+N -150 -140 -150 -120 {lab=CLKN}
+N -220 -120 -150 -120 {lab=CLKN}
+N -150 -120 -110 -120 {lab=CLKN}
+N -260 -170 -70 -170 {lab=VDD}
+N -70 -170 -70 -140 {lab=VDD}
+N -70 -100 -70 -70 {lab=VSS}
+N -260 -70 -70 -70 {lab=VSS}
 C {symbols/pfet_03v3.sym} 80 -120 0 0 {name=q
-L=0.28u
-W=10u
+L=0.5u
+W=2u
 nf=1
-m=1
+m=3
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -125,10 +127,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 170 100 0 0 {name=M2
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -140,10 +142,10 @@ spiceprefix=X
 }
 C {iopin.sym} 410 170 0 0 {name=p1 lab=VSS}
 C {symbols/pfet_03v3.sym} -30 -10 0 0 {name=M3
-L=2u
-W=8u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -154,10 +156,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 210 -10 0 1 {name=M4
-L=2u
-W=8u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -168,10 +170,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 10 100 0 1 {name=M5
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -182,10 +184,10 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 690 -180 0 1 {name=M6
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -196,10 +198,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 860 -180 0 0 {name=M7
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -210,10 +212,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 690 -70 0 1 {name=M8
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -224,10 +226,10 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 860 -70 0 0 {name=M9
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -238,10 +240,10 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 650 50 0 0 {name=M10
-L=0.28u
-W=1u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -252,10 +254,10 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/nfet_03v3.sym} 900 50 0 1 {name=M11
-L=0.28u
-W=1u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=4
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -266,10 +268,10 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 440 -180 0 0 {name=M12
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -280,10 +282,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1120 -180 0 1 {name=M13
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -294,10 +296,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 310 -180 0 0 {name=M14
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -308,10 +310,10 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1260 -180 0 1 {name=M15
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
-m=1
+m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -347,21 +349,11 @@ C {lab_pin.sym} 1300 -180 2 0 {name=p15 sig_type=std_logic lab=AP
 C {lab_pin.sym} 950 50 2 0 {name=p16 sig_type=std_logic lab=AP
 }
 C {iopin.sym} 1210 -80 0 0 {name=p19 lab=OP}
-C {iopin.sym} -130 -120 2 0 {name=p2 lab=CLK}
+C {iopin.sym} -320 -120 2 0 {name=p2 lab=CLK}
 C {lab_pin.sym} 80 100 0 0 {name=p17 sig_type=std_logic lab=CLKK
 }
-C {capa.sym} 610 110 0 0 {name=C1
-m=1
-value=10f
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 940 110 0 0 {name=C2
-m=1
-value=10f
-footprint=1206
-device="ceramic capacitor"}
-C {Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/Inverter/inv.sym} 1220 20 0 0 {name=x1}
-C {Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/Inverter/inv.sym} 380 20 0 1 {name=x2}
+C {designs/sar_adc/comparator/Inverter/inv.sym} 1220 20 0 0 {name=x1}
+C {designs/sar_adc/comparator/Inverter/inv.sym} 380 20 0 1 {name=x2}
 C {lab_pin.sym} 430 -110 0 0 {name=p18 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 1160 -120 0 1 {name=p21 sig_type=std_logic lab=VDD
@@ -373,8 +365,11 @@ C {lab_pin.sym} 1160 -40 2 0 {name=p23 sig_type=std_logic lab=VSS
 C {iopin.sym} 390 -80 0 1 {name=p20 lab=ON}
 C {lab_pin.sym} 40 -140 0 0 {name=p24 sig_type=std_logic lab=CLKK
 }
-C {Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/Inverter/inv.sym} 10 -20 0 0 {name=x5}
-C {lab_pin.sym} -70 -170 0 1 {name=p25 sig_type=std_logic lab=VDD
+C {designs/sar_adc/comparator/Inverter/inv.sym} -180 -20 0 0 {name=x5}
+C {lab_pin.sym} -260 -170 0 1 {name=p25 sig_type=std_logic lab=VDD
 }
-C {lab_pin.sym} -70 -70 0 0 {name=p26 sig_type=std_logic lab=VSS
+C {lab_pin.sym} -260 -70 0 0 {name=p26 sig_type=std_logic lab=VSS
+}
+C {designs/sar_adc/comparator/Inverter/inv.sym} 10 -20 0 0 {name=x3}
+C {lab_pin.sym} -150 -140 0 0 {name=p27 sig_type=std_logic lab=CLKN
 }
