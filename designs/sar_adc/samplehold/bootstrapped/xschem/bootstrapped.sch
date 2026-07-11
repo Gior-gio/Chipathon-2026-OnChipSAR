@@ -231,7 +231,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {designs/sar_adc/samplehold/gate_inv_sh/xschem/gate_inv_sh.sym} 160 -470 0 0 {name=x1}
 C {lab_wire.sym} 300 -180 0 0 {name=p28 sig_type=std_logic lab=CLKN
 }
 C {symbols/pfet_03v3.sym} 540 -520 0 0 {name=BS_SW_P2
@@ -254,3 +253,4 @@ L=10e-6
 model=cap_mim_2f0fF
 spiceprefix=X
 m=1}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 180 -450 0 0 {name=X1}
