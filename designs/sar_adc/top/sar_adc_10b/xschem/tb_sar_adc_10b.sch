@@ -87,7 +87,7 @@ let VRP = 2.1
 let VRN = 1.2
 let VDD = 3.3
 
-let tstep = 1/(Fs*12*100)
+let tstep = 1/(Fs*12*240)
 let tstop = (Ns + Nspare)/Fs
 
 * Save main signals
