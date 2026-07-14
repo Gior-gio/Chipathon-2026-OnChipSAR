@@ -1,6 +1,6 @@
 # SAR ADC Design Organization
 
-The SAR ADC design is divided into four main blocks:
+The SAR ADC design is divided into four main blocks and the top integration:
 
 ```text
 sar_adc/
