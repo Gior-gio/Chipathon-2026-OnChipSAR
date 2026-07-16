@@ -27,8 +27,8 @@ N 720 -360 720 -330 {lab=vss}
 C {title.sym} 210 -180 0 0 {name=l1 author="Maria Herrera"
 }
 C {symbols/nfet_03v3.sym} 700 -390 0 0 {name=M1
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -41,8 +41,8 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 700 -660 0 0 {name=M2
-L=0.28u
-W=0.22u
+L=0.5u
+W=0.5u
 nf=1
 m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
