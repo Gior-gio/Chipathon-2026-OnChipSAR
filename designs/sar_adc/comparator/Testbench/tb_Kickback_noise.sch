@@ -29,10 +29,10 @@ N 990 -650 990 -610 {lab=On}
 N 950 -710 990 -710 {lab=Op}
 N 990 -750 990 -710 {lab=Op}
 N 990 -750 1040 -750 {lab=Op}
-N 1210 -530 1230 -530 {lab=#net1}
-N 630 -480 630 -470 {lab=#net2}
+N 1210 -530 1230 -530 {lab=ONN}
+N 630 -480 630 -470 {lab=#net1}
 N 630 -550 630 -540 {lab=VIN}
-N 540 -650 540 -630 {lab=#net3}
+N 540 -650 540 -630 {lab=#net2}
 N 540 -720 540 -710 {lab=VIP}
 N 1120 -840 1120 -820 {lab=VDD}
 N 1200 -750 1220 -750 {lab=OPP}
@@ -43,7 +43,7 @@ N 1130 -610 1130 -600 {lab=VDD}
 N 1130 -460 1130 -450 {lab=GND}
 N 1220 -750 1250 -750 {lab=OPP}
 N 1250 -750 1280 -750 {lab=OPP}
-N 1230 -530 1280 -530 {lab=#net1}
+N 1230 -530 1280 -530 {lab=ONN}
 C {vsource.sym} 880 -810 0 0 {name=V1 value=\{VDD\} savecurrent=false}
 C {gnd.sym} 820 -590 0 0 {name=l1 lab=GND}
 C {gnd.sym} 630 -390 0 0 {name=l2 lab=GND}
@@ -129,8 +129,8 @@ value=\{res\}
 footprint=1206
 device=resistor
 m=1}
-C {designs/sar_adc/comparator/xschem/StrongARM/strongARM.sym} 900 -680 0 0 {name=x1}
 C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 1140 -730 0 0 {name=x2}
 C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 1150 -510 0 0 {name=x3}
 C {gnd.sym} 1130 -450 0 0 {name=l8 lab=GND}
 C {noconn.sym} 1280 -530 0 1 {name=l5}
+C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 900 -680 0 0 {name=x1}

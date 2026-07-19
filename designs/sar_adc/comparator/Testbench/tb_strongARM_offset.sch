@@ -118,7 +118,6 @@ C {lab_pin.sym} 820 -500 0 1 {name=p8 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 840 -270 0 1 {name=p9 sig_type=std_logic lab=VDD}
 C {vsource.sym} 770 -500 1 0 {name=Vn1 value=0 savecurrent=false}
 C {vsource.sym} 790 -270 1 0 {name=Vn2 value=0 savecurrent=false}
-C {designs/sar_adc/comparator/xschem/StrongARM/strongARM.sym} 440 -300 0 0 {name=x1}
 C {noconn.sym} 870 -410 0 1 {name=l9}
 C {gnd.sym} 710 -320 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} 820 -410 0 1 {name=p14 sig_type=std_logic lab=OPP}
@@ -127,3 +126,4 @@ C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 730 -390 0 0 {nam
 C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 740 -170 0 0 {name=x3}
 C {gnd.sym} 720 -110 0 0 {name=l11 lab=GND}
 C {noconn.sym} 870 -190 0 1 {name=l12}
+C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 440 -300 0 0 {name=x1}

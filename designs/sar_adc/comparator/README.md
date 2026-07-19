@@ -39,39 +39,27 @@ The files are organized into the following subdirectories:
 
 ```text
 comparator/
-├── gds/
-│   └── strongARM.gds       # Layout GDS file
-└── xschem/
-    ├── README.md           # This documentation file
-    ├── Inverter/           # Helper inverter cell
-    │   ├── inv.sch         # Inverter schematic (Xschem)
-    │   └── inv.sym         # Inverter symbol (Xschem)
-    ├── StrongARM/          # Dynamic latch design
-    │   ├── strongARM.sch   # StrongARM Latch schematic (Xschem)
-    │   ├── strongARM.sym   # StrongARM Latch symbol (Xschem)
-    │   └── simulation/
-    │       └── strongARM.spice # Netlist for StrongARM Latch
-    └── Testbench/          # Simulation and characterization environment
-        ├── tb_strongARM_offset.sch  # Schematic testbench for offset simulation
-        ├── tb_Kickback_noise.sch    # Schematic testbench for kickback noise simulation
-        ├── comparador_characterizer.ipynb   # Jupyter Notebook for transient analysis & characterization
-        ├── comparador_kickback_pvt_montecarlo.ipynb # Jupyter Notebook for kickback noise PVT & MC simulations
-        ├── comparador_pvt_montecarlo_optimizado.ipynb # Jupyter Notebook for offset/delay PVT & MC simulations
-        ├── tb_Kickback_noise.ipynb  # Jupyter Notebook for kickback noise analysis
-        └── simulation/
-            └── tb_strongARM_offset.spice # Netlist for offset testbench
+├── README.md               # This documentation file
+├── StrongARM/              # Dynamic latch design and layout files
+│   ├── gds/
+│   │   └── strongARM.gds   # Layout GDS file
+│   └── xschem/
+│       ├── strongARM.sch   # StrongARM Latch schematic (Xschem)
+│       └── strongARM.sym   # StrongARM Latch symbol (Xschem)
+└── Testbench/              # Simulation and characterization environment
+    ├── tb_strongARM_offset.sch  # Schematic testbench for offset simulation
+    ├── tb_Kickback_noise.sch    # Schematic testbench for kickback noise simulation
+    ├── comparador_characterizer.ipynb   # Jupyter Notebook for transient analysis & characterization
+    ├── comparador_pvt_montecarlo_optimizado.ipynb # Jupyter Notebook for offset/delay PVT & MC simulations
+    └── tb_Kickback_noise.ipynb  # Jupyter Notebook for kickback noise analysis
 ```
 
 ---
 
 ## Directory Details
 
-### `Inverter/`
-* Contains `inv.sch` and `inv.sym`.
-* This is a standard CMOS inverter cell used as a building block for output buffering or signal conditioning within the comparator design.
-
 ### `StrongARM/`
-* Contains `strongARM.sch` and `strongARM.sym`.
+* Contains layout GDS files under `gds/` and schematic/symbols under `xschem/`.
 * The **StrongARM Latch** is the core dynamic regenerative comparator. It operates in two phases:
   * **Reset Phase (Clock is Low):** The outputs are precharged to $V_{DD}$ and no static current flows.
   * **Evaluation Phase (Clock is High):** The input differential voltage triggers a regenerative latching action, pulling one of the outputs to ground and pushing the other to $V_{DD}$.
@@ -83,7 +71,6 @@ Provides a comprehensive suite to verify the performance of the comparator under
 * **`tb_Kickback_noise.sch`**: The schematic testbench in Xschem to analyze and measure the kickback noise of the comparator.
 * **`comparador_characterizer.ipynb`**: A Jupyter Notebook designed to automate transient simulations and extract parameters like delay and power consumption.
 * **`comparador_pvt_montecarlo_optimizado.ipynb`**: A Jupyter Notebook that automates simulations across Process, Voltage, and Temperature (PVT) corners and executes Monte Carlo analyses to evaluate delay, power, and dynamic offset.
-* **`comparador_kickback_pvt_montecarlo.ipynb`**: A Jupyter Notebook to automate simulations across PVT corners and Monte Carlo analyses to evaluate kickback noise.
 * **`tb_Kickback_noise.ipynb`**: A Jupyter Notebook for kickback noise post-processing.
 
 ---
@@ -108,5 +95,5 @@ Make sure you have the following tools installed and configured in your environm
    ```bash
    jupyter lab
    ```
-2. Open any of the Jupyter Notebooks under `Testbench/` (e.g. `comparador_characterizer.ipynb`, `comparador_pvt_montecarlo_optimizado.ipynb`, or `comparador_kickback_pvt_montecarlo.ipynb`) to run the Python-driven simulations.
+2. Open any of the Jupyter Notebooks under `Testbench/` (e.g. `comparador_characterizer.ipynb`, `comparador_pvt_montecarlo_optimizado.ipynb`, or `tb_Kickback_noise.ipynb`) to run the Python-driven simulations.
 
