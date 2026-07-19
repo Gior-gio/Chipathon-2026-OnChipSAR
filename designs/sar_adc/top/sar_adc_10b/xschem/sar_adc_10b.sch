@@ -384,4 +384,4 @@ C {lab_wire.sym} 1980 -370 1 1 {name=p71 sig_type=std_logic lab=CN[8]}
 C {lab_wire.sym} 1920 -170 1 1 {name=p134 sig_type=std_logic lab=SW1[8],SW0[8]}
 C {lab_wire.sym} 2370 -470 0 0 {name=p178 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} 2680 -440 0 0 {name=p188 sig_type=std_logic lab=COMPN}
-C {designs/sar_adc/comparator/StrongARM/strongARM.sym} 2540 -470 0 0 {name=x3}
+C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 2540 -470 0 0 {name=xCOMP}
