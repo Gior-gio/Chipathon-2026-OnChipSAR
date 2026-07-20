@@ -154,6 +154,10 @@ meas tran vxy_avg AVG vxy
 meas tran vxy_rms RMS vxy
 meas tran vxy_pp  PP  vxy
 
+let vin = V(VIN)
+meas tran vin_pp  PP  vin
+let gain = vxy_pp / vin_pp
+
 echo ============================================================
 echo VXY_STATISTICS
 echo ============================================================
@@ -161,6 +165,7 @@ echo ============================================================
 echo Average   = $&vxy_avg V
 echo RMS       = $&vxy_rms V
 echo Peak-Peak = $&vxy_pp V
+echo Gain = $&gain V/V
 
 * Plots
 plot V(VX) V(VY)
