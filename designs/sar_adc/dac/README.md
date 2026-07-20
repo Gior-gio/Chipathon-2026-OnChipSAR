@@ -1,6 +1,7 @@
 # Hybrid DAC - GF180MCU
 
-This directory contains the design, schematics, symbols, and simulation testbenches for the DAC of the **On-Chip SAR ADC**. The DAC is implemented using an hybrid topology, generating an scaled voltages with a resistive array to reduce the number of capacitors required for the capacitive DAC. To implement switches, a basic 4-to-1 multiplexer is used, each of them controlled by the SAR Logic output signals SW0<8:0> and SW1<8:0>.
+This directory contains the design, schematics, symbols, and simulation testbenches for the DAC of the **On-Chip SAR ADC**. The DAC is implemented using a **hybrid architecture**, where a resistive array generates scaled reference voltages to reduce the number of capacitors required by the capacitive DAC. The switching network is implemented using a basic 4-to-1 multiplexer, with each switch controlled by the SAR logic output signals `SW0<8:0>` and `SW1<8:0>`.
+
 ---
 
 ## Verification Status
