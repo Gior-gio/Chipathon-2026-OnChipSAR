@@ -79,13 +79,18 @@ let Fs = 5Meg
 let tstep = 1/(Fs*12*100)
 let tstop = 2/Fs
 
+
 * Transient simulation
 tran $&tstep $&tstop
 
+let i_vdd = -i(V2)
+let p_inst = -v(VDD)*i(V2)
 ** Plots
+meas tran Iavg AVG i_vdd FROM=$&tstep TO=$&tstop
+meas tran Pavg AVG p_inst FROM=$&tstep TO=$&tstop
+
 *plot xREG.SAMPN xREG.SET
 
-plot "sw0[8]" "sw0[7]" "sw0[6]" "sw0[5]" "sw0[4]" "sw0[3]"
-plot "sw1[8]" "sw1[7]" "sw1[6]" "sw1[5]" "sw1[4]" "sw1[3]"
+plot \\"sw0[8]\\" \\"sw0[7]\\" \\"sw0[6]\\" \\"sw1[8]\\"+4 \\"sw1[7]\\"+4 \\"sw1[6]\\"+4
 .endc
 "}

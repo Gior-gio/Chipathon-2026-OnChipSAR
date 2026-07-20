@@ -36,9 +36,9 @@ N 420 -380 420 -320 {lab=VDD}
 N 420 -120 420 -80 {lab=VSS}
 C {symbols/nfet_03v3.sym} 180 -150 0 0 {name=MN1
 L=0.28u
-W=1u
+W=0.5u
 nf=1
-m=2
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -50,7 +50,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 180 -290 0 0 {name=MP1
 L=0.28u
-W=3u
+W=0.5u
 nf=1
 m=2
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
@@ -68,9 +68,9 @@ C {iopin.sym} 200 -380 1 1 {name=p5 lab=VDD}
 C {iopin.sym} 200 -80 1 0 {name=p4 lab=VSS}
 C {symbols/nfet_03v3.sym} 400 -150 0 0 {name=MN2
 L=0.28u
-W=1u
+W=0.5u
 nf=1
-m=6
+m=3
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -82,7 +82,7 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 400 -290 0 0 {name=MP2
 L=0.28u
-W=3u
+W=0.5u
 nf=1
 m=6
 ad="'int((nf+1)/2) * W/nf * 0.18u'"

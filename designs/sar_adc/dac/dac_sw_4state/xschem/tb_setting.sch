@@ -205,17 +205,17 @@ C {devices/code_shown.sym} -460 -215 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
 .include $::180MCU_MODELS/design.ngspice
-.lib $::180MCU_MODELS/sm141064.ngspice ss
-.lib $::180MCU_MODELS/sm141064.ngspice res_ss
+.lib $::180MCU_MODELS/sm141064.ngspice typical
+.lib $::180MCU_MODELS/sm141064.ngspice res_typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
-.lib $::180MCU_MODELS/sm141064.ngspice mimcap_ss
+.lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 
 "}
 C {code.sym} -587.5 -217.5 0 0 {name=CODE only_toplevel=false 
 value="
-.temp -40
+.temp 27
 
-.param VDD = 3.3*0.9
+.param VDD = 3.3
 .param VSS = 0
 .param VRP = 2.1
 .param VRN = 1.2

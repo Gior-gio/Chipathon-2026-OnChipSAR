@@ -5,6 +5,7 @@ V {}
 S {}
 F {}
 E {}
+P 4 1 120 -350 {}
 N 180 -360 180 -300 {lab=VRP}
 N 220 -360 220 -300 {lab=VDD}
 N 260 -360 260 -300 {lab=SAMP}
@@ -76,21 +77,22 @@ value="
 .param Ts = 1/Fs
 .param Tclk = 1/(Fs*12)
 
-.param sw_stat_global = 0
-.param sw_stat_mismatch = 0
-
 .control
 
 * Local variables for .control
 let Fs = 5Meg
 let Ns = 1
 let Nspare = 5
+let VRP = 2.1
+let VRN = 1.2
+let VDD = 3.3
 
-let tstep = 1/(Fs*12*100)
+let tstep = 1/(Fs*12*250)
 let tstop = (Ns + Nspare)/Fs
 
 * Save main signals
-save V(VIN) V(VX) V(VY) \\"B[9]\\" \\"B[8]\\" \\"B[7]\\" \\"B[6]\\" \\"B[5]\\" \\"B[4]\\" \\"B[3]\\" \\"B[2]\\" \\"B[1]\\" \\"B[0]\\"
+save V(VIN) V(VX) V(VY) \\"B[9]\\" \\"B[8]\\" \\"B[7]\\" \\"B[6]\\" \\"B[5]\\" \\"B[4]\\" \\"B[3]\\" \\"B[2]\\" \\"B[1]\\" \\"B[0]\\" V(xADC.COMP) I(VSP) I(VREFP) I(VREFN)
+*save all
 
 * Transient simulation
 tran $&tstep $&tstop
@@ -98,10 +100,33 @@ tran $&tstep $&tstop
 * Output waveforms
 linearize
 let vxy = V(VX)-V(VY)
-let dout = (\\"B[9]\\"*1/2 + \\"B[8]\\"*1/4 + \\"B[7]\\"*1/8 + \\"B[6]\\"*1/16 + \\"B[5]\\"*1/32 + \\"B[4]\\"*1/64 + \\"B[3]\\"*1/128 + \\"B[2]\\"*1/256 + \\"B[1]\\"*1/512 + \\"B[0]\\"*1/1024)
+let dout = (\\"B[9]\\"*1/2 + \\"B[8]\\"*1/4 +
++ \\"B[7]\\"*1/8 + \\"B[6]\\"*1/16 +
++ \\"B[5]\\"*1/32 + \\"B[4]\\"*1/64 +
++ \\"B[3]\\"*1/128 + \\"B[2]\\"*1/256 +
++ \\"B[1]\\"*1/512 + \\"B[0]\\"*1/1024)
+
+* Power measurement
+* REFERENCE:
+let P_REF = -1*VRP*i(VREFP) - 1*VRN*i(VREFN)
+meas tran P_REF_avg AVG P_REF from=tstep to=tstop
+
+* SUPPLY:
+let P_VDD = -1*VDD*i(VSP)
+meas tran P_VDD_avg AVG P_VDD from=tstep to=tstop
+let P_T_avg = P_REF_avg + P_VDD_avg
+
+* Print outputs
+echo ============================================================
+echo POWER_AND_RESISTANCE
+echo ============================================================
+
+echo REF POWER = $&P_REF_avg W
+echo VDD POWER = $&P_VDD_avg W
+echo TOTAL POWER = $&P_T_avg W
 
 * export waveforms
-wrdata tb_sar_adc_10b.csv v(VIN) v(VX) v(VY) dout
+wrdata tb_sar_adc_10b.csv v(VIN) v(VX) v(VY) dout P_REF P_VDD
 
  * Plots
 *plot V(VX) V(VY)
@@ -133,4 +158,8 @@ value="
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 
+* Monte Carlo settings
+.param sw_stat_global = 0
+.param sw_stat_mismatch = 0
+.option SEED = 98765
 "}
