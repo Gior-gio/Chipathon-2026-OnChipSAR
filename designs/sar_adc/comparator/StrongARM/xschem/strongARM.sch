@@ -5,8 +5,8 @@ V {}
 S {}
 F {}
 E {}
-N 1350 -480 1350 -420 {lab=#net1}
-N 1560 -480 1560 -420 {lab=#net2}
+N 1350 -480 1350 -420 {lab=CN}
+N 1560 -480 1560 -420 {lab=CP}
 N 1350 -360 1350 -290 {lab=VSS}
 N 1350 -290 1560 -290 {lab=VSS}
 N 1560 -360 1560 -290 {lab=VSS}
@@ -23,15 +23,15 @@ N 1140 -590 1140 -570 {lab=ONN}
 N 1140 -570 1140 -560 {lab=ONN}
 N 1560 -550 1780 -550 {lab=OPP}
 N 1780 -590 1780 -550 {lab=OPP}
-N 1920 -590 1920 -460 {lab=#net2}
-N 1560 -460 1920 -460 {lab=#net2}
+N 1920 -590 1920 -460 {lab=CP}
+N 1560 -460 1920 -460 {lab=CP}
 N 780 -680 780 -590 {lab=VDD}
 N 780 -680 1010 -680 {lab=VDD}
-N 780 -530 780 -510 {lab=#net3}
-N 780 -510 870 -510 {lab=#net3}
-N 870 -510 870 -480 {lab=#net3}
-N 670 -510 780 -510 {lab=#net3}
-N 670 -510 670 -480 {lab=#net3}
+N 780 -530 780 -510 {lab=#net1}
+N 780 -510 870 -510 {lab=#net1}
+N 870 -510 870 -480 {lab=#net1}
+N 670 -510 780 -510 {lab=#net1}
+N 670 -510 670 -480 {lab=#net1}
 N 670 -420 670 -370 {lab=AP}
 N 870 -420 870 -370 {lab=AN}
 N 870 -290 1350 -290 {lab=VSS}
@@ -87,8 +87,8 @@ N 1560 -510 1590 -510 {lab=VSS}
 N 1780 -230 1780 -210 {lab=VSS}
 N 1780 -390 1780 -370 {lab=VDD}
 N 1860 -300 1880 -300 {lab=ON}
-N 1010 -590 1010 -460 {lab=#net1}
-N 1010 -460 1350 -460 {lab=#net1}
+N 1010 -590 1010 -460 {lab=CN}
+N 1010 -460 1350 -460 {lab=CN}
 N 1390 -510 1430 -510 {lab=OPP}
 N 1430 -510 1480 -550 {lab=OPP}
 N 1480 -550 1560 -550 {lab=OPP}
@@ -389,4 +389,10 @@ C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 2130 -280 0 0 {na
 C {lab_pin.sym} 2000 -300 2 1 {name=p35 sig_type=std_logic lab=OPP
 }
 C {lab_pin.sym} 1640 -550 2 0 {name=p34 sig_type=std_logic lab=OPP
+}
+C {lab_pin.sym} 1210 -460 2 0 {name=p21 sig_type=std_logic lab=CN
+}
+C {lab_pin.sym} 1640 -460 2 0 {name=p23 sig_type=std_logic lab=CP
+}
+C {lab_pin.sym} 670 -510 0 0 {name=p36 sig_type=std_logic lab=NT
 }
