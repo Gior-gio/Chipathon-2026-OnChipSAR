@@ -1,0 +1,26 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/samplehold/bootstrapped/xschem/bootstrapped.sch
+.subckt bootstrapped VDD VSS CLK VIN VOUT
+*.PININFO CLK:B VSS:B VDD:B VOUT:B VIN:B
+M_BS_SW_N7 net1 CLKN VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=2
+M_BS_SW_N3 cc VX Vcc VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M_BS_SW_P3 VX cc Vc Vc pfet_03v3 L=0.28u W=0.5u nf=1 m=2
+M_BS_SW_N6 VX VDD net1 VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=2
+M_BS_SW_P1 Vc VX VDD Vc pfet_03v3 L=0.28u W=0.5u nf=1 m=2
+M_BS_SW_N1 VOUT VX VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=3
+M_BS_SW_N2 VIN VX Vcc VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M_BS_SW_N5 Vcc CLKN VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M_BS_SW_N4 cc CLK Vcc VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M_BS_SW_P2 cc CLK VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=2
+XCAP_BOOT Vc Vcc cap_mim_2f0fF c_width=10e-6 c_length=10e-6
+X1 VDD CLK CLKN VSS gate_inv_x1
+.ends
+
+* expanding   symbol:  designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym # of pins=6
+** sym_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sch
+.subckt gate_inv_x1 VDD in out VSS
+*.PININFO out:O in:B VDD:B VSS:B
+M1 out in VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M2 out in VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=2
+.ends
+
