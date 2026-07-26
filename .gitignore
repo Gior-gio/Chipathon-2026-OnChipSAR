@@ -19,6 +19,8 @@ designs/sar_adc/*/docs/
 **/main.lyrdb
 **/density.lyrdb
 **/antenna.lyrdb
+**.lvsdb
+**.lyrdb
 
 # macOS
 .DS_Store
