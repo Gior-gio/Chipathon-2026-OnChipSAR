@@ -1,6 +1,6 @@
 # Ignore simulation results from CACE on designs/sky130/
 
-# Digital flow files
+# Digital flow data
 designs/sar_adc/digital/digital_flow/*/runs/
 
 # SAR ADC generated sim data
