@@ -97,7 +97,7 @@ C {lab_wire.sym} 60 -620 0 0 {name=p22 sig_type=std_logic lab=CLK}
 C {lab_wire.sym} 160 -720 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1110 -770 0 0 {name=p26 sig_type=std_logic lab=CLKN
 }
-C {symbols/nfet_03v3.sym} 1110 -720 3 1 {name=BS_SW_N7
+C {symbols/nfet_03v3.sym} 1110 -720 3 1 {name=XBS_SW_N7
 L=0.28u
 W=0.5u
 nf=1
@@ -111,7 +111,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 890 -320 0 1 {name=BS_SW_N3
+C {symbols/nfet_03v3.sym} 890 -320 0 1 {name=XBS_SW_N3
 L=0.28u
 W=0.5u
 nf=1
@@ -125,7 +125,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/pfet_03v3.sym} 870 -680 3 0 {name=BS_SW_P3
+C {symbols/pfet_03v3.sym} 870 -680 3 0 {name=XBS_SW_P3
 L=0.28u
 W=0.5u
 nf=1
@@ -139,7 +139,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 1010 -720 3 1 {name=BS_SW_N6
+C {symbols/nfet_03v3.sym} 1010 -720 3 1 {name=XBS_SW_N6
 L=0.28u
 W=0.5u
 nf=1
@@ -155,7 +155,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 960 -730 0 0 {name=p1 sig_type=std_logic lab=VX}
 C {lab_wire.sym} 710 -450 0 0 {name=p24 sig_type=std_logic lab=cc}
-C {symbols/pfet_03v3.sym} 370 -800 0 1 {name=BS_SW_P1
+C {symbols/pfet_03v3.sym} 370 -800 0 1 {name=XBS_SW_P1
 L=0.28u
 W=0.5u
 nf=1
@@ -175,7 +175,7 @@ C {lab_wire.sym} 1170 -100 2 0 {name=p13 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 280 -620 0 1 {name=p9 sig_type=std_logic lab=CLKN
 }
 C {lab_wire.sym} 480 -450 0 0 {name=p19 sig_type=std_logic lab=CLK}
-C {symbols/nfet_03v3.sym} 1170 -150 1 0 {name=BS_SW_N1
+C {symbols/nfet_03v3.sym} 1170 -150 1 0 {name=XBS_SW_N1
 L=0.28u
 W=0.5u
 nf=1
@@ -189,7 +189,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 1020 -260 1 0 {name=BS_SW_N2
+C {symbols/nfet_03v3.sym} 1020 -260 1 0 {name=XBS_SW_N2
 L=0.28u
 W=0.5u
 nf=1
@@ -203,7 +203,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 330 -180 0 0 {name=BS_SW_N5
+C {symbols/nfet_03v3.sym} 330 -180 0 0 {name=XBS_SW_N5
 L=0.28u
 W=0.5u
 nf=1
@@ -217,7 +217,7 @@ sa=0 sb=0 sd=0
 model=nfet_03v3
 spiceprefix=X
 }
-C {symbols/nfet_03v3.sym} 540 -390 0 0 {name=BS_SW_N4
+C {symbols/nfet_03v3.sym} 540 -390 0 0 {name=XBS_SW_N4
 L=0.28u
 W=0.5u
 nf=1
@@ -233,7 +233,7 @@ spiceprefix=X
 }
 C {lab_wire.sym} 300 -180 0 0 {name=p28 sig_type=std_logic lab=CLKN
 }
-C {symbols/pfet_03v3.sym} 540 -520 0 0 {name=BS_SW_P2
+C {symbols/pfet_03v3.sym} 540 -520 0 0 {name=XBS_SW_P2
 L=0.28u
 W=0.5u
 nf=1
