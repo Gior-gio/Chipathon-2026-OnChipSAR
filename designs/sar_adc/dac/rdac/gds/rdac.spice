@@ -1,0 +1,14 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/rdac/xschem/rdac.sch
+.subckt rdac VCM VRX[1] VRX[0] VRY[1] VRY[0] VRP VRN VSS
+*.PININFO VRN:I VRP:I VCM:B VRY[1:0]:B VRX[1:0]:B VSS:B
+XRN0 VRY[0] VCM VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRN1 VRY[1] VRY[0] VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRN2 net1 VRY[1] VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRN3 VRN net1 VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRP0 VRX[0] VCM VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRP1 VRX[1] VRX[0] VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRP2 net2 VRX[1] VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRP3 VRP net2 VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6
+XRP4 VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=3e-6 m=4
+XRP5 VSS VSS VSS ppolyf_u_1k r_width=1e-6 r_length=0.8e-6 m=12
+.ends
