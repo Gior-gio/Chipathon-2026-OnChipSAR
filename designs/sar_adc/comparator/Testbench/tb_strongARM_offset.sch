@@ -55,7 +55,7 @@ N 580 -230 580 -190 {lab=On}
 C {vsource.sym} 420 -430 0 0 {name=V1 value=\{VDD\} savecurrent=false}
 C {gnd.sym} 360 -210 0 0 {name=l1 lab=GND}
 C {gnd.sym} 170 -70 0 0 {name=l2 lab=GND}
-C {vsource.sym} 80 -270 0 0 {name=V2 value="pwl(0 \{-offset_resolution\} \{num_cycles*T_clk\} \{offset_resolution\})" savecurrent=false}
+C {vsource.sym} 80 -270 0 0 {name=V2 value="pwl(0 \\\{-offset_resolution\\\} \\\{num_cycles*T_clk\\\} \\\{offset_resolution\\\})" }
 C {vsource.sym} 90 -460 0 0 {name=V3 value="pulse(\{VDD\} 0 1n 100p 100p \{T_clk/2\}) \{T_clk\})" savecurrent=false}
 C {vsource.sym} 170 -120 0 0 {name=V4 value=\{vcm\} savecurrent=false}
 C {lab_pin.sym} 490 -330 0 0 {name=p1 sig_type=std_logic lab=Op}
@@ -69,6 +69,11 @@ C {code_shown.sym} 1000 -950 0 0 {name=s1 only_toplevel=false value="
 .param num_cycles = 16
 .param frec_clk = 100e+6
 .param T_clk = \{1/frec_clk\}
+
+
+
+.include /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/StrongARM/gds/strongARM_pex.spice
+
 
 
 .include /foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice
@@ -122,8 +127,8 @@ C {noconn.sym} 870 -410 0 1 {name=l9}
 C {gnd.sym} 710 -320 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} 820 -410 0 1 {name=p14 sig_type=std_logic lab=OPP}
 C {lab_pin.sym} 810 -190 0 1 {name=p15 sig_type=std_logic lab=ONN}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 730 -390 0 0 {name=x2}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 740 -170 0 0 {name=x3}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 730 -390 0 0 {name=x2[9:0]}
+C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 740 -170 0 0 {name=x3[9:0]}
 C {gnd.sym} 720 -110 0 0 {name=l11 lab=GND}
 C {noconn.sym} 870 -190 0 1 {name=l12}
-C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 440 -300 0 0 {name=x1}
+C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 440 -300 0 0 {name=x1 lvs_ignore=true}
