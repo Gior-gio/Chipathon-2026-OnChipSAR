@@ -50,10 +50,10 @@ _Schematic Review **SLIDES**_: https://drive.google.com/file/d/1ia9soZeWhDro_W-J
 
 | Block | Schematic (Typical) | PVT/MC Validation | Layout | PEX Validation |
 |--------|----------------------|-------------------|--------|----------------|
-| Sample & Hold | 100% | 100% | 0% | 0% |
-| Comparator | 100% | 100% | 0% | 0% |
-| Digital Logic | 100% | NA | 0% | 0% |
-| Hybrid DAC | 100% | 100% | 0% | 0% |
+| Sample & Hold | 100% | 100% | 100% | 0% |
+| Comparator | 100% | 100% | 25% | 0% |
+| Digital Logic | 100% | NA | 100% | 0% |
+| Hybrid DAC | 100% | 100% | 50% | 0% |
 | SAR ADC | 100% | 50% | 0% | 0% |
 
 # References
