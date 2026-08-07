@@ -1,4 +1,3 @@
-# GF180MCU LibreLane config -- minimal walk-through.
 meta:
   version: 3
   flow: Classic
@@ -6,48 +5,65 @@ meta:
 DESIGN_NAME: sar_logic
 VERILOG_FILES:
   - dir::sar_logic.v
+
+# --- El reloj real de 60 MHz ---
 CLOCK_PORT: CLK
-CLOCK_PERIOD: 15
+CLOCK_PERIOD: 16.66 
 
-# Die area: 300x300 um absolute (plenty of room for 4 flops).
+IO_PIN_ORDER_CFG: dir::pin_order.cfg
+PNR_SDC_FILE: dir::sar_logic.sdc
+SIGNOFF_SDC_FILE: dir::sar_logic.sdc
+
+# --- Forzar librerías a 3.3V ---
+LIB:
+  "*tt_025C_3v30":
+    - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib
+  "*ss_125C_3v00":
+    - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib
+  "*ff_n40C_3v60":
+    - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib
+
+DEFAULT_CORNER: "nom_tt_025C_3v30"
+SYNTH_CORNER: "nom_tt_025C_3v30"
+STA_CORNERS:
+  - "nom_tt_025C_3v30"
+  - "max_ss_125C_3v00"
+  - "min_ff_n40C_3v60"
+
+# --- Estrategia ---
+# Borramos SYNTH_STRATEGY para que vuelva a priorizar área.
+# Mantenemos el Fanout en 5 para cuidar el Slew a 3.3V.
+MAX_FANOUT_CONSTRAINT: 5 
+
+# --- Tamaño físico validado ---
 FP_SIZING: absolute
-DIE_AREA: [0.0, 0.0, 100.0, 70.0]
+DIE_AREA: [0.0, 0.0, 150.0, 150.0]
+GPL_CELL_PADDING: 2
+DPL_CELL_PADDING: 2
 
-# Power / ground nets.
-VDD_NETS:
-  - VDD
-GND_NETS:
-  - VSS
-
-# Signoff / streamout.
-PRIMARY_GDSII_STREAMOUT_TOOL: klayout
-
-# Routing / ESD.
-DIODE_ON_PORTS: in
-RT_MAX_LAYER: Metal4
+# --- Red de Alimentación (PDN) ---
+VDD_NETS: [VDD]
+GND_NETS: [VSS]
 PDN_MULTILAYER: false
-
-# Power distribution network (straps + pitch).
 PDN_VWIDTH: 5
 PDN_HWIDTH: 5
-PDN_VSPACING: 1
-PDN_HSPACING: 1
-PDN_VPITCH: 75
-PDN_HPITCH: 75
+PDN_VSPACING: 2.5
+PDN_HSPACING: 2.5
+PDN_VPITCH: 15
+PDN_HPITCH: 15
 PDN_EXTEND_TO: boundary
 
-# Placement.
-PL_TARGET_DENSITY_PCT: 65
-MAX_FANOUT_CONSTRAINT: 10
+# --- Reglas Generales ---
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+DIODE_ON_PORTS: in
+RT_MAX_LAYER: Metal4
 
-# CTS defaults.
-CTS_CLK_MAX_WIRE_LENGTH: 0
-CTS_DISTANCE_BETWEEN_BUFFERS: 0
-CTS_SINK_CLUSTERING_SIZE: 20
-CTS_SINK_CLUSTERING_MAX_DIAMETER: 60
-
-# Margins.
+# Margins
 TOP_MARGIN_MULT: 1
 BOTTOM_MARGIN_MULT: 1
 LEFT_MARGIN_MULT: 6
 RIGHT_MARGIN_MULT: 6
+
+# --- Prohibir celdas de retardo tóxicas para el Hold ---
+EXTRA_EXCLUDED_CELLS:
+  - "gf180mcu_fd_sc_mcu7t5v0__dly*"

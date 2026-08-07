@@ -1,5 +1,8 @@
 # Ignore simulation results from CACE on designs/sky130/
 
+# Digital flow data
+designs/sar_adc/digital/digital_flow/*/runs/
+
 # SAR ADC generated sim data
 designs/sar_adc/*/runs/
 
@@ -19,6 +22,8 @@ designs/sar_adc/*/docs/
 **/main.lyrdb
 **/density.lyrdb
 **/antenna.lyrdb
+**.lvsdb
+**.lyrdb
 
 # macOS
 .DS_Store
