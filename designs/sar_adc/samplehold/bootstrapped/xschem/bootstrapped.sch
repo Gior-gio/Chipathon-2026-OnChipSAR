@@ -127,9 +127,9 @@ spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 870 -680 3 0 {name=XBS_SW_P3
 L=0.28u
-W=0.5u
+W=1u
 nf=1
-m=2
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -157,9 +157,9 @@ C {lab_wire.sym} 960 -730 0 0 {name=p1 sig_type=std_logic lab=VX}
 C {lab_wire.sym} 710 -450 0 0 {name=p24 sig_type=std_logic lab=cc}
 C {symbols/pfet_03v3.sym} 370 -800 0 1 {name=XBS_SW_P1
 L=0.28u
-W=0.5u
+W=1u
 nf=1
-m=2
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
@@ -177,9 +177,9 @@ C {lab_wire.sym} 280 -620 0 1 {name=p9 sig_type=std_logic lab=CLKN
 C {lab_wire.sym} 480 -450 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {symbols/nfet_03v3.sym} 1170 -150 1 0 {name=XBS_SW_N1
 L=0.28u
-W=0.5u
+W=1.5u
 nf=1
-m=3
+m=1
 ad="'int((nf+1)/2) * W/nf * 0.18u'"
 pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
 as="'int((nf+2)/2) * W/nf * 0.18u'"
