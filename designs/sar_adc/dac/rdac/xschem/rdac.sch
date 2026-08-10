@@ -6,13 +6,13 @@ S {}
 F {}
 E {}
 P 4 5 40 -80 400 -80 400 0 40 0 40 -80 {}
-P 4 5 460 -340 600 -340 600 -160 460 -160 460 -340 {}
+P 4 5 720 -420 860 -420 860 -240 720 -240 720 -420 {}
 T {EXTERNAL
 REFERENCE
 VOLTAGES} 180 -60 0 0 0.25 0.25 {}
 T {SCALED 
 REFERENCE 
-VOLTAGES} 490 -280 0 0 0.25 0.25 {}
+VOLTAGES} 750 -360 0 0 0.25 0.25 {}
 T {REFERENCE COMMON MODE} 130 -520 0 0 0.25 0.25 {}
 N 320 -500 320 -460 {lab=VCM}
 N 320 -400 320 -360 {lab=VRY[0]}
@@ -37,25 +37,25 @@ N 320 -500 340 -500 {lab=VCM}
 N 200 -450 210 -450 {lab=VSS}
 N 200 -450 200 -430 {lab=VSS}
 C {symbols/ppolyf_u_3k.sym} 320 -430 0 0 {name=RN0
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 320 -330 0 0 {name=RN1
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 320 -230 0 0 {name=RN2
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 320 -130 0 0 {name=RN3
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
@@ -64,25 +64,25 @@ C {ipin.sym} 320 -40 0 1 {name=p20 lab=VRN}
 C {lab_wire.sym} 340 -380 0 1 {name=p5 sig_type=std_logic lab=VRY[0]}
 C {lab_wire.sym} 340 -280 0 1 {name=p6 sig_type=std_logic lab=VRY[1]}
 C {symbols/ppolyf_u_3k.sym} 120 -430 0 1 {name=RP0
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 120 -330 0 1 {name=RP1
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 120 -230 0 1 {name=RP2
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
 m=1}
 C {symbols/ppolyf_u_3k.sym} 120 -130 0 1 {name=RP3
-W=1e-6
+W=2e-6
 L=3e-6
 model=ppolyf_u_1k
 spiceprefix=X
@@ -94,6 +94,6 @@ C {lab_wire.sym} 100 -380 0 0 {name=p12 sig_type=std_logic lab=VRX[0]}
 C {lab_wire.sym} 100 -280 0 0 {name=p13 sig_type=std_logic lab=VRX[1]}
 C {lab_wire.sym} 240 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {iopin.sym} 340 -500 2 1 {name=p19 lab=VCM}
-C {iopin.sym} 480 -200 2 1 {name=p2 lab=VRY[1:0]}
-C {iopin.sym} 480 -300 2 1 {name=p3 lab=VRX[1:0]}
+C {iopin.sym} 740 -280 2 1 {name=p2 lab=VRY[1:0]}
+C {iopin.sym} 740 -380 2 1 {name=p3 lab=VRX[1:0]}
 C {iopin.sym} 210 -450 2 1 {name=p4 lab=VSS}
