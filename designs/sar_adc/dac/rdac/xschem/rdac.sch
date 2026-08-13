@@ -7,6 +7,7 @@ F {}
 E {}
 P 4 5 40 -80 400 -80 400 0 40 0 40 -80 {}
 P 4 5 720 -420 860 -420 860 -240 720 -240 720 -420 {}
+P 4 5 -830 -560 -190 -560 -190 -370 -830 -370 -830 -560 {}
 T {EXTERNAL
 REFERENCE
 VOLTAGES} 180 -60 0 0 0.25 0.25 {}
@@ -14,6 +15,7 @@ T {SCALED
 REFERENCE 
 VOLTAGES} 750 -360 0 0 0.25 0.25 {}
 T {REFERENCE COMMON MODE} 130 -520 0 0 0.25 0.25 {}
+T {DUMMYS DEVICES} -580 -550 0 0 0.25 0.25 {}
 N 320 -500 320 -460 {lab=VCM}
 N 320 -400 320 -360 {lab=VRY[0]}
 N 320 -300 320 -260 {lab=VRY[1]}
@@ -36,6 +38,21 @@ N 320 -100 320 -40 {lab=VRN}
 N 320 -500 340 -500 {lab=VCM}
 N 200 -450 210 -450 {lab=VSS}
 N 200 -450 200 -430 {lab=VSS}
+N -310 -430 -270 -430 {lab=VSS}
+N -270 -430 -270 -400 {lab=VSS}
+N -340 -410 -340 -390 {lab=VSS}
+N -400 -430 -370 -430 {lab=VSS}
+N -400 -430 -400 -410 {lab=VSS}
+N -490 -430 -450 -430 {lab=VSS}
+N -450 -430 -450 -400 {lab=VSS}
+N -520 -410 -520 -390 {lab=VSS}
+N -580 -430 -550 -430 {lab=VSS}
+N -580 -430 -580 -410 {lab=VSS}
+N -660 -440 -620 -440 {lab=VSS}
+N -620 -440 -620 -410 {lab=VSS}
+N -690 -420 -690 -400 {lab=VSS}
+N -750 -440 -720 -440 {lab=VSS}
+N -750 -440 -750 -420 {lab=VSS}
 C {symbols/ppolyf_u_3k.sym} 320 -430 0 0 {name=RN0
 W=2e-6
 L=3e-6
@@ -97,3 +114,30 @@ C {iopin.sym} 340 -500 2 1 {name=p19 lab=VCM}
 C {iopin.sym} 740 -280 2 1 {name=p2 lab=VRY[1:0]}
 C {iopin.sym} 740 -380 2 1 {name=p3 lab=VRX[1:0]}
 C {iopin.sym} 210 -450 2 1 {name=p4 lab=VSS}
+C {symbols/ppolyf_u_3k.sym} -340 -430 1 1 {name=RD1
+W=0.8e-6
+L=3e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=4}
+C {lab_wire.sym} -340 -390 2 0 {name=p7 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -270 -400 2 0 {name=p9 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -400 -410 2 0 {name=p14 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_3k.sym} -520 -430 1 1 {name=RD2
+W=2e-6
+L=0.8e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=8}
+C {lab_wire.sym} -520 -390 2 0 {name=p15 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -450 -400 2 0 {name=p16 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -580 -410 2 0 {name=p17 sig_type=std_logic lab=VSS}
+C {symbols/ppolyf_u_3k.sym} -690 -440 1 1 {name=RD3
+W=0.8e-6
+L=0.8e-6
+model=ppolyf_u_1k
+spiceprefix=X
+m=4}
+C {lab_wire.sym} -690 -400 2 0 {name=p18 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -620 -410 2 0 {name=p21 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} -750 -420 2 0 {name=p22 sig_type=std_logic lab=VSS}
