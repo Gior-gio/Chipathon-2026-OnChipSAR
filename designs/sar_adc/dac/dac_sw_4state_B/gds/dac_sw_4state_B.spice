@@ -1,0 +1,50 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_4state_B/xschem/dac_sw_4state_B.sch
+.subckt dac_sw_4state_B VDD s[1] s[0] VSS CI VSAM VBP VBN VRST
+*.PININFO VRST:I CI:B VSAM:I VBP:I VBN:I s[1:0]:I VDD:B VSS:B
+xBP VDD VSS BP VBP CI BPN dac_sw_1state_B
+xBN VDD VSS BN VBN CI BNN dac_sw_1state_B
+xRST VDD VSS RST VRST CI RSTN dac_sw_1state_B
+xSAM VDD VSS SAM VSAM CI SAMN dac_sw_1state_B
+xNBP VDD VSS s[1] s[0] BPN gate_nand_x1
+xBP1 VDD BPN BP VSS gate_inv_x1
+xBN1 VDD BNN BN VSS gate_inv_x1
+xNBN VDD VSS sn[0] s[1] BNN gate_nand_x1
+xNRST VDD VSS sn[1] s[0] RSTN gate_nand_x1
+xIRST VDD RSTN RST VSS gate_inv_x1
+xISAM VDD SAMN SAM VSS gate_inv_x1
+xNSAM VDD VSS sn[0] sn[1] SAMN gate_nand_x1
+xS0 VDD s[0] sn[0] VSS gate_inv_x1
+xS1 VDD s[1] sn[1] VSS gate_inv_x1
+.ends
+
+* expanding   symbol:  designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym # of pins=6
+** sym_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sch
+.subckt dac_sw_1state_B VDD VSS CLK VIN VOUT CLKN
+*.PININFO VIN:B VOUT:B CLK:B CLKN:B VSS:B VDD:B
+MSN VOUT CLK VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=10
+MSP VIN CLKN VOUT VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=10
+.ends
+
+
+* expanding   symbol:  designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sym # of pins=5
+** sym_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sym
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sch
+.subckt gate_nand_x1 VDD VSS A B out
+*.PININFO A:B B:B out:B VDD:B VSS:B
+M5 out A VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
+M6 out A net1 VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M7 out B VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
+M8 net1 B VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+.ends
+
+
+* expanding   symbol:  designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym # of pins=6
+** sym_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sch
+.subckt gate_inv_x1 VDD in out VSS
+*.PININFO out:O in:B VDD:B VSS:B
+M1 out in VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M2 out in VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
+.ends
+
