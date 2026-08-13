@@ -1,15 +1,28 @@
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/rdac/xschem/rdac.sch
 .subckt rdac VCM VRX[1] VRX[0] VRY[1] VRY[0] VRP VRN VSS
 *.PININFO VRN:I VRP:I VCM:B VRY[1:0]:B VRX[1:0]:B VSS:B
-XRN0 VRY[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN1 VRY[1] VRY[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN2 net1 VRY[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN3 VRN net1 VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP0 VRX[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP1 VRX[1] VRX[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP2 net2 VRX[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP3 VRP net2 VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRD1 VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6 m=4
-XRD2 VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6 m=8
-XRD3 VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6 m=4
+RN0 VRY[0] VCM VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RN1 VRY[1] VRY[0] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RN2 net1 VRY[1] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RN3 net1 VRN VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RP0 VRX[0] VCM VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RP1 VRX[1] VRX[0] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RP2 net2 VRX[1] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RP3 VRP net2 VSS ppolyf_u r_width=2e-6 r_length=3e-6
+RDC[3] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+RDC[2] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+RDC[1] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+RDC[0] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+RDB[7] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[6] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[5] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[4] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[3] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[2] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[1] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDB[0] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+RDA[3] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+RDA[2] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+RDA[1] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+RDA[0] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
 .ends
