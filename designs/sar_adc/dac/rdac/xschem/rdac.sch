@@ -6,13 +6,13 @@ S {}
 F {}
 E {}
 P 4 5 40 -80 400 -80 400 0 40 0 40 -80 {}
-P 4 5 720 -420 860 -420 860 -240 720 -240 720 -420 {}
+P 4 5 460 -380 600 -380 600 -200 460 -200 460 -380 {}
 T {EXTERNAL
 REFERENCE
 VOLTAGES} 180 -60 0 0 0.25 0.25 {}
 T {SCALED 
 REFERENCE 
-VOLTAGES} 750 -360 0 0 0.25 0.25 {}
+VOLTAGES} 490 -320 0 0 0.25 0.25 {}
 T {REFERENCE COMMON MODE} 130 -520 0 0 0.25 0.25 {}
 N 320 -500 320 -460 {lab=VCM}
 N 320 -400 320 -360 {lab=VRY[0]}
@@ -94,6 +94,6 @@ C {lab_wire.sym} 100 -380 0 0 {name=p12 sig_type=std_logic lab=VRX[0]}
 C {lab_wire.sym} 100 -280 0 0 {name=p13 sig_type=std_logic lab=VRX[1]}
 C {lab_wire.sym} 240 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {iopin.sym} 340 -500 2 1 {name=p19 lab=VCM}
-C {iopin.sym} 740 -280 2 1 {name=p2 lab=VRY[1:0]}
-C {iopin.sym} 740 -380 2 1 {name=p3 lab=VRX[1:0]}
+C {iopin.sym} 480 -240 2 1 {name=p2 lab=VRY[1:0]}
+C {iopin.sym} 480 -340 2 1 {name=p3 lab=VRX[1:0]}
 C {iopin.sym} 210 -450 2 1 {name=p4 lab=VSS}
