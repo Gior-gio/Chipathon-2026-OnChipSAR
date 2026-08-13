@@ -375,7 +375,6 @@ X_p_tran_2 VDD A Z VNW pfet_05v0 W=1.22e-06 L=5e-07
 
 * --- DISEÑO DIGITAL ---
 .subckt sar_logic B[0] B[1] B[2] B[3] B[4] B[5] B[6] B[7] B[8] B[9] CLK SAMP SW0n[0]
-
 + SW0n[1] SW0n[2] SW0n[3] SW0n[4] SW0n[5] SW0n[6] SW0n[7] SW0n[8] SW0p[0] SW0p[1]
 + SW0p[2] SW0p[3] SW0p[4] SW0p[5] SW0p[6] SW0p[7] SW0p[8] SW1n[0] SW1n[1] SW1n[2]
 + SW1n[3] SW1n[4] SW1n[5] SW1n[6] SW1n[7] SW1n[8] SW1p[0] SW1p[1] SW1p[2] SW1p[3]
