@@ -48,6 +48,8 @@ _Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
 _Schematic Review **SLIDES**_: https://drive.google.com/file/d/1ia9soZeWhDro_W-J8qWbhhiAUtmrSQDr/view?usp=sharing
 # Progress summary
 
+_Layout Review **SLIDES**_: https://drive.google.com/file/d/1RrdBT7KRoA7__-rkkRqYoguLSaX0l94i/view?usp=drive_link
+
 | Block | Schematic (Typical) | PVT/MC Validation | Layout | PEX Validation |
 |--------|----------------------|-------------------|--------|----------------|
 | Sample & Hold | 100% | 100% | 100% | 0% |
