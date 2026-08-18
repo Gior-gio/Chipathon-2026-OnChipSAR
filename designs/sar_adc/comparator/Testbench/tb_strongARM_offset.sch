@@ -83,8 +83,8 @@ C {code_shown.sym} 1000 -950 0 0 {name=s1 only_toplevel=false value="
 
 
 .measure tran tpd_ON
-+ TRIG v(CLK) VAL=\{vcm\} FALL=1 TD=5n
-+ TARG v(Op)      VAL=\{vcm\} RISE=1 TD=5n
++ TRIG v(CLK) VAL=\{vcm\} FALL=1 TD=9n
++ TARG v(Op)      VAL=\{vcm\} RISE=1 TD=9n
 
 
 .measure tran VVIP_cross FIND v(VIP) WHEN v(On)=\{vcm\} RISE=1
