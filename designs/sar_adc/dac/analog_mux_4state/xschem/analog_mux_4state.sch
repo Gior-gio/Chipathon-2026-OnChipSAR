@@ -151,23 +151,23 @@ C {lab_wire.sym} 1230 -530 0 0 {name=p36 sig_type=std_logic lab=s[1]}
 C {lab_wire.sym} 1230 -570 0 0 {name=p37 sig_type=std_logic lab=sn[1]}
 C {lab_wire.sym} 100 -340 0 1 {name=p38 sig_type=std_logic lab=s[0]}
 C {lab_wire.sym} 440 -340 0 1 {name=p39 sig_type=std_logic lab=s[1]}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1320 -550 0 0 {name=xP1}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1320 -550 0 0 {name=xP1}
 C {lab_wire.sym} 1320 -650 3 0 {name=p7 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1320 -380 3 1 {name=p40 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 1230 -230 0 0 {name=p41 sig_type=std_logic lab=s[1]}
 C {lab_wire.sym} 1230 -270 0 0 {name=p42 sig_type=std_logic lab=sn[1]}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1320 -250 2 1 {name=xN1}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1320 -250 2 1 {name=xN1}
 C {lab_wire.sym} 1320 -150 3 1 {name=p43 sig_type=std_logic lab=VDD}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1000 -620 0 0 {name=xBP}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1000 -620 0 0 {name=xBP}
 C {lab_wire.sym} 1000 -720 3 0 {name=p46 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 1000 -540 3 1 {name=p47 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 870 -600 0 1 {name=p44 sig_type=std_logic lab=s[0]}
 C {lab_wire.sym} 870 -640 0 1 {name=p45 sig_type=std_logic lab=sn[0]}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1000 -480 2 1 {name=xBN}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1000 -480 2 1 {name=xBN}
 C {lab_wire.sym} 1000 -380 3 1 {name=p50 sig_type=std_logic lab=VDD}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1000 -320 0 0 {name=xRST}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1000 -320 0 0 {name=xRST}
 C {lab_wire.sym} 1000 -240 3 1 {name=p52 sig_type=std_logic lab=VSS}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 1000 -180 2 1 {name=xSAM}
+C {designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sym} 1000 -180 2 1 {name=xSAM}
 C {lab_wire.sym} 1000 -80 3 1 {name=p55 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 870 -460 0 1 {name=p48 sig_type=std_logic lab=s[0]}
 C {lab_wire.sym} 870 -500 0 1 {name=p49 sig_type=std_logic lab=sn[0]}

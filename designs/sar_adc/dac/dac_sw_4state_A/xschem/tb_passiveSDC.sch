@@ -5,13 +5,13 @@ V {}
 S {}
 F {}
 E {}
-N 650 -820 650 -780 {lab=VRP}
-N 630 -820 630 -780 {lab=VRN}
-N 590 -820 590 -780 {lab=VRP}
-N 570 -820 570 -780 {lab=VRP}
-N 650 -640 650 -590 {lab=VDD}
-N 630 -640 630 -590 {lab=VSS}
-N 610 -640 610 -590 {lab=CP}
+N 660 -820 660 -780 {lab=VRP}
+N 640 -820 640 -780 {lab=VRN}
+N 600 -820 600 -780 {lab=VRP}
+N 580 -820 580 -780 {lab=VRP}
+N 660 -640 660 -590 {lab=VDD}
+N 640 -640 640 -590 {lab=VSS}
+N 620 -640 620 -590 {lab=CP}
 N 660 -120 660 -80 {lab=VRP}
 N 640 -120 640 -80 {lab=VRN}
 N 600 -120 600 -80 {lab=VRP}
@@ -27,9 +27,9 @@ N -240 -510 -240 -490 {lab=GND}
 N -140 -510 -140 -490 {lab=GND}
 N -240 -610 -240 -570 {lab=VRP}
 N -140 -610 -140 -570 {lab=VRN}
-N 610 -530 610 -520 {lab=VX}
+N 620 -530 620 -520 {lab=VX}
 N 620 -380 620 -370 {lab=VY}
-N 550 -860 550 -780 {lab=VSS,SAMPN}
+N 560 -860 560 -780 {lab=VSS,SAMPN}
 N 560 -120 560 -40 {lab=VSS,SAMPN}
 N -340 -510 -340 -490 {lab=GND}
 N -340 -610 -340 -570 {lab=SAMP}
@@ -48,15 +48,15 @@ N 230 -520 290 -520 {lab=VIN}
 N 230 -380 290 -380 {lab=VRN}
 N -340 -300 -340 -280 {lab=GND}
 N -340 -400 -340 -360 {lab=SAMPN}
-C {designs/sar_adc/dac/dac_sw_4state/xschem/dac_sw_4state.sym} 610 -710 1 0 {name=xSWP[8:0]}
-C {lab_wire.sym} 650 -790 1 0 {name=p23 sig_type=std_logic lab=VRP}
-C {lab_wire.sym} 630 -790 1 0 {name=p24 sig_type=std_logic lab=VRN}
-C {lab_wire.sym} 590 -790 1 0 {name=p25 sig_type=std_logic lab=VRP}
-C {lab_wire.sym} 570 -790 1 0 {name=p26 sig_type=std_logic lab=VRP}
-C {lab_wire.sym} 650 -590 1 0 {name=p27 sig_type=std_logic lab=VDD}
-C {lab_wire.sym} 630 -590 1 0 {name=p28 sig_type=std_logic lab=VSS}
-C {lab_wire.sym} 610 -590 1 0 {name=p29 sig_type=std_logic lab=CP}
-C {designs/sar_adc/dac/dac_sw_4state/xschem/dac_sw_4state.sym} 620 -190 1 1 {name=xSWN[8:0]}
+C {designs/sar_adc/dac/dac_sw_4state_A/xschem/dac_sw_4state_A.sym} 620 -710 1 0 {name=xSWP[8:0]}
+C {lab_wire.sym} 660 -790 1 0 {name=p23 sig_type=std_logic lab=VRP}
+C {lab_wire.sym} 640 -790 1 0 {name=p24 sig_type=std_logic lab=VRN}
+C {lab_wire.sym} 600 -790 1 0 {name=p25 sig_type=std_logic lab=VRP}
+C {lab_wire.sym} 580 -790 1 0 {name=p26 sig_type=std_logic lab=VRP}
+C {lab_wire.sym} 660 -590 1 0 {name=p27 sig_type=std_logic lab=VDD}
+C {lab_wire.sym} 640 -590 1 0 {name=p28 sig_type=std_logic lab=VSS}
+C {lab_wire.sym} 620 -590 1 0 {name=p29 sig_type=std_logic lab=CP}
+C {designs/sar_adc/dac/dac_sw_4state_A/xschem/dac_sw_4state_A.sym} 620 -190 1 1 {name=xSWN[8:0]}
 C {lab_wire.sym} 640 -110 1 1 {name=p86 sig_type=std_logic lab=VRN}
 C {lab_wire.sym} 660 -110 1 1 {name=p87 sig_type=std_logic lab=VRP}
 C {lab_wire.sym} 600 -110 1 1 {name=p88 sig_type=std_logic lab=VRP}
@@ -76,7 +76,7 @@ C {devices/vsource.sym} -140 -540 0 0 {name=VREFN value=\{VRN\}}
 C {devices/gnd.sym} -140 -490 0 0 {name=l4 lab=GND}
 C {lab_wire.sym} -240 -580 3 1 {name=p137 sig_type=std_logic lab=VRP}
 C {lab_wire.sym} -140 -580 3 1 {name=p138 sig_type=std_logic lab=VRN}
-C {symbols/cap_mim_2f0fF.sym} 610 -560 0 1 {name=CP
+C {symbols/cap_mim_2f0fF.sym} 620 -560 0 1 {name=CP
 W=1e-6
 L=1e-6
 model=cap_mim_2f0fF
@@ -200,4 +200,4 @@ C {gnd.sym} -340 -280 0 1 {name=l3 lab=GND}
 C {lab_wire.sym} -340 -370 3 1 {name=p8 sig_type=std_logic lab=SAMPN}
 C {devices/vsource.sym} -340 -330 0 1 {name=VSAMN value="PULSE(\{VDD\} \{VSS\} 0 0.1n 0.1n \{ton\} \{Ts\})"
 }
-C {lab_wire.sym} 550 -790 1 0 {name=p3 sig_type=std_logic lab=VSS,SAMPN}
+C {lab_wire.sym} 560 -790 1 0 {name=p3 sig_type=std_logic lab=VSS,SAMPN}

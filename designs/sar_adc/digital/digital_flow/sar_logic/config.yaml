@@ -11,8 +11,8 @@ CLOCK_PORT: CLK
 CLOCK_PERIOD: 16.66 
 
 IO_PIN_ORDER_CFG: dir::pin_order.cfg
-PNR_SDC_FILE: dir::sar_logic.sdc
-SIGNOFF_SDC_FILE: dir::sar_logic.sdc
+#PNR_SDC_FILE: dir::sar_logic.sdc
+#SIGNOFF_SDC_FILE: dir::sar_logic.sdc
 
 # --- Forzar librerías a 3.3V ---
 LIB:
@@ -37,7 +37,7 @@ MAX_FANOUT_CONSTRAINT: 5
 
 # --- Tamaño físico validado ---
 FP_SIZING: absolute
-DIE_AREA: [0.0, 0.0, 150.0, 150.0]
+DIE_AREA: [0.0, 0.0, 120.0, 85.0]
 GPL_CELL_PADDING: 2
 DPL_CELL_PADDING: 2
 
