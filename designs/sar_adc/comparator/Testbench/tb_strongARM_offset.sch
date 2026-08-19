@@ -72,7 +72,7 @@ C {code_shown.sym} 1000 -950 0 0 {name=s1 only_toplevel=false value="
 
 
 
-.include /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/StrongARM/gds/strongARM_pex.spice
+*.include /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/StrongARM/gds/strongARM_pex.spice
 
 
 
@@ -131,4 +131,4 @@ C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 730 -390 0 0 {nam
 C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 740 -170 0 0 {name=x3[9:0]}
 C {gnd.sym} 720 -110 0 0 {name=l11 lab=GND}
 C {noconn.sym} 870 -190 0 1 {name=l12}
-C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 440 -300 0 0 {name=x1 lvs_ignore=true}
+C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 440 -300 0 0 {name=x1 lvs_ignore=false}
