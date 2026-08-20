@@ -1,6 +1,6 @@
-** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sch
-.subckt dac_sw_1state VDD VSS CLK VIN VOUT CLKN
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state_A/xschem/dac_sw_1state_A.sch
+.subckt dac_sw_1state_A VDD VSS CLK VIN VOUT CLKN
 *.PININFO VIN:B VOUT:B CLK:B CLKN:B VSS:B VDD:B
-MSN VOUT CLK VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=7
-MSP VIN CLKN VOUT VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=7
+MSN VOUT CLK VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=4
+MSP VIN CLKN VOUT VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=4
 .ends

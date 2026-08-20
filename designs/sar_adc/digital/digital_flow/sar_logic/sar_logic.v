@@ -2,6 +2,7 @@ module sar_logic (
     input  wire       SAMP,
     input  wire       CLK,
     input  wire       Vcomp,
+    //output wire eoc
     output wire [8:0] SW0p,
     output wire [8:0] SW0n,
     output wire [8:0] SW1p,
