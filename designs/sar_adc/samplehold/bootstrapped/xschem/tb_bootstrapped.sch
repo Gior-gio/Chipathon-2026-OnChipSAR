@@ -40,7 +40,7 @@ C {devices/code_shown.sym} 875 -415 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
 
-.include  /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/samplehold/bootstrapped/gds/pex_bootstrapped.spice 
+.include  /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/samplehold/bootstrapped/netlist/pex/bootstrapped.spice 
 
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
