@@ -1,0 +1,25 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/cdac/xschem/cdac.sch
+.subckt cdac CP[8] CP[3] CP[5] CP[1] CP[0] CP[4] CP[6] CP[7] CP[2] CN[2] CN[1] CN[3] CN[8] CN[7] CN[6] CN[5] CN[4] CN[0] VX VY
+*.PININFO VX:B VY:B CP[0]:I CP[1]:I CP[2]:I CP[3]:I CP[4]:I CP[5]:I CP[6]:I CP[7]:I CP[8]:I CN[0]:I CN[1]:I CN[2]:I CN[3]:I
+*+ CN[4]:I CN[5]:I CN[6]:I CN[7]:I CN[8]:I
+XCP8 CP[8] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=16
+XCP7 CP[7] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=8
+XCP6 CP[6] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=4
+XCP5 CP[5] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=2
+XCP4 CP[4] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP3 CP[3] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP2 CP[2] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP1 CP[1] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP01 net1 VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN8 CN[8] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=16
+XCN7 CN[7] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=8
+XCN6 CN[6] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=4
+XCN5 CN[5] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=2
+XCN4 CN[4] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN3 CN[3] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN2 CN[2] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN1 CN[1] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN01 net2 VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP00 CP[0] net1 cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN00 CN[0] net2 cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+.ends

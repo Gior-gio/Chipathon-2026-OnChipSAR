@@ -143,7 +143,6 @@ value=\{Cload\}
 
 footprint=1206
 device="ceramic capacitor"}
-C {designs/sar_adc/dac/dac_sw_1state/xschem/dac_sw_1state.sym} 500 -550 0 0 {name=xSW}
 C {symbols/nfet_03v3.sym} 170 -500 0 0 {name=MIN1
 L=0.28u
 W=0.5u
@@ -180,3 +179,4 @@ C {lab_wire.sym} 190 -710 0 0 {name=p11 sig_type=std_logic lab=VDD
 C {lab_wire.sym} 190 -430 0 0 {name=p13 sig_type=std_logic lab=VSS
 
 }
+C {designs/sar_adc/dac/dac_sw_1state_A/xschem/dac_sw_1state_A.sym} 500 -550 0 0 {name=x1}
