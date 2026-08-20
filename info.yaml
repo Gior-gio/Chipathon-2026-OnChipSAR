@@ -18,3 +18,39 @@ project:
   description: "Draft layout of a 10-bit pseudo-differential SAR ADC"  # Short one-line description
   lvs_config: "lvs_config.json"  
 
+pins: 
+  - name: vdd
+    io_type: power
+  - name: Vin
+    io_type: analog
+  - name: VRP
+    io_type: analog
+  - name: VRN
+    io_type: analog
+  - name: clk 
+    io_type: input_cmos
+  - name: samp 
+    io_type: input_cmos
+  - name: B9
+    io_type: bidirectional
+  - name: B8
+    io_type: bidirectional
+  - name: B7
+    io_type: bidirectional
+  - name: B6
+    io_type: bidirectional
+  - name: B5
+    io_type: bidirectional
+  - name: B4
+    io_type: bidirectional
+  - name: B3
+    io_type: bidirectional
+  - name: B2
+    io_type: bidirectional
+  - name: B1
+    io_type: bidirectional
+  - name: B0
+    io_type: bidirectional
+  - name: eoc
+    io_type: bidirectional
+
