@@ -59,7 +59,7 @@ _Layout Review **SLIDES**_: https://drive.google.com/file/d/1RrdBT7KRoA7__-rkkRq
 | Comparator | 100% | 100% | 100% | 100% |
 | Digital Logic | 100% | NA | 100% | 95% |
 | Hybrid DAC | 100% | 100% | 100% | 100% |
-| SAR ADC | 100% | 50% | 20% | 0% |
+| SAR ADC | 100% | 50% | 20% | 20% |
 
 # References
 
