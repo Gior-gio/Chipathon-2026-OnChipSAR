@@ -27,25 +27,25 @@ pins:
     io_type: input_cmos
   - name: SAMP 
     io_type: input_cmos
-  - name: B9
+  - name: B[9]
     io_type: bidirectional
-  - name: B8
+  - name: B[8]
     io_type: bidirectional
-  - name: B7
+  - name: B[7]
     io_type: bidirectional
-  - name: B6
+  - name: B[6]
     io_type: bidirectional
-  - name: B5
+  - name: B[5]
     io_type: bidirectional
-  - name: B4
+  - name: B[4]
     io_type: bidirectional
-  - name: B3
+  - name: B[3]
     io_type: bidirectional
-  - name: B2
+  - name: B[2]
     io_type: bidirectional
-  - name: B1
+  - name: B[1]
     io_type: bidirectional
-  - name: B0
+  - name: B[0]
     io_type: bidirectional
   - name: eoc
     io_type: bidirectional
