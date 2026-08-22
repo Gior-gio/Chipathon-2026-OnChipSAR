@@ -170,4 +170,4 @@ value="
 .param sw_stat_mismatch = 0
 .option SEED = 98765
 "}
-C {designs/sar_adc/top/sar_adc_10b/xschem/sar_adc_10b_digflow.sym} 220 -200 0 0 {name=x1}
+C {designs/sar_adc/top/sar_adc_10b_digflow/xschem/sar_adc_10b_digflow.sym} 220 -200 0 0 {name=x1}
