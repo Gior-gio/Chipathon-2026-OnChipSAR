@@ -80,7 +80,7 @@ value="
 
 * Local variables for .control
 let Fs = 5Meg
-let Ns = 64
+let Ns = 0
 let Nspare = 5
 let VRP = 2.1
 let VRN = 1.2

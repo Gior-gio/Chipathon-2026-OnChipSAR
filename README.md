@@ -43,6 +43,19 @@ _Repository_: https://github.com/Gior-gio/Chipathon-2026-OnChipSAR
 
 _Proposal_: https://drive.google.com/file/d/1vW6LQJf3oHZ-iXFw3v4OQ3EZNDzVT3Dk/view?usp=sharing
 
+_Schematic Review **VIDEO**_: https://youtu.be/-Ft9aujLMuY
+
+_Schematic Review **SLIDES**_: https://drive.google.com/file/d/1ia9soZeWhDro_W-J8qWbhhiAUtmrSQDr/view?usp=sharing
+# Progress summary
+
+| Block | Schematic (Typical) | PVT/MC Validation | Layout | PEX Validation |
+|--------|----------------------|-------------------|--------|----------------|
+| Sample & Hold | 100% | 100% | 100% | 0% |
+| Comparator | 100% | 100% | 25% | 0% |
+| Digital Logic | 100% | NA | 100% | 0% |
+| Hybrid DAC | 100% | 100% | 50% | 0% |
+| SAR ADC | 100% | 50% | 0% | 0% |
+
 # References
 
 [1] A. Peña-Pérez et al., "A Low-Power Single-Ended SAR ADC With Energy-Efficient Differential Switching for Ultrafast X-Ray Imagers," in IEEE Open Journal of Circuits and Systems, vol. 7, pp. 255-268, 2026, doi: 10.1109/OJCAS.2025.3628857.
