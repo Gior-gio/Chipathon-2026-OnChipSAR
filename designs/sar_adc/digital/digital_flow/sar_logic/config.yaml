@@ -37,7 +37,7 @@ MAX_FANOUT_CONSTRAINT: 5
 
 # --- Tamaño físico validado ---
 FP_SIZING: absolute
-DIE_AREA: [0.0, 0.0, 150.0, 150.0]
+DIE_AREA: [0.0, 0.0, 120.0, 85.0]
 GPL_CELL_PADDING: 2
 DPL_CELL_PADDING: 2
 

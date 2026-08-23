@@ -21,8 +21,9 @@ N 120 -360 160 -360 {lab=CLK}
 N 120 -340 160 -340 {lab=SAMP}
 N 120 -320 160 -320 {lab=Vcomp}
 N 360 -400 400 -400 {lab=SW0[8:0]}
-N 360 -340 400 -340 {lab=B[9:0]}
+N 360 -350 400 -350 {lab=B[9:0]}
 N 360 -280 400 -280 {lab=SW1[8:0]}
+N 360 -330 400 -330 {lab=eoc}
 C {gnd.sym} 300 -20 0 0 {name=l1 lab=0}
 C {vsource.sym} 980 -90 0 0 {name=V2 value=\{VDD\} savecurrent=false}
 C {gnd.sym} 980 -20 0 0 {name=l2 lab=0}
@@ -46,7 +47,7 @@ C {lab_pin.sym} 120 -360 0 0 {name=p4 sig_type=std_logic lab=CLK
 C {lab_pin.sym} 120 -340 0 0 {name=p5 sig_type=std_logic lab=SAMP}
 C {lab_pin.sym} 120 -320 0 0 {name=p6 sig_type=std_logic lab=Vcomp
 }
-C {lab_pin.sym} 400 -340 0 1 {name=p8 sig_type=std_logic lab=B[9:0]
+C {lab_pin.sym} 400 -350 0 1 {name=p8 sig_type=std_logic lab=B[9:0]
 }
 C {devices/code_shown.sym} 830 -360 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
@@ -95,4 +96,6 @@ plot \\"sw1[0]\\" \\"sw1[1]\\"+4 \\"sw1[2]\\"+8 \\"sw1[3]\\"+12 \\"sw1[4]\\"+16 
 plot \\"B[0]\\" \\"B[1]\\"+4 \\"B[2]\\"+8 \\"B[3]\\"+12 \\"B[4]\\"+16 \\"B[5]\\"+20 \\"B[6]\\"+24 \\"B[7]\\"+28 \\"B[8]\\"+32 \\"B[9]\\"+36 Vcomp+40 SAMP+44 CLK+48
 .endc
 "}
-C {designs/sar_adc/digital/digital_flow/xschem/sar_logic.sym} 280 -340 0 0 {name=x1}
+C {designs/sar_adc/digital/digital_flow/xschem/sar_logic.sym} 260 -340 0 0 {name=xREG}
+C {lab_pin.sym} 400 -330 0 1 {name=p10 sig_type=std_logic lab=eoc
+}
