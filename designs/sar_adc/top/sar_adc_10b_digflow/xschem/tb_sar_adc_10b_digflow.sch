@@ -14,7 +14,7 @@ N 220 -100 220 -40 {lab=VSS}
 N 260 -100 260 -40 {lab=CLK}
 N 40 -200 100 -200 {lab=VIN}
 N 340 -240 400 -240 {lab=VX}
-N 340 -200 400 -200 {lab=B[9:0]}
+N 340 -220 400 -220 {lab=B[9:0]}
 N 340 -160 400 -160 {lab=VY}
 N -430 -60 -430 -40 {lab=GND}
 N -330 -60 -330 -40 {lab=GND}
@@ -30,7 +30,8 @@ N -230 -290 -230 -260 {lab=GND}
 N -230 -380 -230 -350 {lab=VIN}
 N -530 -60 -530 -40 {lab=GND}
 N -530 -160 -530 -120 {lab=CLK}
-C {lab_wire.sym} 390 -200 0 0 {name=p151 sig_type=std_logic lab=B[9:0]}
+N 340 -180 400 -180 {lab=eoc}
+C {lab_wire.sym} 390 -220 0 0 {name=p151 sig_type=std_logic lab=B[9:0]}
 C {lab_wire.sym} 380 -240 0 0 {name=p1 sig_type=std_logic lab=VX}
 C {lab_wire.sym} 380 -160 0 0 {name=p2 sig_type=std_logic lab=VY}
 C {lab_wire.sym} 60 -200 0 1 {name=p3 sig_type=std_logic lab=VIN}
@@ -171,3 +172,4 @@ value="
 .option SEED = 98765
 "}
 C {designs/sar_adc/top/sar_adc_10b_digflow/xschem/sar_adc_10b_digflow.sym} 220 -200 0 0 {name=x1}
+C {lab_wire.sym} 390 -180 0 0 {name=p12 sig_type=std_logic lab=eoc}

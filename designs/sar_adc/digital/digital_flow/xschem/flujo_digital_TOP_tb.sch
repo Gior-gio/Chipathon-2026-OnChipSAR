@@ -20,9 +20,9 @@ N 260 -460 260 -440 {lab=VDD}
 N 120 -360 160 -360 {lab=CLK}
 N 120 -340 160 -340 {lab=SAMP}
 N 120 -320 160 -320 {lab=Vcomp}
-N 360 -400 400 -400 {lab=SW0[8:0]}
+N 360 -380 400 -380 {lab=SW0[8:0]}
 N 360 -350 400 -350 {lab=B[9:0]}
-N 360 -280 400 -280 {lab=SW1[8:0]}
+N 360 -400 400 -400 {lab=SW1[8:0]}
 N 360 -330 400 -330 {lab=eoc}
 C {gnd.sym} 300 -20 0 0 {name=l1 lab=0}
 C {vsource.sym} 980 -90 0 0 {name=V2 value=\{VDD\} savecurrent=false}
@@ -55,9 +55,9 @@ value="
 .include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 "}
-C {lab_pin.sym} 400 -400 0 1 {name=p9 sig_type=std_logic lab=SW0[8:0]
+C {lab_pin.sym} 400 -380 0 1 {name=p9 sig_type=std_logic lab=SW0[8:0]
 }
-C {lab_pin.sym} 400 -280 0 1 {name=p7 sig_type=std_logic lab=SW1[8:0]
+C {lab_pin.sym} 400 -400 0 1 {name=p7 sig_type=std_logic lab=SW1[8:0]
 }
 C {devices/vsource.sym} 300 -90 0 1 {name=VCLK value="PULSE(\{VDD\} 0 0 0.1n 0.1n \{Tclk/2\} \{Tclk\})"
 }
