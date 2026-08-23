@@ -2,7 +2,7 @@ module sar_logic (
     input  wire       SAMP,
     input  wire       CLK,
     input  wire       Vcomp,
-    //output wire eoc
+    output wire eoc,
     output wire [8:0] SW0p,
     output wire [8:0] SW0n,
     output wire [8:0] SW1p,
@@ -151,5 +151,5 @@ module sar_logic (
     assign SW0n[8:0] = BN[9:1];
     assign SW1p[8:0] = CK[9:1];
     assign SW1n[8:0] = CK[9:1];
-    //assign eoc       = CK[0];
+    assign eoc       = CK[0];
 endmodule
