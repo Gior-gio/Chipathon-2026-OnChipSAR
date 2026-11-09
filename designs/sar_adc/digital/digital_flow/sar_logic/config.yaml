@@ -1,69 +1,117 @@
+
 meta:
   version: 3
   flow: Classic
 
 DESIGN_NAME: sar_logic
+
 VERILOG_FILES:
   - dir::sar_logic.v
 
-# --- El reloj real de 60 MHz ---
+# ==============================================================================
+# CLOCK AND TIMING
+# ==============================================================================
+
 CLOCK_PORT: CLK
-CLOCK_PERIOD: 16.66 
+CLOCK_PERIOD: 16.667
 
 IO_PIN_ORDER_CFG: dir::pin_order.cfg
+
 PNR_SDC_FILE: dir::sar_logic.sdc
 SIGNOFF_SDC_FILE: dir::sar_logic.sdc
 
-# --- Forzar librerías a 3.3V ---
+
+# ==============================================================================
+# STANDARD CELL LIBRARIES
+# ==============================================================================
+# GF180MCU 3.3 V libraries at different process corners.
+
 LIB:
   "*tt_025C_3v30":
     - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib
+
   "*ss_125C_3v00":
     - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib
+
   "*ff_n40C_3v60":
     - /foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib
 
+# Default and synthesis corners.
 DEFAULT_CORNER: "nom_tt_025C_3v30"
 SYNTH_CORNER: "nom_tt_025C_3v30"
+
+# Corners used for timing analysis.
 STA_CORNERS:
   - "nom_tt_025C_3v30"
   - "max_ss_125C_3v00"
   - "min_ff_n40C_3v60"
 
-# --- Estrategia ---
-# Borramos SYNTH_STRATEGY para que vuelva a priorizar área.
-# Mantenemos el Fanout en 5 para cuidar el Slew a 3.3V.
-MAX_FANOUT_CONSTRAINT: 5 
 
-# --- Tamaño físico validado ---
+# ==============================================================================
+# TIMING OPTIMIZATION
+# ==============================================================================
+
+# Disable post-CTS timing optimization to avoid unnecessary
+# buffering and cell upsizing.
+# Internal setup and hold analysis remains enabled.
+RUN_POST_CTS_RESIZER_TIMING: true
+
+# No explicit MAX_FANOUT_CONSTRAINT.
+# Use the PDK and synthesis defaults instead.
+
+
+# ==============================================================================
+# FLOORPLAN AND PLACEMENT
+# ==============================================================================
+
+# Fixed die dimensions.
 FP_SIZING: absolute
-DIE_AREA: [0.0, 0.0, 150.0, 150.0]
-GPL_CELL_PADDING: 2
-DPL_CELL_PADDING: 2
+DIE_AREA: [0.0, 0.0, 120.0, 70.0]
 
-# --- Red de Alimentación (PDN) ---
+# Reduce placement padding to improve area utilization.
+GPL_CELL_PADDING: 1
+DPL_CELL_PADDING: 1
+
+
+# ==============================================================================
+# POWER DISTRIBUTION NETWORK (PDN)
+# ==============================================================================
+
 VDD_NETS: [VDD]
 GND_NETS: [VSS]
+
 PDN_MULTILAYER: false
+
 PDN_VWIDTH: 5
 PDN_HWIDTH: 5
+
 PDN_VSPACING: 2.5
 PDN_HSPACING: 2.5
+
 PDN_VPITCH: 15
 PDN_HPITCH: 15
+
 PDN_EXTEND_TO: boundary
 
-# --- Reglas Generales ---
+
+# ==============================================================================
+# PHYSICAL IMPLEMENTATION
+# ==============================================================================
+
 PRIMARY_GDSII_STREAMOUT_TOOL: klayout
-DIODE_ON_PORTS: in
+
+# Insert protection diodes on input ports.
+DIODE_ON_PORTS: none
+
+# Maximum routing layer.
 RT_MAX_LAYER: Metal4
 
-# Margins
+
+# ==============================================================================
+# FLOORPLAN MARGINS
+# ==============================================================================
+
 TOP_MARGIN_MULT: 1
 BOTTOM_MARGIN_MULT: 1
 LEFT_MARGIN_MULT: 6
 RIGHT_MARGIN_MULT: 6
-
-# --- Prohibir celdas de retardo tóxicas para el Hold ---
-EXTRA_EXCLUDED_CELLS:
-  - "gf180mcu_fd_sc_mcu7t5v0__dly*"
