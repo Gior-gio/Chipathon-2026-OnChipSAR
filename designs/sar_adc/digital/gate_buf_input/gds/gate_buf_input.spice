@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_buf_input/xschem/gate_buf_input.sch
+.subckt gate_buf_input VDD VSS VIN VOUT
+*.PININFO VDD:B VSS:B VIN:B VOUT:B
+MN1 net1 VIN VSS VSS nfet_03v3 L=0.28u W=2u nf=1
+MP1 net1 VIN VDD VDD pfet_03v3 L=0.28u W=6u nf=1
+MP2 VOUT net1 VDD VDD pfet_03v3 L=0.28u W=6u nf=1 m=4
+MN2 VOUT net1 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=4
+.ends
