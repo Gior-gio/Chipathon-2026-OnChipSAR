@@ -15,6 +15,52 @@ project:
   title: "PseudoDiffSAR"                     # Project title (e.g. "Simple CPU", "PLL", "ADC")
   team: "A23_OnChipSAR"                      # Your Team name
   discord: "jangper"                         # Optional: Discord username (for support / communication)
-  description: "Draft layout of a 10-bit pseudo-differential SAR ADC"  # Short one-line description
-  lvs_config: "lvs_config.json"  
+  description: "Layout of the A23 project: A 10-bit pseudo-differential SAR ADC"  # Short one-line description
+  lvs_config: "lvs_config.json"
+  gf_def_ready: true            # data ready for def generation with global foundries' pad frame
+  ws_def_ready: true            # data ready for def generation with wafer space pad frame
+  drc_ready: true               # data ready for integration and DRC
+  lvs_ready: true               # data ready for integrated LVS
+  export_control: "docs/Export_Control_GF_Rev8.2_A23.docx"   # Required export control document
+
+pins:
+  - name: VSS
+    io_type: ground
+  - name: VDD
+    io_type: power
+  - name: CLK 
+    io_type: input_cmos
+  - name: SAMP 
+    io_type: input_cmos
+  - name: B[9]
+    io_type: bidirectional
+  - name: B[8]
+    io_type: bidirectional
+  - name: B[7]
+    io_type: bidirectional
+  - name: B[6]
+    io_type: bidirectional
+  - name: B[5]
+    io_type: bidirectional
+  - name: B[4]
+    io_type: bidirectional
+  - name: B[3]
+    io_type: bidirectional
+  - name: B[2]
+    io_type: bidirectional
+  - name: B[1]
+    io_type: bidirectional
+  - name: B[0]
+    io_type: bidirectional
+  - name: eoc
+    io_type: bidirectional
+  - name: Vin
+    io_type: analog
+    secondary_esd: true
+  - name: VRP
+    io_type: analog
+    secondary_esd: true
+  - name: VRN
+    io_type: analog
+    secondary_esd: true
 
