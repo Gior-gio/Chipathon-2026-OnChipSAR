@@ -1,0 +1,33 @@
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/comparator/StrongARM/xschem/strongARM.sch
+.subckt strongARM VDD CLK ON OP VIN VIP VSS
+*.PININFO VSS:B VDD:B VIN:B VIP:B OP:B CLK:B ON:B
+MTAIL NT CLKK VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=6
+M2 AN CLKK VSS VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M3 AP VIP NT VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=4
+M4 AN VIN NT VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=4
+M5 AP CLKK VSS VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M6 ONN OPP VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M7 OPP ONN VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M8 ONN OPP CN VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M9 OPP ONN CP VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M10 CN AN VSS VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=4
+M11 CP AP VSS VSS nfet_03v3 L=0.5u W=0.5u nf=1 m=4
+M12 ONN AN VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M13 OPP AP VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M14 CN AN VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+M15 CP AP VDD VDD pfet_03v3 L=0.5u W=0.5u nf=1 m=2
+x4 VDD CLK CLKN VSS gate_inv_x1
+x6 VDD CLKN CLKK VSS gate_inv_x1
+x3 VDD ONN ON VSS gate_inv_x1
+x2 VDD OPP OP VSS gate_inv_x1
+.ends
+
+* expanding   symbol:  designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym # of pins=6
+** sym_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym
+** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sch
+.subckt gate_inv_x1 VDD in out VSS
+*.PININFO out:O in:B VDD:B VSS:B
+M1 out in VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M2 out in VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=2
+.ends
+
