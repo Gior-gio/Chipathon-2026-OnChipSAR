@@ -1,8 +1,8 @@
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/top/hybrid_dac/xschem/hybrid_dac.sch
 .subckt hybrid_dac VSS VDD VRP VRN SW1p[8] SW1p[7] SW1p[6] SW1p[5] SW1p[4] SW1p[3] SW1p[2] SW1p[1] SW1p[0] SW0p[8] SW0p[7] SW0p[6]
 + SW0p[5] SW0p[4] SW0p[3] SW0p[2] SW0p[1] SW0p[0] SW1n[8] SW1n[7] SW1n[6] SW1n[5] SW1n[4] SW1n[3] SW1n[2] SW1n[1] SW1n[0] SW0n[8] SW0n[7]
-+ SW0n[6] SW0n[5] SW0n[4] SW0n[3] SW0n[2] SW0n[1] SW0n[0] VIN VX VY
-*.PININFO VSS:B VDD:B VRP:I VRN:I SW1p[8:0]:B SW0p[8:0]:B SW1n[8:0]:B SW0n[8:0]:B VIN:B VX:O VY:O
++ SW0n[6] SW0n[5] SW0n[4] SW0n[3] SW0n[2] SW0n[1] SW0n[0] VIN VY VX
+*.PININFO VSS:B VDD:B VRP:I VRN:I SW1p[8:0]:B SW0p[8:0]:B SW1n[8:0]:B SW0n[8:0]:B VIN:B VY:B VX:B
 xRDAC VCM VRX[1] VRX[0] VRY[1] VRY[0] VRP VRN VSS rdac
 xCDAC CP[8] CP[3] CP[5] CP[1] CP[0] CP[4] CP[6] CP[7] CP[2] CN[2] CN[1] CN[3] CN[8] CN[7] CN[6] CN[5] CN[4] CN[0] VX VY cdac
 xSWP4 VDD SW1p[4] SW0p[4] VSS CP[4] VRP VRP VRN VRP dac_sw_4state_A
@@ -31,17 +31,30 @@ xSWN3 VDD SW1n[3] SW0n[3] VSS CN[3] VIN VRY[1] VRX[1] VRP dac_sw_4state_A
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/rdac/xschem/rdac.sch
 .subckt rdac VCM VRX[1] VRX[0] VRY[1] VRY[0] VRP VRN VSS
 *.PININFO VRN:I VRP:I VCM:B VRY[1:0]:B VRX[1:0]:B VSS:B
-*  RN0 -  ppolyf_u_3k  IS MISSING !!!!
-*  RN1 -  ppolyf_u_3k  IS MISSING !!!!
-*  RN2 -  ppolyf_u_3k  IS MISSING !!!!
-*  RN3 -  ppolyf_u_3k  IS MISSING !!!!
-*  RP0 -  ppolyf_u_3k  IS MISSING !!!!
-*  RP1 -  ppolyf_u_3k  IS MISSING !!!!
-*  RP2 -  ppolyf_u_3k  IS MISSING !!!!
-*  RP3 -  ppolyf_u_3k  IS MISSING !!!!
-*  RDC[3],RDC[2],RDC[1],RDC[0] -  ppolyf_u_3k  IS MISSING !!!!
-*  RDB[7],RDB[6],RDB[5],RDB[4],RDB[3],RDB[2],RDB[1],RDB[0] -  ppolyf_u_3k  IS MISSING !!!!
-*  RDA[3],RDA[2],RDA[1],RDA[0] -  ppolyf_u_3k  IS MISSING !!!!
+XRN0 VRY[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRN1 VRY[1] VRY[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRN2 net1 VRY[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRN3 net1 VRN VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRP0 VRX[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRP1 VRX[1] VRX[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRP2 net2 VRX[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRP3 VRP net2 VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
+XRDC[3] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
+XRDC[2] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
+XRDC[1] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
+XRDC[0] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
+XRDB[7] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[6] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[5] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[4] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[3] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[2] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[1] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDB[0] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
+XRDA[3] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
+XRDA[2] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
+XRDA[1] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
+XRDA[0] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
 .ends
 
 
@@ -51,26 +64,26 @@ xSWN3 VDD SW1n[3] SW0n[3] VSS CN[3] VIN VRY[1] VRX[1] VRP dac_sw_4state_A
 .subckt cdac CP[8] CP[3] CP[5] CP[1] CP[0] CP[4] CP[6] CP[7] CP[2] CN[2] CN[1] CN[3] CN[8] CN[7] CN[6] CN[5] CN[4] CN[0] VX VY
 *.PININFO VX:B VY:B CP[0]:I CP[1]:I CP[2]:I CP[3]:I CP[4]:I CP[5]:I CP[6]:I CP[7]:I CP[8]:I CN[0]:I CN[1]:I CN[2]:I CN[3]:I
 *+ CN[4]:I CN[5]:I CN[6]:I CN[7]:I CN[8]:I
-*  CP8 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP7 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP6 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP5 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP4 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP3 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP2 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP1 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP01 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN8 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN7 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN6 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN5 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN4 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN3 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN2 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN1 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN01 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CP00 -  cap_mim_2f0fF  IS MISSING !!!!
-*  CN00 -  cap_mim_2f0fF  IS MISSING !!!!
+XCP8 CP[8] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=16
+XCP7 CP[7] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=8
+XCP6 CP[6] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=4
+XCP5 CP[5] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=2
+XCP4 CP[4] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP3 CP[3] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP2 CP[2] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP1 CP[1] VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP01 net1 VX cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN8 CN[8] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=16
+XCN7 CN[7] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=8
+XCN6 CN[6] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=4
+XCN5 CN[5] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6 m=2
+XCN4 CN[4] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN3 CN[3] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN2 CN[2] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN1 CN[1] VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN01 net2 VY cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCP00 CP[0] net1 cap_mim_2f0fF c_width=5e-6 c_length=5e-6
+XCN00 CN[0] net2 cap_mim_2f0fF c_width=5e-6 c_length=5e-6
 .ends
 
 
@@ -123,8 +136,8 @@ xS1 VDD s[1] sn[1] VSS gate_inv_x1
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state_A/xschem/dac_sw_1state_A.sch
 .subckt dac_sw_1state_A VDD VSS CLK VIN VOUT CLKN
 *.PININFO VIN:B VOUT:B CLK:B CLKN:B VSS:B VDD:B
-*  MSN -  nfet_03v3  IS MISSING !!!!
-*  MSP -  pfet_03v3  IS MISSING !!!!
+MSN VOUT CLK VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=4
+MSP VIN CLKN VOUT VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=4
 .ends
 
 
@@ -133,10 +146,10 @@ xS1 VDD s[1] sn[1] VSS gate_inv_x1
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_nand_x1/xschem/gate_nand_x1.sch
 .subckt gate_nand_x1 VDD VSS A B out
 *.PININFO A:B B:B out:B VDD:B VSS:B
-*  M5 -  pfet_03v3  IS MISSING !!!!
-*  M6 -  nfet_03v3  IS MISSING !!!!
-*  M7 -  pfet_03v3  IS MISSING !!!!
-*  M8 -  nfet_03v3  IS MISSING !!!!
+M5 out A VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
+M6 out A net1 VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M7 out B VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
+M8 net1 B VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
 .ends
 
 
@@ -145,8 +158,8 @@ xS1 VDD s[1] sn[1] VSS gate_inv_x1
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sch
 .subckt gate_inv_x1 VDD in out VSS
 *.PININFO out:O in:B VDD:B VSS:B
-*  M1 -  nfet_03v3  IS MISSING !!!!
-*  M2 -  pfet_03v3  IS MISSING !!!!
+M1 out in VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1
+M2 out in VDD VDD pfet_03v3 L=0.28u W=0.5u nf=1
 .ends
 
 
@@ -155,7 +168,7 @@ xS1 VDD s[1] sn[1] VSS gate_inv_x1
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/dac_sw_1state_B/xschem/dac_sw_1state_B.sch
 .subckt dac_sw_1state_B VDD VSS CLK VIN VOUT CLKN
 *.PININFO VIN:B VOUT:B CLK:B CLKN:B VSS:B VDD:B
-*  MSN -  nfet_03v3  IS MISSING !!!!
-*  MSP -  pfet_03v3  IS MISSING !!!!
+MSN VOUT CLK VIN VSS nfet_03v3 L=0.28u W=0.5u nf=1 m=10
+MSP VIN CLKN VOUT VDD pfet_03v3 L=0.28u W=0.5u nf=1 m=10
 .ends
 
