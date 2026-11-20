@@ -160,13 +160,15 @@ N 1040 -1070 1040 -1030 {lab=VRX[0]}
 N 600 -1360 700 -1360 {lab=VCM}
 N 2520 -1380 2540 -1380 {lab=VX}
 N 2520 -1340 2540 -1340 {lab=VY}
+N 2540 -1380 2550 -1380 {lab=VX}
+N 2540 -1340 2550 -1340 {lab=VY}
 C {designs/sar_adc/dac/rdac/xschem/rdac.sym} 520 -1360 0 0 {name=xRDAC}
 C {lab_wire.sym} 640 -1260 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 680 -1360 0 0 {name=p3 sig_type=std_logic lab=VCM}
 C {lab_wire.sym} 680 -1420 0 0 {name=p4 sig_type=std_logic lab=VRX[1:0]}
 C {lab_wire.sym} 680 -1300 0 0 {name=p5 sig_type=std_logic lab=VRY[1:0]}
-C {iopin.sym} 530 -1690 0 1 {name=p156 lab=VSS}
-C {iopin.sym} 530 -1710 0 1 {name=p157 lab=VDD}
+C {iopin.sym} 2140 -1870 0 1 {name=p156 lab=VSS}
+C {iopin.sym} 2140 -1890 0 1 {name=p157 lab=VDD}
 C {ipin.sym} 520 -1520 3 1 {name=p158 lab=VRP}
 C {ipin.sym} 520 -1200 3 0 {name=p159 lab=VRN}
 C {designs/sar_adc/dac/cdac/xschem/cdac.sym} 1620 -1360 0 0 {name=xCDAC}
@@ -338,6 +340,7 @@ C {iopin.sym} 2110 -2040 0 0 {name=p141 lab=SW0p[8:0]}
 C {iopin.sym} 2110 -2010 0 0 {name=p147 lab=SW1n[8:0]}
 C {iopin.sym} 2110 -1980 0 0 {name=p149 lab=SW0n[8:0]}
 C {iopin.sym} 2110 -1950 0 0 {name=p1 lab=VIN}
-C {opin.sym} 2540 -1380 0 0 {name=p22 lab=VX}
-C {opin.sym} 2540 -1340 0 0 {name=p135 lab=VY
+C {iopin.sym} 2550 -1340 2 1 {name=p136 lab=VY}
+C {iopin.sym} 2550 -1380 2 1 {name=p137 lab=VX
+
 }
