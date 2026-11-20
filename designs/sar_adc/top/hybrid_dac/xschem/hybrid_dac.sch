@@ -5,7 +5,7 @@ V {}
 S {}
 F {}
 E {}
-P 4 5 2070 -2150 2250 -2150 2250 -1950 2070 -1950 2070 -2150 {}
+P 4 5 2070 -2150 2250 -2150 2250 -1920 2070 -1920 2070 -2150 {}
 T {CONTROL SIGNALS
 FROM SAR LOGIC} 2080 -2140 0 0 0.3 0.3 {}
 N 520 -1520 520 -1480 {lab=VRP}
@@ -157,7 +157,9 @@ N 860 -1070 860 -1030 {lab=VCM}
 N 840 -1070 840 -1030 {lab=VRX[0]}
 N 1060 -1070 1060 -1030 {lab=VCM}
 N 1040 -1070 1040 -1030 {lab=VRX[0]}
-N 600 -1360 700 -1360 {lab=#net1}
+N 600 -1360 700 -1360 {lab=VCM}
+N 2520 -1380 2540 -1380 {lab=VX}
+N 2520 -1340 2540 -1340 {lab=VY}
 C {designs/sar_adc/dac/rdac/xschem/rdac.sym} 520 -1360 0 0 {name=xRDAC}
 C {lab_wire.sym} 640 -1260 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 680 -1360 0 0 {name=p3 sig_type=std_logic lab=VCM}
@@ -335,3 +337,7 @@ C {iopin.sym} 2110 -2070 0 0 {name=p138 lab=SW1p[8:0]}
 C {iopin.sym} 2110 -2040 0 0 {name=p141 lab=SW0p[8:0]}
 C {iopin.sym} 2110 -2010 0 0 {name=p147 lab=SW1n[8:0]}
 C {iopin.sym} 2110 -1980 0 0 {name=p149 lab=SW0n[8:0]}
+C {iopin.sym} 2110 -1950 0 0 {name=p1 lab=VIN}
+C {opin.sym} 2540 -1380 0 0 {name=p22 lab=VX}
+C {opin.sym} 2540 -1340 0 0 {name=p135 lab=VY
+}
