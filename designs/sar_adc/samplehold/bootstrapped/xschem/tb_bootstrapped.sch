@@ -39,13 +39,15 @@ C {lab_wire.sym} 260 -360 0 0 {name=p5 sig_type=std_logic lab=Vin
 C {devices/code_shown.sym} 875 -415 0 0 {name=MODELS1 only_toplevel=true
 format="tcleval( @value )"
 value="
-.include $::180MCU_MODELS/design.ngspice
+
+.include  /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/samplehold/bootstrapped/netlist/pex/bootstrapped.spice 
+
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/sm141064.ngspice cap_mim
 .lib $::180MCU_MODELS/sm141064.ngspice mimcap_typical
 
 "}
-C {code.sym} 805 -580 0 0 {name=s1 only_toplevel=false value="
+C {code.sym} 955 -600 0 0 {name=s1 only_toplevel=false value="
 
 * Sampling clock
 .param Fs = 5Meg
@@ -56,6 +58,8 @@ C {code.sym} 805 -580 0 0 {name=s1 only_toplevel=false value="
 .param Ns = 1024
 .param Nc = 103
 .param fin = Nc/Ns*Fs
+.param sw_stat_mismatch=0
+.param fnoicor=0
 
 * Test-bench parameters
 .temp 27

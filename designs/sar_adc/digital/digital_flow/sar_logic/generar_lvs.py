@@ -51,7 +51,12 @@ def aplicar_parche_definiciones():
                 in_subckt_top = False
                 continue
             
-            # Formatear instancia a X1, X2... dejando sus nodos intactos
+            # --- NUEVO: Capturar continuaciones de puertos ---
+            if ls.startswith('+'):
+                instancias_limpias.append(line)
+                continue
+            
+            # Formatear instancia a X1, X2...
             if "gf180mcu_fd_sc_mcu7t5v0__" in ls.lower():
                 tokens = ls.split()
                 nombre_celda = tokens[-1].upper()

@@ -81,13 +81,13 @@ value="
 
 * Local variables for .control
 let Fs = 5Meg
-let Ns = 1
+let Ns = 0
 let Nspare = 5
 let VRP = 2.1
 let VRN = 1.2
 let VDD = 3.3
 
-let tstep = 1/(Fs*12*100)
+let tstep = 1/(Fs*12*250)
 let tstop = (Ns + Nspare)/Fs
 
 * Save main signals
@@ -138,7 +138,7 @@ plot dout
 
 .endc
 "}
-C {devices/vsource.sym} -230 -320 0 0 {name=VSIN value= "SIN(\{VCM\} \{0.95*VRPN/2\} \{fin\} 0 )"
+C {devices/vsource.sym} -230 -320 0 0 {name=VSIN value= "SIN(\{VCM\} \{0.9*VRPN/2\} \{fin\} 0 )"
 }
 C {devices/gnd.sym} -230 -260 0 0 {name=l5 lab=GND}
 C {lab_wire.sym} -230 -360 3 1 {name=p10 sig_type=std_logic lab=VIN
