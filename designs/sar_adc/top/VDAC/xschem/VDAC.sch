@@ -5,9 +5,6 @@ V {}
 S {}
 F {}
 E {}
-P 4 5 800 -810 980 -810 980 -610 800 -610 800 -810 {}
-T {CONTROL SIGNALS
-FROM SAR LOGIC} 810 -800 0 0 0.3 0.3 {}
 N 500 -400 560 -400 {lab=VY}
 N 500 -440 560 -440 {lab=VX}
 N 560 -460 560 -440 {lab=VX}
@@ -48,11 +45,8 @@ C {lab_wire.sym} 960 -390 0 1 {name=p188 sig_type=std_logic lab=COMPN}
 C {designs/sar_adc/comparator/StrongARM/xschem/strongARM.sym} 960 -420 0 0 {name=xCOMP}
 C {ipin.sym} 620 -810 1 0 {name=p1 lab=SAMP}
 C {iopin.sym} 1020 -450 2 1 {name=p22 lab=COMP}
-C {iopin.sym} 840 -730 0 0 {name=p138 lab=SW1p[8:0]}
-C {iopin.sym} 840 -700 0 0 {name=p141 lab=SW0p[8:0]}
-C {iopin.sym} 840 -670 0 0 {name=p147 lab=SW1n[8:0]}
-C {iopin.sym} 840 -640 0 0 {name=p149 lab=SW0n[8:0]}
 C {ipin.sym} 740 -420 0 0 {name=p150 lab=CLK}
 C {noconn.sym} 1020 -390 0 1 {name=l2}
 C {iopin.sym} 170 -720 0 1 {name=p156 lab=VSS}
 C {iopin.sym} 170 -740 0 1 {name=p157 lab=VDD}
+C {ipin.sym} 170 -690 0 0 {name=p159 lab=VRN}
