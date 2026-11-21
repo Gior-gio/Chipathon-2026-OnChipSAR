@@ -27,11 +27,11 @@ N 1920 -590 1920 -460 {lab=CP}
 N 1560 -460 1920 -460 {lab=CP}
 N 780 -680 780 -590 {lab=VDD}
 N 780 -680 1010 -680 {lab=VDD}
-N 780 -530 780 -510 {lab=#net1}
-N 780 -510 870 -510 {lab=#net1}
-N 870 -510 870 -480 {lab=#net1}
-N 670 -510 780 -510 {lab=#net1}
-N 670 -510 670 -480 {lab=#net1}
+N 780 -530 780 -510 {lab=NT}
+N 780 -510 870 -510 {lab=NT}
+N 870 -510 870 -480 {lab=NT}
+N 670 -510 780 -510 {lab=NT}
+N 670 -510 670 -480 {lab=NT}
 N 670 -420 670 -370 {lab=AP}
 N 870 -420 870 -370 {lab=AN}
 N 870 -290 1350 -290 {lab=VSS}
@@ -368,15 +368,12 @@ C {lab_pin.sym} 240 -660 0 0 {name=p25 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 480 -460 0 0 {name=p26 sig_type=std_logic lab=VSS
 }
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 260 -540 0 0 {name=x4}
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 500 -540 0 0 {name=x6}
 C {lab_pin.sym} 240 -460 0 0 {name=p28 sig_type=std_logic lab=VSS
 }
 C {lab_pin.sym} 480 -660 0 0 {name=p29 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 370 -560 1 0 {name=p30 sig_type=std_logic lab=CLKN
 }
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 1800 -280 0 0 {name=x3}
 C {lab_pin.sym} 1220 -550 2 0 {name=p27 sig_type=std_logic lab=ONN
 }
 C {lab_pin.sym} 1670 -300 2 1 {name=p31 sig_type=std_logic lab=ONN
@@ -385,7 +382,6 @@ C {lab_pin.sym} 2110 -390 0 1 {name=p32 sig_type=std_logic lab=VDD
 }
 C {lab_pin.sym} 2110 -210 0 1 {name=p33 sig_type=std_logic lab=VSS
 }
-C {designs/sar_adc/digital/gate_inv_x1/xschem/gate_inv_x1.sym} 2130 -280 0 0 {name=x2}
 C {lab_pin.sym} 2000 -300 2 1 {name=p35 sig_type=std_logic lab=OPP
 }
 C {lab_pin.sym} 1640 -550 2 0 {name=p34 sig_type=std_logic lab=OPP
@@ -396,3 +392,7 @@ C {lab_pin.sym} 1640 -460 2 0 {name=p23 sig_type=std_logic lab=CP
 }
 C {lab_pin.sym} 670 -510 0 0 {name=p36 sig_type=std_logic lab=NT
 }
+C {designs/sar_adc/digital/gate_inv_x2/xschem/gate_inv_x2.sym} 210 -560 0 0 {name=x1}
+C {designs/sar_adc/digital/gate_inv_x2/xschem/gate_inv_x2.sym} 450 -560 0 0 {name=x2}
+C {designs/sar_adc/digital/gate_inv_x2/xschem/gate_inv_x2.sym} 1750 -300 0 0 {name=x3}
+C {designs/sar_adc/digital/gate_inv_x2/xschem/gate_inv_x2.sym} 2080 -300 0 0 {name=x4}
