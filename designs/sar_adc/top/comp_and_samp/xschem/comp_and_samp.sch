@@ -24,8 +24,6 @@ N 690 -170 730 -170 {lab=VDD}
 N 620 -90 620 -30 {lab=SAMP}
 N 640 -90 640 -30 {lab=VRN}
 N 640 -380 640 -250 {lab=VY}
-N 640 -330 660 -330 {lab=VY}
-N 640 -510 660 -510 {lab=VX}
 N 940 -450 1020 -450 {lab=COMP}
 N 940 -390 1020 -390 {lab=COMPN}
 C {lab_wire.sym} 880 -510 1 0 {name=p136 sig_type=std_logic lab=VDD}
