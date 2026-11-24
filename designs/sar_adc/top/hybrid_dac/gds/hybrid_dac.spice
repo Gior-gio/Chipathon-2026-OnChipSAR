@@ -31,30 +31,30 @@ xSWN3 VDD SW1n[3] SW0n[3] VSS CN[3] VIN VRY[1] VRX[1] VRP dac_sw_4state_A
 ** sch_path: /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/dac/rdac/xschem/rdac.sch
 .subckt rdac VCM VRX[1] VRX[0] VRY[1] VRY[0] VRP VRN VSS
 *.PININFO VRN:I VRP:I VCM:B VRY[1:0]:B VRX[1:0]:B VSS:B
-XRN0 VRY[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN1 VRY[1] VRY[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN2 net1 VRY[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRN3 net1 VRN VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP0 VRX[0] VCM VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP1 VRX[1] VRX[0] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP2 net2 VRX[1] VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRP3 VRP net2 VSS ppolyf_u_1k r_width=2e-6 r_length=3e-6
-XRDC[3] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
-XRDC[2] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
-XRDC[1] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
-XRDC[0] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=3e-6
-XRDB[7] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[6] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[5] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[4] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[3] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[2] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[1] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDB[0] VSS VSS VSS ppolyf_u_1k r_width=2e-6 r_length=0.8e-6
-XRDA[3] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
-XRDA[2] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
-XRDA[1] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
-XRDA[0] VSS VSS VSS ppolyf_u_1k r_width=0.8e-6 r_length=0.8e-6
+XRN0 VRY[0] VCM VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRN1 VRY[1] VRY[0] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRN2 net1 VRY[1] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRN3 net1 VRN VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRP0 VRX[0] VCM VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRP1 VRX[1] VRX[0] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRP2 net2 VRX[1] VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRP3 VRP net2 VSS ppolyf_u r_width=2e-6 r_length=3e-6
+XRDC[3] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+XRDC[2] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+XRDC[1] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+XRDC[0] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=3e-6
+XRDB[7] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[6] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[5] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[4] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[3] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[2] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[1] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDB[0] VSS VSS VSS ppolyf_u r_width=2e-6 r_length=0.8e-6
+XRDA[3] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+XRDA[2] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+XRDA[1] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
+XRDA[0] VSS VSS VSS ppolyf_u r_width=0.8e-6 r_length=0.8e-6
 .ends
 
 
