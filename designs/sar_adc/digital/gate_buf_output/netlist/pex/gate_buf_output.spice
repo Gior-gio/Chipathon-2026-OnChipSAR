@@ -1,0 +1,246 @@
+* SPICE3 file created from gate_buf_output.ext - technology: gf180mcuD
+
+.subckt pfet a_28_n136# w_n180_n88# a_n92_0# a_94_0# VSUBS
+X0 a_94_0# a_28_n136# a_n92_0# w_n180_n88# pfet_03v3 ad=3.9p pd=13.3u as=3.9p ps=13.3u w=6u l=0.28u
+C0 w_n180_n88# a_28_n136# 0.09255f
+C1 a_28_n136# a_n92_0# 0.04243f
+C2 a_94_0# a_28_n136# 0.04243f
+C3 w_n180_n88# a_n92_0# 0.03904f
+C4 w_n180_n88# a_94_0# 0.03904f
+C5 a_94_0# a_n92_0# 0.35882f
+C6 a_94_0# VSUBS 0.2009f
+C7 a_n92_0# VSUBS 0.2009f
+C8 a_28_n136# VSUBS 0.12782f
+C9 w_n180_n88# VSUBS 2.03098f
+.ends
+
+.subckt nfet a_n84_0# a_94_0# a_30_460# VSUBS
+X0 a_94_0# a_30_460# a_n84_0# VSUBS nfet_03v3 ad=1.22p pd=5.22u as=1.22p ps=5.22u w=2u l=0.28u
+C0 a_30_460# a_n84_0# 0.01165f
+C1 a_n84_0# a_94_0# 0.09601f
+C2 a_30_460# a_94_0# 0.01165f
+C3 a_94_0# VSUBS 0.08144f
+C4 a_n84_0# VSUBS 0.08144f
+C5 a_30_460# VSUBS 0.21826f
+.ends
+
+.subckt gate_buf_output VDD  VIN VOUT VSS 
+Xpfet_0 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_80 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_1 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_81 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_70 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_2 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_60 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_82 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_71 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_80 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_3 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_50 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_83 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_72 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_61 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_81 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_70 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_4 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_62 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_40 m1_n814_n508# w_n1690_n2178# VDD m1_82_n508# pfet_9/VSUBS pfet
+Xpfet_51 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_84 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_73 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xnfet_60 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_82 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_71 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_5 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_30 m1_82_n508# w_n1690_n2178# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_52 m1_82_n508# w_n1422_1690# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_41 m1_82_n508# w_n1422_1690# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_74 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_63 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xnfet_83 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_50 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_72 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_61 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_6 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_20 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_31 m1_82_n508# w_n1690_n2178# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_53 m1_82_n508# w_n1422_1690# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_42 m1_82_n508# w_n1422_1690# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_75 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_64 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xnfet_40 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_51 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_84 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_73 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_62 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_7 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_10 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_21 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_32 m1_82_n508# w_n1690_n2178# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_43 m1_82_n508# w_n1422_1690# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_54 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_65 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_76 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xnfet_30 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_41 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_52 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_74 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_63 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_8 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_11 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_22 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_33 m1_n814_n508# w_n1690_n2178# m1_82_n508# VDD pfet_9/VSUBS pfet
+Xpfet_55 m1_82_n508# w_n1422_1690# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_44 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_77 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_66 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_20 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_31 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_42 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_53 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_75 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_64 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_9 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_12 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_23 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_34 m1_82_n508# w_n1690_n2178# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_56 m1_82_n508# w_n1422_1690# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_45 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_67 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_78 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_21 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_32 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_10 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_54 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_43 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_76 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_65 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_13 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_79 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_24 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_35 m1_82_n508# w_n1690_n2178# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_57 m1_82_n508# w_n1422_1690# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_46 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_68 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xnfet_22 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_33 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_11 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_55 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_44 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_77 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_66 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_14 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_25 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_36 m1_82_n508# w_n1690_n2178# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xpfet_58 VIN w_n1422_1690# VDD m1_n814_n508# pfet_9/VSUBS pfet
+Xpfet_47 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_69 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_23 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_34 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_12 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_56 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_45 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_78 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_67 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_59 m1_34_n40# w_n1422_1690# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_15 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_26 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_37 m1_82_n508# w_n1690_n2178# VDD m1_34_n40# pfet_9/VSUBS pfet
+Xpfet_48 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_24 m1_82_n508# VSS m1_n814_n508# pfet_9/VSUBS nfet
+Xnfet_35 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_13 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_46 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_57 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_68 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_79 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_16 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_27 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_38 m1_n814_n508# w_n1690_n2178# m1_82_n508# VDD pfet_9/VSUBS pfet
+Xpfet_49 m1_34_n40# w_n1422_1690# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_25 VSS m1_82_n508# m1_n814_n508# pfet_9/VSUBS nfet
+Xnfet_36 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_14 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_58 VSS m1_n814_n508# VIN pfet_9/VSUBS nfet
+Xnfet_47 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_69 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_17 m1_34_n40# w_n1690_n2178# VDD VOUT pfet_9/VSUBS pfet
+Xpfet_28 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_39 m1_n814_n508# w_n1690_n2178# VDD m1_82_n508# pfet_9/VSUBS pfet
+Xnfet_26 VSS m1_82_n508# m1_n814_n508# pfet_9/VSUBS nfet
+Xnfet_37 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_15 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_59 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_48 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_18 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xpfet_29 m1_82_n508# w_n1690_n2178# m1_34_n40# VDD pfet_9/VSUBS pfet
+Xnfet_27 m1_82_n508# VSS m1_n814_n508# pfet_9/VSUBS nfet
+Xnfet_38 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_16 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_49 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xpfet_19 m1_34_n40# w_n1690_n2178# VOUT VDD pfet_9/VSUBS pfet
+Xnfet_28 VSS m1_34_n40# m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_39 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_17 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_29 m1_34_n40# VSS m1_82_n508# pfet_9/VSUBS nfet
+Xnfet_18 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_19 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_0 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_1 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_2 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_3 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_4 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_5 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_6 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_7 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_8 VSS VOUT m1_34_n40# pfet_9/VSUBS nfet
+Xnfet_9 VOUT VSS m1_34_n40# pfet_9/VSUBS nfet
+R0 VIN.n2 VIN.n0 97.8331
+R1 VIN.n2 VIN.n1 45.8096
+R2 VIN VIN.n2 4.979
+C0 m1_82_n508# m1_34_n40# 3.8581f
+C1 VSS w_n1422_1690# 0.02585f
+C2 VOUT m1_34_n40# 13.31977f
+C3 VDD w_n1690_n2178# 1.45452f
+C4 m1_n814_n508# VDD 0.42077f
+C5 m1_82_n508# w_n1690_n2178# -0.06243f
+C6 m1_82_n508# m1_n814_n508# 1.40198f
+C7 VIN m1_34_n40# 0.00937f
+C8 w_n1690_n2178# VOUT -0.95886f
+C9 VDD w_n1422_1690# 1.71483f
+C10 m1_82_n508# w_n1422_1690# 0.06698f
+C11 m1_n814_n508# VIN 0.69644f
+C12 w_n1422_1690# VOUT -0.95903f
+C13 VDD VSS 14.11186f
+C14 m1_82_n508# VSS 1.3089f
+C15 w_n1690_n2178# m1_34_n40# 0.07071f
+C16 m1_n814_n508# m1_34_n40# 0.01929f
+C17 w_n1422_1690# VIN 0.03f
+C18 VSS VOUT 6.37188f
+C19 w_n1422_1690# m1_34_n40# 0.08175f
+C20 m1_n814_n508# w_n1690_n2178# 0.04751f
+C21 m1_82_n508# VDD 0.95079f
+C22 VSS VIN 0.03183f
+C23 VDD VOUT 6.93341f
+C24 VSS m1_34_n40# 3.26778f
+C25 m1_82_n508# VOUT 0.03188f
+C26 m1_n814_n508# w_n1422_1690# 0.02224f
+C27 VDD VIN 0.08949f
+C28 VSS w_n1690_n2178# 0.01848f
+C29 m1_82_n508# VIN 0.05095f
+C30 m1_n814_n508# VSS 0.53455f
+C31 VDD m1_34_n40# 4.17932f
+C32 VDD pfet_9/VSUBS 18.85515f
+C33 VSS pfet_9/VSUBS -5.82904f
+C34 VIN.n0 pfet_9/VSUBS 0.05205f
+C35 VIN.n1 pfet_9/VSUBS 0.01833f
+C36 VIN.n2 pfet_9/VSUBS 0.06994f
+C37 VIN pfet_9/VSUBS 0.12439f
+C38 m1_34_n40# pfet_9/VSUBS -21.65836f
+C39 w_n1422_1690# pfet_9/VSUBS -33.0635f
+C40 VOUT pfet_9/VSUBS -28.65029f
+C41 m1_82_n508# pfet_9/VSUBS -5.19048f
+C42 m1_n814_n508# pfet_9/VSUBS -0.41585f
+C43 w_n1690_n2178# pfet_9/VSUBS -37.73057f
+.ends
+

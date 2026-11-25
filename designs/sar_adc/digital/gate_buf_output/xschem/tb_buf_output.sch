@@ -41,14 +41,13 @@ C {lab_wire.sym} 260 -450 0 0 {name=p4 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 260 -290 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 170 -370 0 0 {name=p6 sig_type=std_logic lab=VIN}
 C {lab_wire.sym} 430 -370 2 0 {name=p7 sig_type=std_logic lab=VOUT}
-C {devices/code_shown.sym} 520 -170 0 0 {name=MODELS only_toplevel=true
+C {devices/code_shown.sym} 570 -110 0 0 {name=MODELS only_toplevel=true
 format="tcleval( @value )"
 value="
-.include $::180MCU_MODELS/design.ngspice
 .lib $::180MCU_MODELS/sm141064.ngspice typical
 .lib $::180MCU_MODELS/smbb000149.ngspice typical
 "}
-C {code.sym} 665 -390 0 0 {name=s1 only_toplevel=false value="
+C {code.sym} 575 -390 0 0 {name=code only_toplevel=false value="
 .param Vmid = 1.65
 * Sampling clock
 .param Fs = 16Meg
@@ -138,3 +137,9 @@ C {devices/vsource.sym} 70 -130 0 0 {name=v1 value=\{VDD\}
 C {devices/vsource.sym} 260 -130 0 0 {name=V3 value="PULSE(0 \{VDD\} 0 0.5n 0.5n \{ton\} \{Ts\})"
 }
 C {designs/sar_adc/digital/gate_buf_output/xschem/gate_buf_output.sym} 130 -170 0 0 {name=x1}
+C {devices/code_shown.sym} 570 -200 0 0 {name=PEX only_toplevel=true
+format="tcleval( @value )"
+value="
+.include /foss/designs/Chipathon-2026-OnChipSAR/designs/sar_adc/digital/gate_buf_output/netlist/pex/gate_buf_output.spice
+*.include $::180MCU_MODELS/design.ngspice
+"}

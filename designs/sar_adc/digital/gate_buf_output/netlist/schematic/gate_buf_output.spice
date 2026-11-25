@@ -5,6 +5,8 @@ MN1 net1 VIN VSS VSS nfet_03v3 L=0.28u W=2u nf=1
 MP1 net1 VIN VDD VDD pfet_03v3 L=0.28u W=6u nf=1
 MP2 net2 net1 VDD VDD pfet_03v3 L=0.28u W=6u nf=1 m=4
 MN2 net2 net1 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=4
-MP3 VOUT net2 VDD VDD pfet_03v3 L=0.28u W=6u nf=1 m=16
-MN3 VOUT net2 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=16
+MP3 net3 net2 VDD VDD pfet_03v3 L=0.28u W=6u nf=1 m=16
+MN3 net3 net2 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=16
+MP4 VOUT net3 VDD VDD pfet_03v3 L=0.28u W=6u nf=1 m=64
+MN4 VOUT net3 VSS VSS nfet_03v3 L=0.28u W=2u nf=1 m=64
 .ends
